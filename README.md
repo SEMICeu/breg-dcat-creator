@@ -1,8 +1,8 @@
-# DCAT Public Service Description Creator
+# Data Catalog Vocabulary (DCAT) Description Creator
 
-This is a proof of concept editor for editing public service descriptions according to the Data Catalog Vocabulary (DCAT) v2.0.1. The editor is driven by the RDForms library which uses templates to generate HTML Forms to edit RDF. The Public Service Describer will allow European public administrations to create public service descriptions in an easy-to-use web form and export these descriptions in DCAT 2.1 compliant machine-readable formats to store locally on a computer. 
+This is a proof of concept editor for editing public service descriptions according to the Data Catalog Vocabulary (DCAT) v2.0.1. The editor is driven by the RDForms library which uses templates to generate HTML Forms to edit RDF. The DCAT Describer will allow European public administrations to create public service descriptions in an easy-to-use web form and export these descriptions in DCAT 2.1 compliant machine-readable formats to store locally on a computer. 
 
-The DCAT Public Service Description Creator uses [RDForms 4.1 by MetaSolutionsAB](https://github.com/MetaSolutionsAB/rdforms/releases/tag/4.1), a JavaScript library that provides a way to declarative describe how the editor and presentation views of RDF should look like. The configuration mechanism eliminates the need for programming once the library has been deployed into an environment. The main task of RDForms is to make it easy to construct form-based RDF editors in a web environment. To accomplish this, RDForms relies on a templating mechanism that both describes how to generate a HTML-form and how to map specific expressions in a RDF graph to corresponding fields. Simply put, RDForm uses a template to construct the input-form for the user and its transformation to RDF. 
+The Data Catalog Vocabulary (DCAT) Description Creator uses [RDForms 4.1 by MetaSolutionsAB](https://github.com/MetaSolutionsAB/rdforms/releases/tag/4.1), a JavaScript library that provides a way to declarative describe how the editor and presentation views of RDF should look like. The configuration mechanism eliminates the need for programming once the library has been deployed into an environment. The main task of RDForms is to make it easy to construct form-based RDF editors in a web environment. To accomplish this, RDForms relies on a templating mechanism that both describes how to generate a HTML-form and how to map specific expressions in a RDF graph to corresponding fields. Simply put, RDForm uses a template to construct the input-form for the user and its transformation to RDF. 
 
 
 ## Installation instructions
@@ -32,7 +32,7 @@ It is possible that your computer will need to be restarted during the process. 
 
 ### Command-line installation instructions for Linux <a name="commandLineInstallation"></a>
 
-The DCAT Public Service Description Creator uses [RDForms 4.1 by MetaSolutionsAB](https://github.com/MetaSolutionsAB/rdforms/releases/tag/4.1), a JavaScript library that provides a way to declarative describe how the editor and presentation views of RDF should look like. Before you can use the editor you need to make sure all the dependencies for RDForms are loaded and RDForms is build. To load the dependencies, simply run:
+The Data Catalog Vocabulary (DCAT) Description Creator uses [RDForms 4.1 by MetaSolutionsAB](https://github.com/MetaSolutionsAB/rdforms/releases/tag/4.1), a JavaScript library that provides a way to declarative describe how the editor and presentation views of RDF should look like. Before you can use the editor you need to make sure all the dependencies for RDForms are loaded and RDForms is build. To load the dependencies, simply run:
 
     $ cd path_to_cpsv-ap_creator
     $ npm   install
