@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+
+  creator:
+    build: ./creator
+    image: bregdcat_creator:0.01
+    container_name: bregdcat-creator
+    ports:
+      - 48181:8181
+      - 48180:80
+    restart: unless-stopped

@@ -1,17 +1,17 @@
-# Data Catalog Vocabulary (DCAT) Description Creator
+# DCAT Application profile for base registries in Europe (BRegDCAT-AP)	Description Creator
 
-This is a proof of concept editor for editing public service descriptions according to the Data Catalog Vocabulary (DCAT) v2.0.1. The editor is driven by the RDForms library which uses templates to generate HTML Forms to edit RDF. The DCAT Describer will allow European public administrations to create public service descriptions in an easy-to-use web form and export these descriptions in DCAT 2.1 compliant machine-readable formats to store locally on a computer. 
+This is a proof of concept editor for editing public service descriptions according to the DCAT Application profile for base registries in Europe (BRegDCAT-AP)	v2.0.1. The editor is driven by the RDForms library which uses templates to generate HTML Forms to edit RDF. The DCAT Describer will allow European public administrations to create public service descriptions in an easy-to-use web form and export these descriptions in BRegDCAT-AP 2.0.1 compliant machine-readable formats to store locally on a computer. 
 
-The Data Catalog Vocabulary (DCAT) Description Creator uses [RDForms 4.1 by MetaSolutionsAB](https://github.com/MetaSolutionsAB/rdforms/releases/tag/4.1), a JavaScript library that provides a way to declarative describe how the editor and presentation views of RDF should look like. The configuration mechanism eliminates the need for programming once the library has been deployed into an environment. The main task of RDForms is to make it easy to construct form-based RDF editors in a web environment. To accomplish this, RDForms relies on a templating mechanism that both describes how to generate a HTML-form and how to map specific expressions in a RDF graph to corresponding fields. Simply put, RDForm uses a template to construct the input-form for the user and its transformation to RDF. 
+The DCAT Application profile for base registries in Europe (BRegDCAT-AP)	 Description Creator uses [RDForms 4.1 by MetaSolutionsAB](https://github.com/MetaSolutionsAB/rdforms/releases/tag/4.1), a JavaScript library that provides a way to declarative describe how the editor and presentation views of RDF should look like. The configuration mechanism eliminates the need for programming once the library has been deployed into an environment. The main task of RDForms is to make it easy to construct form-based RDF editors in a web environment. To accomplish this, RDForms relies on a templating mechanism that both describes how to generate a HTML-form and how to map specific expressions in a RDF graph to corresponding fields. Simply put, RDForm uses a template to construct the input-form for the user and its transformation to RDF. 
 
 
 ## Installation instructions
 
 ### Command-line installation instructions <a name="commandLineInstallation"></a>
 
-The Data Catalog Vocabulary (DCAT) Description Creator uses [RDForms 4.1 by MetaSolutionsAB](https://github.com/MetaSolutionsAB/rdforms/releases/tag/4.1), a JavaScript library that provides a way to declarative describe how the editor and presentation views of RDF should look like. Before you can use the editor you need to make sure all the dependencies for RDForms are loaded and RDForms is build. To load the dependencies, simply run:
+The DCAT Application profile for base registries in Europe (BRegDCAT-AP)	 Description Creator uses [RDForms 4.1 by MetaSolutionsAB](https://github.com/MetaSolutionsAB/rdforms/releases/tag/4.1), a JavaScript library that provides a way to declarative describe how the editor and presentation views of RDF should look like. Before you can use the editor you need to make sure all the dependencies for RDForms are loaded and RDForms is build. To load the dependencies, simply run:
 
-    $ cd path_to_cpsv-ap_creator
+    $ cd path_to_creator
     $ npm   install
     $ bower install
 
@@ -19,7 +19,7 @@ This requires that you have [nodejs](http://nodejs.org/), [npm](https://www.npmj
 
 After having installed the dependencies, build RDForms. This is done by:
 
-    $ cd path_to_cpsv-ap_creator/build
+    $ cd path_to_creator/build
     $ ./build.sh
 
 ## Configuration <a name="configuration"></a>
@@ -34,9 +34,9 @@ In Chrome this is done by starting the browser with the following flag: --allow-
 
 ## Usage instructions <a name="usageInstructions"></a>
 
-Open the publicserviceCreator.html file in your standard web browser. 
+Open the DCAT.html file in your standard web browser. 
 
-Edit your description in the editor tab, see the results in the present tab and download the resulting RDF in the RDF tab. Any changes you make in the editor will be reflected in the other tabs. Created descriptions can be imported into the RDF tab and then viewed (and possibly changed) in the editor tab. The tool allows to make a description for one public service and to export the created description.
+Edit your description in the editor tab, see the results in the present tab and download the resulting RDF in the RDF tab. Any changes you make in the editor will be reflected in the other tabs. Created descriptions can be imported into the RDF tab and then viewed (and possibly changed) in the editor tab. The tool allows to make a description for one catalog and to export the created description.
 
 ## License
 
