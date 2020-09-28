@@ -1,0 +1,8 @@
+{
+"version":3,
+"file":"Text.js",
+"lineCount":2,
+"mappings":"A;AACAA,MAAA,yDAAkE,QAAA,CAASC,CAAT,CAAkBC,CAAlB,QAKvDD,EAAA,CAAQC,CAAR,IALuD,CAAlE;",
+"sources":["Text.js.uncompressed.js"],
+"names":["define","declare","Item"]
+}

@@ -1,0 +1,4 @@
+//>>built
+define("rdforms/view/TreeOntologyChooser",["dojo/_base/declare","dojo/_base/lang","./Chooser","./ChoicesTreeModel","dijit/Tree"],function(c,a,d,e,f){return c(d,{postCreate:function(){this.inherited("postCreate",arguments);this.tree=new f({model:new e(this.binding.getItem().getChoices()||[]),showRoot:!1,onClick:a.hitch(this,this._selectChoice),getLabelClass:a.hitch(this,function(b){if(null==b)return"";var a=this.binding.getChoice();return!1===b.selectable?"notselectable":null!=a&&a.value===b.value?
+"currentselection":"default"})},this.selectionNode)}})});
+//# sourceMappingURL=TreeOntologyChooser.js.map

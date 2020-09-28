@@ -1,0 +1,3 @@
+//>>built
+define("rdforms/model/PropertyChoiceBinding",["dojo/_base/declare","./ChoiceBinding"],function(b,c){return b(c,{_objectBinding:null,constructor:function(a){this._objectBinding=a.objectBinding},remove:function(){},setValue:function(a){this._objectBinding.setPredicate(a)},getValue:function(){return this._objectBinding.getPredicate()},isValid:function(){return!1},updateAssertions:function(){}})});
+//# sourceMappingURL=PropertyChoiceBinding.js.map

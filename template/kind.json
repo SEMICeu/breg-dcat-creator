@@ -1,0 +1,2168 @@
+{
+ "templates": [
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#organization-unit",
+   "property": "http://www.w3.org/2006/vcard/ns#organization-unit",
+   "label": {
+    "en": "organizational unit name"
+   },
+   "description": {
+    "en": "To specify the organizational unit name associated with the object"
+   },
+   "type": "text",
+   "nodetype": "LITERAL",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#organization-name",
+   "property": "http://www.w3.org/2006/vcard/ns#organization-name",
+   "label": {
+    "en": "organization name"
+   },
+   "description": {
+    "en": "To specify the organizational name associated with the object"
+   },
+   "type": "text",
+   "nodetype": "LITERAL",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#anniversary",
+   "property": "http://www.w3.org/2006/vcard/ns#anniversary",
+   "label": {
+    "en": "anniversary"
+   },
+   "description": {
+    "en": "The date of marriage, or equivalent, of the object"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "_:n31"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#bday",
+   "property": "http://www.w3.org/2006/vcard/ns#bday",
+   "label": {
+    "en": "birth date"
+   },
+   "description": {
+    "en": "To specify the birth date of the object"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "_:n34"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#category",
+   "property": "http://www.w3.org/2006/vcard/ns#category",
+   "label": {
+    "en": "category"
+   },
+   "description": {
+    "en": "The category information about the object, also known as tags"
+   },
+   "type": "text",
+   "nodetype": "LITERAL",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#class",
+   "property": "http://www.w3.org/2006/vcard/ns#class",
+   "label": {
+    "en": "class"
+   },
+   "description": {
+    "en": "This data property has been deprecated"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#extended-address",
+   "property": "http://www.w3.org/2006/vcard/ns#extended-address",
+   "label": {
+    "en": "extended address"
+   },
+   "description": {
+    "en": "This data property has been deprecated"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#nickname",
+   "property": "http://www.w3.org/2006/vcard/ns#nickname",
+   "label": {
+    "en": "nickname"
+   },
+   "description": {
+    "en": "The nick name associated with the object"
+   },
+   "type": "text",
+   "nodetype": "LITERAL",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#label",
+   "property": "http://www.w3.org/2006/vcard/ns#label",
+   "label": {
+    "en": "label"
+   },
+   "description": {
+    "en": "This data property has been deprecated"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#language",
+   "property": "http://www.w3.org/2006/vcard/ns#language",
+   "label": {
+    "en": "language"
+   },
+   "description": {
+    "en": "To specify the language that may be used for contacting the object. May also be used as a property parameter."
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#latitude",
+   "property": "http://www.w3.org/2006/vcard/ns#latitude",
+   "label": {
+    "en": "latitude"
+   },
+   "description": {
+    "en": "This data property has been deprecated. See hasGeo"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#longitude",
+   "property": "http://www.w3.org/2006/vcard/ns#longitude",
+   "label": {
+    "en": "longitude"
+   },
+   "description": {
+    "en": "This data property has been deprecated. See hasGeo"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#mailer",
+   "property": "http://www.w3.org/2006/vcard/ns#mailer",
+   "label": {
+    "en": "mailer"
+   },
+   "description": {
+    "en": "This data property has been deprecated"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#note",
+   "property": "http://www.w3.org/2006/vcard/ns#note",
+   "label": {
+    "en": "note"
+   },
+   "description": {
+    "en": "A note associated with the object"
+   },
+   "type": "text",
+   "nodetype": "LITERAL",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#post-office-box",
+   "property": "http://www.w3.org/2006/vcard/ns#post-office-box",
+   "label": {
+    "en": "post office box"
+   },
+   "description": {
+    "en": "This data property has been deprecated"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#prodid",
+   "property": "http://www.w3.org/2006/vcard/ns#prodid",
+   "label": {
+    "en": "product id"
+   },
+   "description": {
+    "en": "To specify the identifier for the product that created the object"
+   },
+   "type": "text",
+   "nodetype": "LITERAL",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#rev",
+   "property": "http://www.w3.org/2006/vcard/ns#rev",
+   "label": {
+    "en": "revision"
+   },
+   "description": {
+    "en": "To specify revision information about the object"
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#role",
+   "property": "http://www.w3.org/2006/vcard/ns#role",
+   "label": {
+    "en": "role"
+   },
+   "description": {
+    "en": "To specify the function or part played in a particular situation by the object"
+   },
+   "type": "text",
+   "nodetype": "LITERAL",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#sort-string",
+   "property": "http://www.w3.org/2006/vcard/ns#sort-string",
+   "label": {
+    "en": "sort as"
+   },
+   "description": {
+    "en": "To specify the string to be used for national-language-specific sorting. Used as a property parameter only."
+   },
+   "type": "text",
+   "nodetype": "LITERAL",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#title",
+   "property": "http://www.w3.org/2006/vcard/ns#title",
+   "label": {
+    "en": "title"
+   },
+   "description": {
+    "en": "To specify the position or job of the object"
+   },
+   "type": "text",
+   "nodetype": "LITERAL",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#tz",
+   "property": "http://www.w3.org/2006/vcard/ns#tz",
+   "label": {
+    "en": "time zone"
+   },
+   "description": {
+    "en": "To indicate time zone information that is specific to the object. May also be used as a property parameter."
+   },
+   "type": "text",
+   "nodetype": "LITERAL",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#value",
+   "property": "http://www.w3.org/2006/vcard/ns#value",
+   "label": {
+    "en": "value"
+   },
+   "description": {
+    "en": "Used to indicate the literal value of a data property that requires property parameters"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#fn",
+   "property": "http://www.w3.org/2006/vcard/ns#fn",
+   "label": {
+    "en": "formatted name"
+   },
+   "description": {
+    "en": "The formatted text corresponding to the name of the object"
+   },
+   "type": "text",
+   "nodetype": "LITERAL",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#additional-name",
+   "property": "http://www.w3.org/2006/vcard/ns#additional-name",
+   "label": {
+    "en": "additional name"
+   },
+   "description": {
+    "en": "The additional name associated with the object"
+   },
+   "type": "text",
+   "nodetype": "LITERAL",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#country-name",
+   "property": "http://www.w3.org/2006/vcard/ns#country-name",
+   "label": {
+    "en": "country name"
+   },
+   "description": {
+    "en": "The country name associated with the address of the object"
+   },
+   "type": "text",
+   "nodetype": "LITERAL",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#family-name",
+   "property": "http://www.w3.org/2006/vcard/ns#family-name",
+   "label": {
+    "en": "family name"
+   },
+   "description": {
+    "en": "The family name associated with the object"
+   },
+   "type": "text",
+   "nodetype": "LITERAL",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#given-name",
+   "property": "http://www.w3.org/2006/vcard/ns#given-name",
+   "label": {
+    "en": "given name"
+   },
+   "description": {
+    "en": "The given name associated with the object"
+   },
+   "type": "text",
+   "nodetype": "LITERAL",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#honorific-prefix",
+   "property": "http://www.w3.org/2006/vcard/ns#honorific-prefix",
+   "label": {
+    "en": "honorific prefix"
+   },
+   "description": {
+    "en": "The honorific prefix of the name associated with the object"
+   },
+   "type": "text",
+   "nodetype": "LITERAL",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#honorific-suffix",
+   "property": "http://www.w3.org/2006/vcard/ns#honorific-suffix",
+   "label": {
+    "en": "honorific suffix"
+   },
+   "description": {
+    "en": "The honorific suffix of the name associated with the object"
+   },
+   "type": "text",
+   "nodetype": "LITERAL",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#locality",
+   "property": "http://www.w3.org/2006/vcard/ns#locality",
+   "label": {
+    "en": "locality"
+   },
+   "description": {
+    "en": "The locality (e.g. city or town) associated with the address of the object"
+   },
+   "type": "text",
+   "nodetype": "LITERAL",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#postal-code",
+   "property": "http://www.w3.org/2006/vcard/ns#postal-code",
+   "label": {
+    "en": "postal code"
+   },
+   "description": {
+    "en": "The postal code associated with the address of the object"
+   },
+   "type": "text",
+   "nodetype": "LITERAL",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#region",
+   "property": "http://www.w3.org/2006/vcard/ns#region",
+   "label": {
+    "en": "region"
+   },
+   "description": {
+    "en": "The region (e.g. state or province) associated with the address of the object"
+   },
+   "type": "text",
+   "nodetype": "LITERAL",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#street-address",
+   "property": "http://www.w3.org/2006/vcard/ns#street-address",
+   "label": {
+    "en": "street address"
+   },
+   "description": {
+    "en": "The street address associated with the address of the object"
+   },
+   "type": "text",
+   "nodetype": "LITERAL",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#adr",
+   "property": "http://www.w3.org/2006/vcard/ns#adr",
+   "label": {
+    "en": "address"
+   },
+   "description": {
+    "en": "This object property has been mapped"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#hasAddress",
+   "property": "http://www.w3.org/2006/vcard/ns#hasAddress",
+   "label": {
+    "en": "has address"
+   },
+   "description": {
+    "en": "To specify the components of the delivery address for the object"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Address"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#agent",
+   "property": "http://www.w3.org/2006/vcard/ns#agent",
+   "label": {
+    "en": "agent"
+   },
+   "description": {
+    "en": "This object property has been deprecated"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#email",
+   "property": "http://www.w3.org/2006/vcard/ns#email",
+   "label": {
+    "en": "email"
+   },
+   "description": {
+    "en": "This object property has been mapped"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#hasEmail",
+   "property": "http://www.w3.org/2006/vcard/ns#hasEmail",
+   "label": {
+    "en": "has email"
+   },
+   "description": {
+    "en": "To specify the electronic mail address for communication with the object"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Email"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#geo",
+   "property": "http://www.w3.org/2006/vcard/ns#geo",
+   "label": {
+    "en": "geo"
+   },
+   "description": {
+    "en": "This object property has been mapped"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#hasGeo",
+   "property": "http://www.w3.org/2006/vcard/ns#hasGeo",
+   "label": {
+    "en": "has geo"
+   },
+   "description": {
+    "en": "To specify information related to the global positioning of the object. May also be used as a property parameter."
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#hasAdditionalName",
+   "property": "http://www.w3.org/2006/vcard/ns#hasAdditionalName",
+   "label": {
+    "en": "has additional name"
+   },
+   "description": {
+    "en": "Used to support property parameters for the additional name data property"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#hasCalendarBusy",
+   "property": "http://www.w3.org/2006/vcard/ns#hasCalendarBusy",
+   "label": {
+    "en": "has calendar busy"
+   },
+   "description": {
+    "en": "To specify the busy time associated with the object. (Was called FBURL in RFC6350)"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#hasCalendarLink",
+   "property": "http://www.w3.org/2006/vcard/ns#hasCalendarLink",
+   "label": {
+    "en": "has calendar link"
+   },
+   "description": {
+    "en": "To specify the calendar associated with the object. (Was called CALURI in RFC6350)"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#hasCalendarRequest",
+   "property": "http://www.w3.org/2006/vcard/ns#hasCalendarRequest",
+   "label": {
+    "en": "has calendar request"
+   },
+   "description": {
+    "en": "To specify the calendar user address to which a scheduling request be sent for the object. (Was called CALADRURI in RFC6350)"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#hasCategory",
+   "property": "http://www.w3.org/2006/vcard/ns#hasCategory",
+   "label": {
+    "en": "has category"
+   },
+   "description": {
+    "en": "Used to support property parameters for the category data property"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#hasCountryName",
+   "property": "http://www.w3.org/2006/vcard/ns#hasCountryName",
+   "label": {
+    "en": "has country name"
+   },
+   "description": {
+    "en": "Used to support property parameters for the country name data property"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#hasFN",
+   "property": "http://www.w3.org/2006/vcard/ns#hasFN",
+   "label": {
+    "en": "has formatted name"
+   },
+   "description": {
+    "en": "Used to support property parameters for the formatted name data property"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#hasFamilyName",
+   "property": "http://www.w3.org/2006/vcard/ns#hasFamilyName",
+   "label": {
+    "en": "has family name"
+   },
+   "description": {
+    "en": "Used to support property parameters for the family name data property"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#hasGender",
+   "property": "http://www.w3.org/2006/vcard/ns#hasGender",
+   "label": {
+    "en": "has gender"
+   },
+   "description": {
+    "en": "To specify  the sex or gender identity of the object. URIs are recommended to enable interoperable sex and gender codes to be used."
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#hasGivenName",
+   "property": "http://www.w3.org/2006/vcard/ns#hasGivenName",
+   "label": {
+    "en": "has given name"
+   },
+   "description": {
+    "en": "Used to support property parameters for the given name data property"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#hasHonorificPrefix",
+   "property": "http://www.w3.org/2006/vcard/ns#hasHonorificPrefix",
+   "label": {
+    "en": "has honorific prefix"
+   },
+   "description": {
+    "en": "Used to support property parameters for the honorific prefix data property"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#hasHonorificSuffix",
+   "property": "http://www.w3.org/2006/vcard/ns#hasHonorificSuffix",
+   "label": {
+    "en": "has honorific suffix"
+   },
+   "description": {
+    "en": "Used to support property parameters for the honorific suffix data property"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#hasInstantMessage",
+   "property": "http://www.w3.org/2006/vcard/ns#hasInstantMessage",
+   "label": {
+    "en": "has messaging"
+   },
+   "description": {
+    "en": "To specify the instant messaging and presence protocol communications with the object. (Was called IMPP in RFC6350)"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#hasLanguage",
+   "property": "http://www.w3.org/2006/vcard/ns#hasLanguage",
+   "label": {
+    "en": "has language"
+   },
+   "description": {
+    "en": "Used to support property parameters for the language data property"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#hasLocality",
+   "property": "http://www.w3.org/2006/vcard/ns#hasLocality",
+   "label": {
+    "en": "has locality"
+   },
+   "description": {
+    "en": "Used to support property parameters for the locality data property"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#hasNickname",
+   "property": "http://www.w3.org/2006/vcard/ns#hasNickname",
+   "label": {
+    "en": "has nickname"
+   },
+   "description": {
+    "en": "Used to support property parameters for the nickname data property"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#hasNote",
+   "property": "http://www.w3.org/2006/vcard/ns#hasNote",
+   "label": {
+    "en": "has note"
+   },
+   "description": {
+    "en": "Used to support property parameters for the note data property"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#hasOrganizationName",
+   "property": "http://www.w3.org/2006/vcard/ns#hasOrganizationName",
+   "label": {
+    "en": "has organization name"
+   },
+   "description": {
+    "en": "Used to support property parameters for the organization name data property"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#hasOrganizationUnit",
+   "property": "http://www.w3.org/2006/vcard/ns#hasOrganizationUnit",
+   "label": {
+    "en": "has organization unit name"
+   },
+   "description": {
+    "en": "Used to support property parameters for the organization unit name data property"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#hasPostalCode",
+   "property": "http://www.w3.org/2006/vcard/ns#hasPostalCode",
+   "label": {
+    "en": "has postal code"
+   },
+   "description": {
+    "en": "Used to support property parameters for the postal code data property"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#hasRegion",
+   "property": "http://www.w3.org/2006/vcard/ns#hasRegion",
+   "label": {
+    "en": "has region"
+   },
+   "description": {
+    "en": "Used to support property parameters for the region data property"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#hasRelated",
+   "property": "http://www.w3.org/2006/vcard/ns#hasRelated",
+   "label": {
+    "en": "has related"
+   },
+   "description": {
+    "en": "To specify a relationship between another entity and the entity represented by this object"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#hasRole",
+   "property": "http://www.w3.org/2006/vcard/ns#hasRole",
+   "label": {
+    "en": "has role"
+   },
+   "description": {
+    "en": "Used to support property parameters for the role data property"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#hasSource",
+   "property": "http://www.w3.org/2006/vcard/ns#hasSource",
+   "label": {
+    "en": "has source"
+   },
+   "description": {
+    "en": "To identify the source of directory information of the object"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#hasStreetAddress",
+   "property": "http://www.w3.org/2006/vcard/ns#hasStreetAddress",
+   "label": {
+    "en": "has street address"
+   },
+   "description": {
+    "en": "Used to support property parameters for the street address data property"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#hasTitle",
+   "property": "http://www.w3.org/2006/vcard/ns#hasTitle",
+   "label": {
+    "en": "has title"
+   },
+   "description": {
+    "en": "Used to support property parameters for the title data property"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#hasUID",
+   "property": "http://www.w3.org/2006/vcard/ns#hasUID",
+   "label": {
+    "en": "has uid"
+   },
+   "description": {
+    "en": "To specify a value that represents a globally unique identifier corresponding to the object"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#hasValue",
+   "property": "http://www.w3.org/2006/vcard/ns#hasValue",
+   "label": {
+    "en": "has value"
+   },
+   "description": {
+    "en": "Used to indicate the resource value of an object property that requires property parameters"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#org",
+   "property": "http://www.w3.org/2006/vcard/ns#org",
+   "label": {
+    "en": "organization"
+   },
+   "description": {
+    "en": "This object property has been mapped. Use the organization-name data property."
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#hasKey",
+   "property": "http://www.w3.org/2006/vcard/ns#hasKey",
+   "label": {
+    "en": "has key"
+   },
+   "description": {
+    "en": "To specify a public key or authentication certificate associated with the object"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#key",
+   "property": "http://www.w3.org/2006/vcard/ns#key",
+   "label": {
+    "en": "key"
+   },
+   "description": {
+    "en": "This object property has been mapped"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#hasLogo",
+   "property": "http://www.w3.org/2006/vcard/ns#hasLogo",
+   "label": {
+    "en": "has logo"
+   },
+   "description": {
+    "en": "To specify a graphic image of a logo associated with the object "
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#logo",
+   "property": "http://www.w3.org/2006/vcard/ns#logo",
+   "label": {
+    "en": "logo"
+   },
+   "description": {
+    "en": "This object property has been mapped"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#hasName",
+   "property": "http://www.w3.org/2006/vcard/ns#hasName",
+   "label": {
+    "en": "has name"
+   },
+   "description": {
+    "en": "To specify the components of the name of the object"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Name"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#n",
+   "property": "http://www.w3.org/2006/vcard/ns#n",
+   "label": {
+    "en": "name"
+   },
+   "description": {
+    "en": "This object property has been mapped"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#hasPhoto",
+   "property": "http://www.w3.org/2006/vcard/ns#hasPhoto",
+   "label": {
+    "en": "has photo"
+   },
+   "description": {
+    "en": "To specify an image or photograph information that annotates some aspect of the object"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#photo",
+   "property": "http://www.w3.org/2006/vcard/ns#photo",
+   "label": {
+    "en": "photo"
+   },
+   "description": {
+    "en": "This object property has been mapped"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#hasSound",
+   "property": "http://www.w3.org/2006/vcard/ns#hasSound",
+   "label": {
+    "en": "has sound"
+   },
+   "description": {
+    "en": "To specify a digital sound content information that annotates some aspect of the object"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#sound",
+   "property": "http://www.w3.org/2006/vcard/ns#sound",
+   "label": {
+    "en": "sound"
+   },
+   "description": {
+    "en": "This object property has been mapped"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#hasTelephone",
+   "property": "http://www.w3.org/2006/vcard/ns#hasTelephone",
+   "label": {
+    "en": "has telephone"
+   },
+   "description": {
+    "en": "To specify the telephone number for telephony communication with the object"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#tel",
+   "property": "http://www.w3.org/2006/vcard/ns#tel",
+   "label": {
+    "en": "telephone"
+   },
+   "description": {
+    "en": "This object property has been mapped"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#hasURL",
+   "property": "http://www.w3.org/2006/vcard/ns#hasURL",
+   "label": {
+    "en": "has url"
+   },
+   "description": {
+    "en": "To specify a uniform resource locator associated with the object"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#url",
+   "property": "http://www.w3.org/2006/vcard/ns#url",
+   "label": {
+    "en": "url"
+   },
+   "description": {
+    "en": "This object property has been mapped"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#hasMember",
+   "property": "http://www.w3.org/2006/vcard/ns#hasMember",
+   "label": {
+    "en": "has member"
+   },
+   "description": {
+    "en": "To include a member in the group this object represents. (This property can only be used by Group individuals)"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Kind"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Acquaintance",
+   "label": {
+    "en": "Acquaintance"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Acquaintance"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Agent",
+   "label": {
+    "en": "Agent"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Agent"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#BBS",
+   "label": {
+    "en": "BBS"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#BBS"
+   },
+   "description": {
+    "en": "This class is deprecated"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Car",
+   "label": {
+    "en": "Car"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Car"
+   },
+   "description": {
+    "en": "This class is deprecated"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Cell",
+   "label": {
+    "en": "Cell"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Cell"
+   },
+   "description": {
+    "en": "Also called mobile telephone"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Child",
+   "label": {
+    "en": "Child"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Child"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Colleague",
+   "label": {
+    "en": "Colleague"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Colleague"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Contact",
+   "label": {
+    "en": "Contact"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Contact"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Coresident",
+   "label": {
+    "en": "Coresident"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Coresident"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Coworker",
+   "label": {
+    "en": "Coworker"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Coworker"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Crush",
+   "label": {
+    "en": "Crush"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Crush"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Date",
+   "label": {
+    "en": "Date"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Date"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Dom",
+   "label": {
+    "en": "Dom"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Dom"
+   },
+   "description": {
+    "en": "This class is deprecated"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Emergency",
+   "label": {
+    "en": "Emergency"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Emergency"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Fax",
+   "label": {
+    "en": "Fax"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Fax"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Female",
+   "label": {
+    "en": "Female"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Female"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Friend",
+   "label": {
+    "en": "Friend"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Friend"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Home",
+   "label": {
+    "en": "Home"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Home"
+   },
+   "description": {
+    "en": "This implies that the property is related to an individual's personal life"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#ISDN",
+   "label": {
+    "en": "ISDN"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#ISDN"
+   },
+   "description": {
+    "en": "This class is deprecated"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Internet",
+   "label": {
+    "en": "Internet"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Internet"
+   },
+   "description": {
+    "en": "This class is deprecated"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Intl",
+   "label": {
+    "en": "Intl"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Intl"
+   },
+   "description": {
+    "en": "This class is deprecated"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Kin",
+   "label": {
+    "en": "Kin"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Kin"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Label",
+   "label": {
+    "en": "Label"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Label"
+   },
+   "description": {
+    "en": "This class is deprecated"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Male",
+   "label": {
+    "en": "Male"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Male"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Me",
+   "label": {
+    "en": "Me"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Me"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Met",
+   "label": {
+    "en": "Met"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Met"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Modem",
+   "label": {
+    "en": "Modem"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Modem"
+   },
+   "description": {
+    "en": "This class is deprecated"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Msg",
+   "label": {
+    "en": "Msg"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Msg"
+   },
+   "description": {
+    "en": "This class is deprecated"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Muse",
+   "label": {
+    "en": "Muse"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Muse"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Neighbor",
+   "label": {
+    "en": "Neighbor"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Neighbor"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#None",
+   "label": {
+    "en": "None"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#None"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Other",
+   "label": {
+    "en": "Other"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Other"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#PCS",
+   "label": {
+    "en": "PCS"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#PCS"
+   },
+   "description": {
+    "en": "This class is deprecated"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Pager",
+   "label": {
+    "en": "Pager"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Pager"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Parcel",
+   "label": {
+    "en": "Parcel"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Parcel"
+   },
+   "description": {
+    "en": "This class is deprecated"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Parent",
+   "label": {
+    "en": "Parent"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Parent"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Postal",
+   "label": {
+    "en": "Postal"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Postal"
+   },
+   "description": {
+    "en": "This class is deprecated"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Pref",
+   "label": {
+    "en": "Pref"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Pref"
+   },
+   "description": {
+    "en": "This class is deprecated"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Sibling",
+   "label": {
+    "en": "Sibling"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Sibling"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Spouse",
+   "label": {
+    "en": "Spouse"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Spouse"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Sweetheart",
+   "label": {
+    "en": "Sweetheart"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Sweetheart"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Tel",
+   "label": {
+    "en": "Tel"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Tel"
+   },
+   "description": {
+    "en": "This class is deprecated. Use the hasTelephone object property."
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Text",
+   "label": {
+    "en": "Text"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Text"
+   },
+   "description": {
+    "en": "Also called sms telephone"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#TextPhone",
+   "label": {
+    "en": "Text phone"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#TextPhone"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Unknown",
+   "label": {
+    "en": "Unknown"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Unknown"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Video",
+   "label": {
+    "en": "Video"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Video"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Voice",
+   "label": {
+    "en": "Voice"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Voice"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Work",
+   "label": {
+    "en": "Work"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Work"
+   },
+   "description": {
+    "en": "This implies that the property is related to an individual's work place"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#X400",
+   "label": {
+    "en": "X400"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#X400"
+   },
+   "description": {
+    "en": "This class is deprecated"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Address",
+   "label": {
+    "en": "Address"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Address"
+   },
+   "description": {
+    "en": "To specify the components of the delivery address for the  object"
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "_:n0",
+   "label": {
+    "en": "_:n0"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "_:n0"
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "_:n2",
+   "label": {
+    "en": "_:n2"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "_:n2"
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "_:n8",
+   "label": {
+    "en": "_:n8"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "_:n8"
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "_:n14",
+   "label": {
+    "en": "_:n14"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "_:n14"
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "_:n20",
+   "label": {
+    "en": "_:n20"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "_:n20"
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "_:n26",
+   "label": {
+    "en": "_:n26"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "_:n26"
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Email",
+   "label": {
+    "en": "Email"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Email"
+   },
+   "description": {
+    "en": "To specify the electronic mail address for communication with the object the vCard represents. Use the hasEmail object property."
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Group",
+   "label": {
+    "en": "Group"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Group"
+   },
+   "description": {
+    "en": "Object representing a group of persons or entities.  A group object will usually contain hasMember properties to specify the members of the group."
+   },
+   "type": "group",
+   "items": [
+    "http://www.w3.org/2006/vcard/ns#hasMember"
+   ]
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Individual",
+   "label": {
+    "en": "Individual"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Individual"
+   },
+   "description": {
+    "en": "An object representing a single person or entity"
+   },
+   "type": "group"
+  },
+  {
+   "id": "_:n38",
+   "label": {
+    "en": "_:n38"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "_:n38"
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Name",
+   "label": {
+    "en": "Name"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Name"
+   },
+   "description": {
+    "en": "To specify the components of the name of the object"
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "_:n43",
+   "label": {
+    "en": "_:n43"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "_:n43"
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "_:n45",
+   "label": {
+    "en": "_:n45"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "_:n45"
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "_:n51",
+   "label": {
+    "en": "_:n51"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "_:n51"
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "_:n57",
+   "label": {
+    "en": "_:n57"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "_:n57"
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "_:n63",
+   "label": {
+    "en": "_:n63"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "_:n63"
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "_:n69",
+   "label": {
+    "en": "_:n69"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "_:n69"
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#VCard",
+   "label": {
+    "en": "VCard"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#VCard"
+   },
+   "description": {
+    "en": "The vCard class is  equivalent to the new Kind class, which is the parent for the four explicit types of vCards (Individual, Organization, Location, Group)"
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Location",
+   "label": {
+    "en": "Location"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Location"
+   },
+   "description": {
+    "en": "An object representing a named geographical place"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Organization",
+   "label": {
+    "en": "Organization"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Organization"
+   },
+   "description": {
+    "en": "An object representing an organization.  An organization is a single entity, and might represent a business or government, a department or division within a business or government, a club, an association, or the like.\n"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Gender",
+   "label": {
+    "en": "Gender"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Gender"
+   },
+   "description": {
+    "en": "Used for gender codes. The URI of the gender code must be used as the value for Gender."
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Kind",
+   "label": {
+    "en": "Kind"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Kind"
+   },
+   "description": {
+    "en": "The parent class for all objects"
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Type",
+   "label": {
+    "en": "Type"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Type"
+   },
+   "description": {
+    "en": "Used for type codes. The URI of the type code must be used as the value for Type."
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#TelephoneType",
+   "label": {
+    "en": "Phone"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#TelephoneType"
+   },
+   "description": {
+    "en": "Used for telephone type codes. The URI of the telephone type code must be used as the value for the Telephone Type."
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#RelatedType",
+   "label": {
+    "en": "Relation Type"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#RelatedType"
+   },
+   "description": {
+    "en": "Used for relation type codes. The URI of the relation type code must be used as the value for the Relation Type."
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2002/07/owl#Thing",
+   "label": {
+    "en": "owl#Thing"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2002/07/owl#Thing"
+   },
+   "type": "group"
+  }
+ ],
+ "scope": "dcat",
+ "namespace": "http://www.w3.org/ns/dcat#",
+ "root": "dcat:Catalog"
+}

@@ -1,0 +1,8 @@
+{
+"version":3,
+"file":"PropertyGroup.js",
+"lineCount":2,
+"mappings":"A;AACAA,MAAA,mEAA4E,QAAA,CAASC,CAAT,CAAkBC,CAAlB,QASjED,EAAA,CAAQC,CAAR,cAIUC,QAAAA,YACLC,uBADKD,MAEDE,kBAA4BC,QAAAA,8BAA5BD,CAGJD,wBALKD,CAKqBI,IAAAC,IAAA,CAASC,cAAA,eAA8BC,SAA9B,CAAT,CAAmD,QAAA,CAASC,CAAT,QAClEJ,KAAAK,SAAA,CAAcD,CAAd,CAAqBN,CAArB,CADkE,CAAnD,CALrBF,OASFC,wBATED,CAJV,iBAecU,QAAAA,SACNV,iBAAA,EAAA,GADMU,CAfd,eAkBYC,QAAAA,SACJX,iBAAA,EAAA,GADIW,CAlBZ,EATiE,CAA5E;",
+"sources":["PropertyGroup.js.uncompressed.js"],
+"names":["define","declare","Group","getChildren","_delegatedChildren","override","getCardinality","dojo","map","inherited","arguments","child","delegate","getPropertyItem","getObjectItem"]
+}

@@ -1,0 +1,4 @@
+//>>built
+define("rdforms/model/ChoiceBinding",["dojo/_base/declare","./ValueBinding"],function(g,h){var b=g(h,{_choice:null,setChoice:function(a){this._choice=a;null==a?this.setValue(null):this.getValue()!=a.value&&this.setValue(a.value,a)},getChoice:function(){return this._choice},constructor:function(a){this._choice=a.choice},remove:function(){this.setValue(null);this.inherited("remove",arguments)},setValue:function(a,c){var d=this.getValue();this.inherited("setValue",arguments);var e=this._statement.getGraph();
+e.findAndRemove(d,b.label);e.findAndRemove(d,b.seeAlso);if(null!=a&&null!=c&&(c.seeAlso&&c.inlineSeeAlso&&e.create(a,b.seeAlso,c.seeAlso),!0===c.inlineLabel)){var d=c.label||{},f;for(f in d)d.hasOwnProperty(f)&&e.create(a,b.label,{value:d[f],lang:f,type:"literal"})}}});b.label="http://www.w3.org/2000/01/rdf-schema#label";b.seeAlso="http://www.w3.org/2000/01/rdf-schema#seeAlso";return b});
+//# sourceMappingURL=ChoiceBinding.js.map

@@ -1,0 +1,8 @@
+{
+"version":3,
+"file":"download.js",
+"lineCount":3,
+"mappings":"A;AACAA,QAASA,SAATA,CAAkBC,CAAlBD,CAA4BE,CAA5BF,EACkBG,KAAAC,KAAAC,+BADlBL,KAEQM,EAAUC,QAAAC,cAAA,KACdF,EAAAG,aAAA,4CAAgEC,kBAAA,CAAmBR,CAAnB,CAAhE,CACAI,EAAAG,aAAA,YAAiCR,CAAjC,CAEAK,EAAAK,MAAAC,QANJZ,OAOIO,SAAAM,KAAAC,YAAA,CAA0BR,CAA1B,CAEAA,EAAAS,MAAA,EAEAR,SAAAM,KAAAG,YAAA,CAA0BV,CAA1B,CAXJN;AAeAiB,QAASA,gBAATA,kCAE0BC,CAAA,0JAAAC,KAAAC,MAF1BH,CAIQjB,QAAA,sCAA+CG,KAAAC,KAAA,+BAAAC,MAA/C,CAJRY,CAMOjB,QAAA,wCAAiDG,KAAAC,KAAA,+BAAAC,MAAjD,CANPY;",
+"sources":["download.js.uncompressed.js"],
+"names":["download","filename","text","dijit","byId","value","element","document","createElement","setAttribute","encodeURIComponent","style","display","body","appendChild","click","removeChild","downloadClicked","$","attr","activeTextField"]
+}

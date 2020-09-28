@@ -1,0 +1,2491 @@
+<!-- About the application profile -->
+<rdf:RDF xmlns:cc="http://creativecommons.org/ns#"
+         xmlns:dct="http://purl.org/dc/terms/"
+         xmlns:adms="http://www.w3.org/ns/adms#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:odrl="http://www.w3.org/ns/odrl/2/"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:dcat="http://www.w3.org/ns/dcat#"
+         xmlns:lcon="http://www.w3.org/ns/locn#"
+         xmlns:sioc="http://rdfs.org/sioc/ns#"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:prov="http://www.w3.org/ns/prov#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:schema="http://schema.org/"
+         xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+         xmlns:vann="http://purl.org/vocab/vann/"
+         xmlns:voaf="http://purl.org/vocommons/voaf#"
+         xmlns:wdrs="http://www.w3.org/2007/05/powder-s#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:spdx="http://spdx.org/rdf/terms#"
+         xmlns:time="http://www.w3.org/2006/time#"
+         xmlns:dcatap="http://data.europa.eu/r5r/"
+         xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#">
+   <owl:Ontology rdf:about="https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe">
+      <rdfs:label />
+      <dct:modified rdf:datatype="xsd:date">2019-11-15</dct:modified>
+      <dct:abstract xml:lang="en">The DCAT Application profile for data portals in Europe (DCAT-AP) is a specification based on the Data Catalogue vocabulary (DCAT) for describing public sector datasets in Europe. Its basic use case is to enable a cross-data portal search for data sets and make public sector data better searchable across borders and sectors. This can be achieved by the exchange of descriptions of data sets among data portals.</dct:abstract>
+      <cc:attributionName xml:lang="en">European Commission</cc:attributionName>
+      <rdfs:comment xml:lang="en">This document specifies the set of RDF classes and properties used in the DCAT Application profile for data portals in Europe (DCAT-AP).</rdfs:comment>
+      <owl:versionInfo>2.0.0</owl:versionInfo>
+      <dct:publisher rdf:resource="http://publications.europa.eu/resource/authority/corporate-body/DIGIT"/>
+      <cc:attributionURL rdf:resource="http://ec.europa.eu/"/>
+      <adms:versionNotes xml:lang="en">Change log for DCAT-AP v2.0.0: see github</adms:versionNotes>
+      <xhv:prev rdf:resource="https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe/release/200"/>
+      <wdrs:describedby rdf:resource="http://data.europa.eu/w21/6be4d036-2e6d-4528-a888-0e9a0e29c579"/>
+      <voaf:specializes rdf:resource="http://www.w3.org/ns/dcat#"/>
+      <dct:relation rdf:resource="http://data.europa.eu/w21/6be4d036-2e6d-4528-a888-0e9a0e29c579"/>
+      <dct:license>
+         <rdf:Description rdf:about="https://creativecommons.org/licenses/by/4.0/">
+            <dct:title>Attribution 4.0 International (CC BY 4.0)</dct:title>
+            <cc:attributionName>European Commission</cc:attributionName>
+            <cc:attributionURL rdf:resource="http://ec.europa.eu/"/>
+         </rdf:Description>
+      </dct:license>
+      <foaf:logo>
+         <rdf:Description rdf:about="https://joinup.ec.europa.eu/sites/default/files/imagecache/community_logo/DCAT_application_profile_for_European_data_portals_logo_0.png">
+            <rdfs:label >APlogo</rdfs:label>
+         </rdf:Description>
+      </foaf:logo>
+      <dct:conformsTo>
+         <rdf:Description rdf:about="https://joinup.ec.europa.eu/document/process-and-methodology-developing-core-vocabularies">
+            <dct:title>Process and Methodology for Developing Core Vocabularies</dct:title>
+         </rdf:Description>
+      </dct:conformsTo>
+      <dct:creator rdf:parseType="Resource">
+         <rdfs:seeAlso rdf:resource="http://makxdekkers.com/"/>
+         <foaf:name>Makx Dekkers</foaf:name>
+         <foaf:homepage rdf:resource="http://makxdekkers.com/"/>
+         <schema:affiliation rdf:parseType="Resource">
+            <foaf:name>AMI Consult</foaf:name>
+            <foaf:homepage rdf:resource="http://www.makxdekkers.com/"/>
+         </schema:affiliation>
+      </dct:creator>
+      <dct:creator rdf:parseType="Resource">
+         <rdfs:seeAlso rdf:resource="http://www.deri.ie/users/vassilios-peristeras/"/>
+         <foaf:name>Vassilios Peristeras</foaf:name>
+         <foaf:homepage rdf:resource="http://www.deri.ie/users/vassilios-peristeras/"/>
+         <schema:affiliation rdf:parseType="Resource">
+            <foaf:name>European Commission</foaf:name>
+            <foaf:homepage rdf:resource="http://ec.europa.eu/"/>
+         </schema:affiliation>
+      </dct:creator>
+      <dct:creator rdf:parseType="Resource">
+         <rdfs:seeAlso rdf:resource="http://nikosloutas.com/"/>
+         <foaf:name>Nikolaos Loutas</foaf:name>
+         <foaf:homepage rdf:resource="http://nikosloutas.com/"/>
+         <schema:affiliation rdf:parseType="Resource">
+            <foaf:name>PwC EU Services</foaf:name>
+            <foaf:homepage rdf:resource="http://www.pwc.com/gx/en/eu-institutions-services/"/>
+         </schema:affiliation>
+      </dct:creator>
+      <dct:creator rdf:parseType="Resource">
+         <rdfs:seeAlso rdf:resource="https://www.ails.ece.ntua.gr/people/natasa"/>
+         <foaf:name>Natasa Sofou</foaf:name>
+         <foaf:homepage rdf:resource="https://www.ails.ece.ntua.gr/people/natasa"/>
+         <schema:affiliation rdf:parseType="Resource">
+            <foaf:name>Artificial Intelligence and Learning Systems Laboratory, National Technical University of Athens</foaf:name>
+            <foaf:homepage rdf:resource="https://www.ails.ece.ntua.gr/"/>
+         </schema:affiliation>
+      </dct:creator>
+      <dct:creator rdf:parseType="Resource">
+         <foaf:name>Bert Van Nuffelen</foaf:name>
+         <foaf:homepage rdf:resource="https://www.linkedin.com/in/bert-van-nuffelen-a349634/"/>
+         <schema:affiliation rdf:parseType="Resource">
+            <foaf:name>TenForce</foaf:name>
+            <foaf:homepage rdf:resource="https://tenforce.com"/>
+         </schema:affiliation>
+      </dct:creator>
+      <foaf:maker rdf:parseType="Resource">
+         <foaf:name>DCAT-AP Working Group</foaf:name>
+         <foaf:page rdf:resource="https://github.com/SEMICeu/DCAT-AP"/>
+         <foaf:page rdf:resource="https://joinup.ec.europa.eu/node/64331"/>
+      </foaf:maker>
+   </owl:Ontology>
+
+   <!-- ####################################### -->
+   <!-- ##===================================## -->
+   <!-- ##==        FOAF                   ==## -->
+   <!-- ##===================================## -->
+   <!-- ####################################### -->
+
+  <!-- utility class, a candidate for replacing the pattern of subproperty-ing rdfs:label -->
+    <rdfs:Class rdf:about="http://xmlns.com/foaf/0.1/LabelProperty" >
+        <rdfs:label>Label Property</rdfs:label>
+        <rdfs:comment>A foaf:LabelProperty is any RDF property with texual values that serve as labels.</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdfs:Class>
+
+    <!-- FOAF classes (types) are listed first. -->
+
+    <rdfs:Class rdf:about="http://xmlns.com/foaf/0.1/Person" rdfs:label="Person" rdfs:comment="A person.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+        <owl:equivalentClass rdf:resource="http://schema.org/Person" />
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2000/10/swap/pim/contact#Person" />
+        <!--    <rdfs:subClassOf><owl:Class rdf:about="http://xmlns.com/wordnet/1.6/Person"/></rdfs:subClassOf> -->
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent"/>
+        </rdfs:subClassOf>
+        <!--    <rdfs:subClassOf><owl:Class rdf:about="http://xmlns.com/wordnet/1.6/Agent"/></rdfs:subClassOf> -->
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" rdfs:label="Spatial Thing"/>
+        </rdfs:subClassOf>
+        <!-- aside: 
+    are spatial things always spatially located? 
+	Person includes imaginary people... discuss... -->
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+
+        <!--    <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Document"/> this was a mistake; tattoo'd people, for example. -->
+
+        <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+    </rdfs:Class>
+    <!-- <rdfs:Class rdf:about="http://xmlns.com/foaf/0.1/Document" rdfs:label="Document" rdfs:comment="A document.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <owl:equivalentClass rdf:resource="http://schema.org/CreativeWork" />
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+    </rdfs:Class> -->
+    <rdfs:Class rdf:about="http://xmlns.com/foaf/0.1/Organization" rdfs:label="Organization" rdfs:comment="An organization.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <!--    <rdfs:subClassOf><owl:Class rdf:about="http://xmlns.com/wordnet/1.6/Organization"/></rdfs:subClassOf> -->
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    </rdfs:Class>
+    <rdfs:Class rdf:about="http://xmlns.com/foaf/0.1/Group" rdfs:label="Group" rdfs:comment="A class of Agents.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    </rdfs:Class>
+    <!-- <rdfs:Class rdf:about="http://xmlns.com/foaf/0.1/Agent" rdfs:label="Agent" rdfs:comment="An agent (eg. person, group, software or physical artifact).">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <owl:equivalentClass rdf:resource="http://purl.org/dc/terms/Agent"/>
+    </rdfs:Class> -->
+    <rdfs:Class rdf:about="http://xmlns.com/foaf/0.1/Project"  rdfs:label="Project" rdfs:comment="A project (a collective endeavour of some kind).">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <!--    <rdfs:subClassOf><owl:Class rdf:about="http://xmlns.com/wordnet/1.6/Project"/></rdfs:subClassOf> -->
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <!-- arguably a subclass of Agent; to be discussed -->
+    </rdfs:Class>
+    <rdfs:Class rdf:about="http://xmlns.com/foaf/0.1/Image" rdfs:label="Image" rdfs:comment="An image.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <owl:equivalentClass rdf:resource="http://schema.org/ImageObject" />
+        <!--    <rdfs:subClassOf><owl:Class rdf:about="http://xmlns.com/wordnet/1.6/Document"/></rdfs:subClassOf> -->
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Document"/>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://xmlns.com/foaf/0.1/PersonalProfileDocument" rdfs:label="PersonalProfileDocument" rdfs:comment="A personal profile RDF document." >
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://xmlns.com/foaf/0.1/OnlineAccount"  rdfs:label="Online Account" rdfs:comment="An online account.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing" rdfs:label="Thing"/>
+    </rdfs:Class>
+    <rdfs:Class rdf:about="http://xmlns.com/foaf/0.1/OnlineGamingAccount"  rdfs:label="Online Gaming Account" rdfs:comment="An online gaming account.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/OnlineAccount"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdfs:Class>
+    <rdfs:Class rdf:about="http://xmlns.com/foaf/0.1/OnlineEcommerceAccount"  rdfs:label="Online E-commerce Account" rdfs:comment="An online e-commerce account.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/OnlineAccount"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdfs:Class>
+    <rdfs:Class rdf:about="http://xmlns.com/foaf/0.1/OnlineChatAccount"  rdfs:label="Online Chat Account" rdfs:comment="An online chat account.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/OnlineAccount"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdfs:Class>
+    <!-- FOAF properties (ie. relationships). -->
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/mbox" rdfs:label="personal mailbox" rdfs:comment="A 
+personal mailbox, ie. an Internet mailbox associated with exactly one owner, the first owner of this mailbox. This is a 'static inverse functional property', in that  there is (across time and change) at most one individual that ever has any particular value for foaf:mbox.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/mbox_sha1sum"  rdfs:label="sha1sum of a personal mailbox URI name" rdfs:comment="The sha1sum of the URI of an Internet mailbox associated with exactly one owner, the  first owner of the mailbox.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+
+        <!--
+put it back in again 2006-01-29 - see 
+http://chatlogs.planetrdf.com/swig/2006-01-29.html#T21-12-35
+I have mailed rdfweb-dev@vapours.rdfweb.org for discussion.
+Libby
+
+Commenting out as a kindness to OWL DL users. The semantics didn't quite cover
+our usage anyway, since (a) we want static-across-time, which is so beyond OWL as 
+to be from another planet (b) we want identity reasoning invariant across xml:lang 
+tagging. FOAF code will know what to do. OWL folks note, this assertion might return. 
+
+danbri
+-->
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/gender"  rdfs:label="gender" rdfs:comment="The gender of this Agent (typically but not necessarily 'male' or 'female').">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <!-- whatever one's gender is, and we are liberal in leaving room for more options 
+    than 'male' and 'female', we model this so that an agent has only one gender. -->
+    </rdf:Property>
+
+
+
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/geekcode"  rdfs:label="geekcode" rdfs:comment="A textual geekcode for this person, see http://www.geekcode.com/geek.html">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/dnaChecksum"  rdfs:label="DNA checksum" rdfs:comment="A checksum for the DNA of some thing. Joke.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/sha1"  rdfs:label="sha1sum (hex)" rdfs:comment="A sha1sum hash, in hex.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <!-- rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty" -->
+        <!-- IFP under discussion -->
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/based_near"  rdfs:label="based near" rdfs:comment="A location that something is based near, for some broadly human notion of near.">
+        <!-- see http://esw.w3.org/topic/GeoOnion for extension  ideas -->
+        <!-- this was ranged as Agent... hmm -->
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+    <!-- FOAF naming properties -->
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/title"  rdfs:label="title" rdfs:comment="Title (Mr, Mrs, Ms, Dr. etc)">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/nick"  rdfs:label="nickname" rdfs:comment="A short informal nickname characterising an agent (includes login identifiers, IRC and other chat nicknames).">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+    <!-- ......................... chat IDs ........................... -->
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/jabberID"  rdfs:label="jabber ID" rdfs:comment="A jabber ID for something.">
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <!--
+    <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/nick"/>
+...different to the other IM IDs, as Jabber has wider usage, so 
+we don't want the implied rdfs:domain here.
+
+-->
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <!-- there is a case for using resources/URIs here, ... -->
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/aimChatID"  rdfs:label="AIM chat ID" rdfs:comment="An AIM chat ID">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/nick"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/skypeID"  rdfs:label="Skype ID" rdfs:comment="A Skype ID">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/nick"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <!-- todo: OWL2 easy key definition -->
+    </rdf:Property>
+
+    <!-- http://www.stud.uni-karlsruhe.de/~uck4/ICQ/Packet-112.html -->
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/icqChatID"  rdfs:label="ICQ chat ID" rdfs:comment="An ICQ chat ID">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/nick"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/yahooChatID"  rdfs:label="Yahoo chat ID" rdfs:comment="A Yahoo chat ID">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/nick"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/msnChatID"  rdfs:label="MSN chat ID" rdfs:comment="An MSN chat ID">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/nick"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    </rdf:Property>
+    <!-- ....................................................... -->
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/name"  rdfs:label="name" rdfs:comment="A name for some thing.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/firstName"  rdfs:label="firstName" rdfs:comment="The first name of a person.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/lastName"  rdfs:label="lastName" rdfs:comment="The last name of a person.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/givenName"  rdfs:label="Given name" rdfs:comment="The given name of some person.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/givenname"  rdfs:label="Given name" rdfs:comment="The given name of some person.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/surname"  rdfs:label="Surname" rdfs:comment="The surname of some person.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/family_name"  rdfs:label="family_name" rdfs:comment="The family name of some person.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/familyName"  rdfs:label="familyName" rdfs:comment="The family name of some person.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+    <!-- end of naming properties. See http://rdfweb.org/issues/show_bug.cgi?id=7
+	   for open issue / re-design discussions.
+	-->
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/phone"  rdfs:label="phone" rdfs:comment="A phone,  specified using fully qualified tel: URI scheme (refs: http://www.w3.org/Addressing/schemes.html#tel).">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/homepage" rdfs:label="homepage" rdfs:comment="A homepage for some thing.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/page"/>
+        <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/isPrimaryTopicOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <!--  previously: rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent" -->
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/weblog" rdfs:label="weblog" rdfs:comment="A weblog of some thing (whether person, group, company etc.).">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/page"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/openid"  rdfs:label="openid" rdfs:comment="An OpenID for an Agent.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/isPrimaryTopicOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/tipjar"  rdfs:label="tipjar" rdfs:comment="A tipjar document for this agent, describing means for payment and reward.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/page"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/plan"  rdfs:label="plan" rdfs:comment="A .plan comment, in the tradition of finger and '.plan' files.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/made" rdfs:label="made" rdfs:comment="Something that was made by this agent.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <owl:inverseOf rdf:resource="http://xmlns.com/foaf/0.1/maker"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/maker" rdfs:label="maker" rdfs:comment="An agent that 
+made this thing.">
+        <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/creator"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <owl:inverseOf rdf:resource="http://xmlns.com/foaf/0.1/made"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/img"  rdfs:label="image" rdfs:comment="An image that can be used to represent some thing (ie. those depictions which are particularly representative of something, eg. one's photo on a homepage).">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Image"/>
+        <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/depiction"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/depiction"  rdfs:label="depiction" rdfs:comment="A depiction of some thing.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Image"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <owl:inverseOf rdf:resource="http://xmlns.com/foaf/0.1/depicts"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/depicts"  rdfs:label="depicts" rdfs:comment="A thing depicted in this representation.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Image"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <owl:inverseOf rdf:resource="http://xmlns.com/foaf/0.1/depiction"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/thumbnail"  rdfs:label="thumbnail" rdfs:comment="A derived thumbnail image.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Image"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Image"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/myersBriggs"  rdfs:label="myersBriggs" rdfs:comment="A Myers Briggs (MBTI) personality classification.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/workplaceHomepage"  rdfs:label="workplace homepage" rdfs:comment="A workplace homepage of some person; the homepage of an organization they work for.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/workInfoHomepage"  rdfs:label="work info homepage" rdfs:comment="A work info homepage of some person; a page about their work for some organization.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/schoolHomepage"  rdfs:label="schoolHomepage" rdfs:comment="A homepage of a school attended by the person.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/knows" rdfs:label="knows" rdfs:comment="A person known by this person (indicating some level of reciprocated interaction between the parties).">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/interest"  rdfs:label="interest" rdfs:comment="A page about a topic of interest to this person.">
+        <!-- we should distinguish the page from the topic more carefully. danbri 2002-07-08 -->
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/topic_interest"  rdfs:label="topic_interest" rdfs:comment="A thing of interest to this person.">
+        <!-- we should distinguish the page from the topic more carefully. danbri 2002-07-08 -->
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/publications"  rdfs:label="publications" rdfs:comment="A link to the publications of this person.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+    <!-- by libby for ILRT mappings 2001-10-31 -->
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/currentProject"  rdfs:label="current project" rdfs:comment="A current project this person works on.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/pastProject"  rdfs:label="past project" rdfs:comment="A project this person has previously worked on.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/fundedBy"  rdfs:label="funded by" rdfs:comment="An organization funding a project or person.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/logo"  rdfs:label="logo" rdfs:comment="A logo representing some thing.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/topic"  rdfs:label="topic" rdfs:comment="A topic of some page or document.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <owl:inverseOf rdf:resource="http://xmlns.com/foaf/0.1/page"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/primaryTopic" rdfs:label="primary topic" rdfs:comment="The primary topic of some page or document.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <owl:inverseOf rdf:resource="http://xmlns.com/foaf/0.1/isPrimaryTopicOf"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/focus"  rdfs:label="focus" rdfs:comment="The underlying or 'focal' entity associated with some SKOS-described concept.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" rdfs:label="Concept"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/isPrimaryTopicOf" rdfs:label="is primary topic of" rdfs:comment="A document that this thing is the primary topic of.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/page"/>
+        <owl:inverseOf rdf:resource="http://xmlns.com/foaf/0.1/primaryTopic"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/page" rdfs:label="page" rdfs:comment="A page or document about this thing.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <owl:inverseOf rdf:resource="http://xmlns.com/foaf/0.1/topic"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/theme"  rdfs:label="theme" rdfs:comment="A theme.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/account"  rdfs:label="account" rdfs:comment="Indicates an account held by this agent.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/OnlineAccount"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/holdsAccount"  rdfs:label="holdsAccount" rdfs:comment="Indicates an account held by this agent.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/OnlineAccount"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/accountServiceHomepage"  rdfs:label="account service homepage" rdfs:comment="Indicates a homepage of the service provide for this online account.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/OnlineAccount"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/accountName"  rdfs:label="account name" rdfs:comment="Indicates the name (identifier) associated with this online account.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/OnlineAccount"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/member" rdfs:label="member" rdfs:comment="Indicates a member of a Group">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Group"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/membershipClass"  rdfs:label="membershipClass" rdfs:comment="Indicates the class of individuals that are a member of a Group">
+        <!-- maybe we should just use SPARQL or Rules, instead of trying to use OWL here -->
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+        <!-- Added to keep OWL DL from bluescreening. DON'T CROSS THE STREAMERS, etc. -->
+        <!-- This may get dropped if it means non-DL tools don't expose it as a real property.
+	 Should be fine though; I think only OWL stuff cares about AnnotationProperty.
+	 Dan									 -->
+
+        <!--    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Group"/> prose only for now...-->
+        <!--    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/> -->
+        <!--    <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Class"/> -->
+
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+
+
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/birthday"  rdfs:label="birthday" rdfs:comment="The birthday of this Agent, represented in mm-dd string form, eg. '12-31'.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/age"  rdfs:label="age" rdfs:comment="The age in years of some agent.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/status"  rdfs:label="status" rdfs:comment="A string expressing what the user is happy for the general public (normally) to know about their current activity.">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </rdf:Property>
+
+
+
+   <!-- ####################################### -->
+   <!-- ##===================================## -->
+   <!-- ##==        FOAF                   ==## -->
+   <!-- ##===================================## -->
+   <!-- ####################################### -->
+
+
+
+
+
+   <!-- ####################################### -->
+   <!-- ##===================================## -->
+   <!-- ##==        RESOURCE               ==## -->
+   <!-- ##===================================## -->
+   <!-- ####################################### -->
+
+
+  <!-- <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
+    <rdfs:label>Resource</rdfs:label>
+    <rdfs:comment>The class resource, everything.</rdfs:comment>
+  </rdfs:Class> -->
+
+  <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Class">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
+    <rdfs:label>Class</rdfs:label>
+    <rdfs:comment>The class of classes.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdfs:Class>
+
+  <rdf:Property rdf:about="http://www.w3.org/2000/01/rdf-schema#subClassOf">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
+    <rdfs:label>subClassOf</rdfs:label>
+    <rdfs:comment>The subject is a subclass of a class.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.w3.org/2000/01/rdf-schema#subPropertyOf">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
+    <rdfs:label>subPropertyOf</rdfs:label>
+    <rdfs:comment>The subject is a subproperty of a property.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
+    <rdfs:label>comment</rdfs:label>
+    <rdfs:comment>A description of the subject resource.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
+    <rdfs:label>label</rdfs:label>
+    <rdfs:comment>A human-readable name for the subject.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.w3.org/2000/01/rdf-schema#domain">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
+    <rdfs:label>domain</rdfs:label>
+    <rdfs:comment>A domain of the subject property.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.w3.org/2000/01/rdf-schema#range">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
+    <rdfs:label>range</rdfs:label>
+    <rdfs:comment>A range of the subject property.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.w3.org/2000/01/rdf-schema#seeAlso">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
+    <rdfs:label>seeAlso</rdfs:label>
+    <rdfs:comment>Further information about the subject resource.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.w3.org/2000/01/rdf-schema#isDefinedBy">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+    <rdfs:label>isDefinedBy</rdfs:label>
+    <rdfs:comment>The defininition of the subject resource.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdf:Property>
+
+  <!-- <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Literal">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
+    <rdfs:label>Literal</rdfs:label>
+    <rdfs:comment>The class of literal values, eg. textual strings and integers.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdfs:Class> -->
+
+  <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Container">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
+    <rdfs:label>Container</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:comment>The class of RDF containers.</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#ContainerMembershipProperty">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
+    <rdfs:label>ContainerMembershipProperty</rdfs:label>
+    <rdfs:comment>The class of container membership properties, rdf:_1, rdf:_2, ...,
+                    all of which are sub-properties of 'member'.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdfs:Class>
+
+  <rdf:Property rdf:about="http://www.w3.org/2000/01/rdf-schema#member">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
+    <rdfs:label>member</rdfs:label>
+    <rdfs:comment>A member of the subject resource.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdf:Property>
+
+  <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Datatype">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
+    <rdfs:label>Datatype</rdfs:label>
+    <rdfs:comment>The class of RDF datatypes.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdfs:Class>
+
+   <!-- ####################################### -->
+   <!-- ##===================================## -->
+   <!-- ##==        RESOURCE               ==## -->
+   <!-- ##===================================## -->
+   <!-- ####################################### -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!-- ####################################### -->
+   <!-- ##===================================## -->
+   <!-- ##==           CLASSES             ==## -->
+   <!-- ##===================================## -->
+   <!-- ####################################### -->
+   <!-- ================================ -->
+   <!-- ==       MANDATORY CLASSES    == -->
+   <!-- ================================ -->
+   <!-- dcat:Catalog   -->
+   <rdfs:Class rdf:about="http://www.w3.org/ns/dcat#Catalog">
+      <vann:usageNote xml:lang="en">Mandatory class. A catalogue or repository that hosts the Datasets being described.</vann:usageNote>
+      <dct:identifier>dcat:Catalog</dct:identifier>
+      <rdfs:label >Catalog</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Class:Catalog"/>
+      <rdfs:comment xml:lang="en">A  curated collection of metadata about datasets</rdfs:comment>
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <!-- <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/> -->
+   </rdfs:Class>
+   <!-- foaf:Agent   -->
+   <rdfs:Class rdf:about="http://xmlns.com/foaf/0.1/Agent">
+      <vann:usageNote xml:lang="en">Mandatory class. An entity that is associated with Catalogues and/or Datasets. If the Agent is an organisation, the use of the Organization Ontology  is recommended.</vann:usageNote>
+      <dct:identifier>foaf:Agent</dct:identifier>
+      <rdfs:label >Agent</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/spec/#term_Agent"/>
+      <rdfs:comment xml:lang="en">An agent (eg. person, group, software or physical artifact).</rdfs:comment>
+   </rdfs:Class>
+   <!-- dcat:Dataset   -->
+   <rdfs:Class rdf:about="http://www.w3.org/ns/dcat#Dataset">
+      <vann:usageNote xml:lang="en">Mandatory class. A conceptual entity that represents the information published.</vann:usageNote>
+      <dct:identifier>dcat:Dataset</dct:identifier>
+      <rdfs:label >Dataset</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Class:Dataset"/>
+      <rdfs:comment xml:lang="en">A collection of data, published or curated by a single source, and available for access or download in one or more formats</rdfs:comment>
+   </rdfs:Class>
+   <!-- rdfs:Literal   -->
+   <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Literal">
+      <vann:usageNote xml:lang="en">Mandatory class. A literal value such as a string or integer; Literals may be typed, e.g. as a date according to xsd:date. Literals that contain human-readable text have an optional language tag as defined by BCP 47.</vann:usageNote>
+      <dct:identifier>rdfs:Literal</dct:identifier>
+      <rdfs:label >Literal</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/rdf-concepts/#section-Literals"/>
+      <rdfs:comment xml:lang="en">The class rdfs:Literal is the class of literal values such as strings and integers. Property values such as textual strings are examples of RDF literals.</rdfs:comment>
+   </rdfs:Class>
+   <!-- rdfs:Resource   -->
+   <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource">
+      <vann:usageNote xml:lang="en">Mandatory class. Anything described by RDF.</vann:usageNote>
+      <dct:identifier>rdfs:Resource</dct:identifier>
+      <rdfs:label >Resource</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/rdf-schema/#ch_resource"/>
+      <rdfs:comment xml:lang="en">All things described by RDF are called resources, and are instances of the class rdfs:Resource. This is the class of everything. All other classes are subclasses of this class. rdfs:Resource is an instance of rdfs:Class.</rdfs:comment>
+   </rdfs:Class>
+   <!-- ================================ -->
+   <!-- ==     RECOMMENDED CLASSES    == -->
+   <!-- ================================ -->
+   <!-- skos:Concept<-->
+   <rdfs:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
+      <vann:usageNote xml:lang="en">Recommended class - Category: a subject of a Dataset. Optional Class - Publisher type: A type of organisation that acts as a publisher. Optional Class - Status: an indication of the maturity of a Distribution.</vann:usageNote>
+      <dct:identifier>skos:Concept</dct:identifier>
+      <rdfs:label >Concept</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Class:Concept"/>
+      <rdfs:comment xml:lang="en">An abstract idea or notion; a unit of thought.</rdfs:comment>
+   </rdfs:Class>
+   <!-- dcat:Distribution -->
+   <rdfs:Class rdf:about="http://www.w3.org/ns/dcat#Distribution">
+      <vann:usageNote xml:lang="en">Recommended class. A physical embodiment of the Dataset in a particular format.</vann:usageNote>
+      <dct:identifier>dcat:Distribution</dct:identifier>
+      <rdfs:label>Distribution</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Class:Distribution"/>
+      <rdfs:comment xml:lang="en">Represents a specific available form of a dataset. Each dataset might be available in different forms, these forms might represent different formats of the dataset, different endpoints,... Examples of Distribution include a downloadable CSV file, an XLS file representing the dataset, an RSS feed…</rdfs:comment>
+   </rdfs:Class>
+   <!-- dct:LicenseDocument -->
+   <rdfs:Class rdf:about="http://purl.org/dc/terms/LicenseDocument">
+      <vann:usageNote xml:lang="en">Recommended class. A legal document giving official permission to do something with a resource. </vann:usageNote>
+      <dct:identifier>dct:LicenseDocument</dct:identifier>
+      <rdfs:label>LicenseDocument</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/2012/06/14/dcmi-terms/?v=terms#LicenseDocument"/>
+      <rdfs:comment xml:lang="en">A legal document giving official permission to do something with a Resource.</rdfs:comment>
+   </rdfs:Class>
+   <!-- skos:ConceptScheme -->
+   <rdfs:Class rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme">
+      <vann:usageNote xml:lang="en">Recommended class. A concept collection (e.g. controlled vocabulary) in which the Category is defined.</vann:usageNote>
+      <dct:identifier>skos:ConceptScheme</dct:identifier>
+      <rdfs:label>ConceptScheme</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Class:Concept_Scheme"/>
+      <rdfs:comment xml:lang="en">An abstract idea or notion; a unit of thought.</rdfs:comment>
+   </rdfs:Class>
+   <!-- ================================ -->
+   <!-- ==      OPTIONAL CLASSES      == -->
+   <!-- ================================ -->
+   <!-- dcat:CatalogRecord  -->
+   <rdfs:Class rdf:about="http://www.w3.org/ns/dcat#CatalogRecord">
+      <vann:usageNote xml:lang="en">Optional  class. A description of a Dataset’s entry in the Catalogue.</vann:usageNote>
+      <dct:identifier>dcat:CatalogRecord</dct:identifier>
+      <rdfs:label >CatalogRecord</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Class:Catalog_Record"/>
+      <rdfs:comment xml:lang="en">A record in a data catalog, describing a single dataset.</rdfs:comment>
+   </rdfs:Class>
+   <!-- spdx:Checksum -->
+   <rdfs:Class rdf:about="http://spdx.org/rdf/terms#Checksum">
+      <vann:usageNote xml:lang="en">A value that allows the contents of a file to be authenticated. This class allows the results of a variety of checksum and cryptographic message digest algorithms to be represented.</vann:usageNote>
+      <dct:identifier>spdx:Checksum</dct:identifier>
+      <rdfs:label >Checksum</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://spdx.org/rdf/terms#Checksum"/>
+      <rdfs:comment xml:lang="en">A value that allows the contents of a file to be authenticated. This class allows the results of a variety of checksum and cryptographic message digest algorithms to be represented.</rdfs:comment>
+   </rdfs:Class>
+   <!-- foaf:Document -->
+   <rdfs:Class rdf:about="http://xmlns.com/foaf/0.1/Document">
+      <vann:usageNote xml:lang="en">Optional class. A textual resource intended for human consumption that contains information, e.g. a web page about a Dataset.</vann:usageNote>
+      <dct:identifier>foaf:Document</dct:identifier>
+      <rdfs:label >Document</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/spec/#term_Document"/>
+      <rdfs:comment xml:lang="en">A document.</rdfs:comment>
+   </rdfs:Class>
+   <!-- dct:Frequency -->
+   <rdfs:Class rdf:about="http://purl.org/dc/terms/Frequency">
+      <vann:usageNote xml:lang="en">Optional class. A rate at which something recurs, e.g. the publication of a Dataset.</vann:usageNote>
+      <dct:identifier>dct:Frequency</dct:identifier>
+      <rdfs:label >Frequency</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-Frequency"/>
+      <rdfs:comment xml:lang="en">A rate at which something recurs.</rdfs:comment>
+   </rdfs:Class>
+   <!-- adms:Identifier  -->
+   <rdfs:Class rdf:about="http://www.w3.org/ns/adms#Identifier">
+      <vann:usageNote xml:lang="en">Optional class. An identifier in a particular context, consisting of the string that is the identifier; an optional identifier for the identifier scheme; an optional identifier for the version of the identifier scheme; an optional identifier for the agency that manages the identifier scheme</vann:usageNote>
+      <dct:identifier>adms:Identifier</dct:identifier>
+      <rdfs:label >Identifier</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-adms/#identifier"/>
+      <rdfs:comment xml:lang="en">This class is based on the UN/CEFACT Identifier complex type defined in See Section 5.8 of Core Components Data Type Catalogue Version 3.1 (http://www.unece.org/fileadmin/DAM/cefact/codesfortrade/CCTS/CCTS-DTCatalogueVersion3p1.pdf) In RDF this is expressed using the following properties: - the content string should be provided using skos:notation, datatyped with the identifier scheme (inclduing the version number if appropriate); - use dcterms:creator to link to a class describing the agency that manages the identifier scheme or adms:schemaAgency to provide the name as a literal. Although not part of the ADMS conceptual model, it may be useful to provide further properties to the Identifier class such as dcterms:created to provide the date on which the identifier was issued.</rdfs:comment>
+   </rdfs:Class>
+   <!-- vcard:Kind -->
+   <rdfs:Class rdf:about="http://www.w3.org/2006/vcard/ns#Kind">
+      <vann:usageNote xml:lang="en">Optional class. A description following the vCard specification, e.g. to provide telephone number and e-mail address for a contact point. Note that the class Kind is the parent class for the four explicit types of vCards (Individual, Organization, Location, Group).</vann:usageNote>
+      <dct:identifier>vcard:Kind</dct:identifier>
+      <rdfs:label >Kind</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2006/vcard/ns#"/>
+      <rdfs:comment xml:lang="en">A description following the vCard specification, e.g. to provide telephone number and e-mail address for a contact point. Note that the class Kind is the parent class for the four explicit types of vCards (Individual, Organization, Location, Group).</rdfs:comment>
+   </rdfs:Class>
+   <!-- dct:LinguisticSystem -->
+   <rdfs:Class rdf:about="http://purl.org/dc/terms/LinguisticSystem">
+      <vann:usageNote xml:lang="en">Optional class. A system of signs, symbols, sounds, gestures, or rules used in communication, e.g. a language. </vann:usageNote>
+      <dct:identifier>dct:LinguisticSystem</dct:identifier>
+      <rdfs:label >LinguisticSystem</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/2012/06/14/dcmi-terms/?v=terms#LinguisticSystem"/>
+      <rdfs:comment xml:lang="en">A system of signs, symbols, sounds, gestures, or rules used in communication, e.g. a language.</rdfs:comment>
+   </rdfs:Class>
+   <!-- dct:Location -->
+   <rdfs:Class rdf:about="http://purl.org/dc/terms/Location">
+      <vann:usageNote xml:lang="en">Optional class. A spatial region or named place. It can be represented using a controlled vocabulary or with geographic coordinates. In the latter case, the use of the Core Location Vocabulary  is recommended. </vann:usageNote>
+      <dct:identifier>dct:Location</dct:identifier>
+      <rdfs:label >Location</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/2012/06/14/dcmi-terms/?v=terms#Location"/>
+      <rdfs:comment xml:lang="en">A spatial region or named place.</rdfs:comment>
+   </rdfs:Class>
+   <!-- dct:MediaType -->
+   <rdfs:Class rdf:about="http://purl.org/dc/terms/MediaType">
+      <vann:usageNote xml:lang="en">Optional class. A media type or extent, e.g. the format of a computer file. </vann:usageNote>
+      <dct:identifier>dct:MediaType</dct:identifier>
+      <rdfs:label >MediaType</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-MediaType"/>
+      <rdfs:comment xml:lang="en">A media type or extent, e.g. the format of a computer file.</rdfs:comment>
+   </rdfs:Class>
+   <!-- dct:PeriodOfTime  -->
+   <rdfs:Class rdf:about="http://purl.org/dc/terms/PeriodOfTime">
+      <vann:usageNote xml:lang="en">Optional class. An interval of time that is named or defined by its start and end dates. </vann:usageNote>
+      <dct:identifier>dct:PeriodOfTime</dct:identifier>
+      <rdfs:label >PeriodOfTime</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-PeriodOfTime"/>
+      <rdfs:comment xml:lang="en">An interval of time that is named or defined by its start and end dates.</rdfs:comment>
+   </rdfs:Class>
+   <!-- dct:RightsStatement -->
+   <rdfs:Class rdf:about="http://purl.org/dc/terms/RightsStatement">
+      <vann:usageNote xml:lang="en">Optional class. A statement about the intellectual property rights (IPR) held in or over a resource, a legal document giving official permission to do something with a resource, or a statement about access rights. </vann:usageNote>
+      <dct:identifier>dct:RightsStatement</dct:identifier>
+      <rdfs:label >RightsStatement</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-RightsStatement"/>
+      <rdfs:comment xml:lang="en">A statement about the intellectual property rights (IPR) held in or over a resource, a legal document giving official permission to do something with a resource, or a statement about access rights.</rdfs:comment>
+   </rdfs:Class>
+   <!-- dct:ProvenanceStatement -->
+   <rdfs:Class rdf:about="http://purl.org/dc/terms/ProvenanceStatement">
+      <vann:usageNote xml:lang="en">Optional class. A statement of any changes in ownership and custody of a resource since its creation that are significant for its authenticity, integrity, and interpretation. </vann:usageNote>
+      <dct:identifier>dct:ProvenanceStatement</dct:identifier>
+      <rdfs:label >ProvenanceStatement</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-ProvenanceStatement"/>
+      <rdfs:comment xml:lang="en">A statement of any changes in ownership and custody of a resource since its creation that are significant for its authenticity, integrity, and interpretation.</rdfs:comment>
+   </rdfs:Class>
+   <!-- dct:Standard -->
+   <rdfs:Class rdf:about="http://purl.org/dc/terms/Standard">
+      <vann:usageNote xml:lang="en">Optional class. A standard or other specification to which a Dataset conforms. </vann:usageNote>
+      <dct:identifier>dct:Standard</dct:identifier>
+      <rdfs:label >Standard</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-Standard"/>
+      <rdfs:comment xml:lang="en">A basis for comparison; a reference point against which other things can be evaluated.</rdfs:comment>
+   </rdfs:Class>
+   <!-- dcat:DataService  (dcat 2)  -->
+   <rdfs:Class rdf:about="http://www.w3.org/ns/dcat#DataService">
+      <vann:usageNote xml:lang="en">Optional class. A collection of operations that provides access to one or more datasets or data processing functions.</vann:usageNote>
+      <dct:identifier>dcat:DataService</dct:identifier>
+      <rdfs:label >DataService</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Class:Data_Service"/>
+      <rdfs:comment xml:lang="en">A collection of operations that provides access to one or more datasets or data processing functions.</rdfs:comment>
+   </rdfs:Class>
+   <!-- dcat:Relationship  (dcat 2) -->
+   <rdfs:Class rdf:about="http://www.w3.org/ns/dcat#Relationship">
+      <vann:usageNote xml:lang="en">Optional class. An association class for attaching additional information to a relationship between DCAT Resources.</vann:usageNote>
+      <dct:identifier>dcat:Relationship</dct:identifier>
+      <rdfs:label >Relationship</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Class:Relationship"/>
+      <rdfs:comment xml:lang="en">An association class for attaching additional information to a relationship between DCAT Resources.</rdfs:comment>
+   </rdfs:Class>
+   <!-- dcat:Role (dcat 2)  -->
+   <rdfs:Class rdf:about="http://www.w3.org/ns/dcat#Role">
+      <vann:usageNote xml:lang="en">Optional class. A role is the function of a resource or agent with respect to another resource, in the context of resource attribution or resource relationships. Note it is a subclass of skos:Concept.</vann:usageNote>
+      <dct:identifier>dcat:Role</dct:identifier>
+      <rdfs:label >Role</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Class:Role"/>
+      <rdfs:comment xml:lang="en">A role is the function of a resource or agent with respect to another resource, in the context of resource attribution or resource relationships.</rdfs:comment>
+   </rdfs:Class>
+   <!-- ####################################### -->
+   <!-- ##===================================## -->
+   <!-- ##==          PROPERTIES           ==## -->
+   <!-- ##===================================## -->
+   <!-- ####################################### -->
+   <!-- ==================================== -->
+   <!-- ==  Data Catalogue - Properties   == -->
+   <!-- ==================================== -->
+   <!-- Data Catalogue - dcat:dataset  -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#dataset">
+      <vann:usageNote xml:lang="en">Mandatory property. This property links the Catalogue with a Dataset that is part of the Catalogue.</vann:usageNote>
+      <dct:identifier>dcat:dataset</dct:identifier>
+      <rdfs:label>dataset</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_dataset"/>
+      <rdfs:comment xml:lang="en">A dataset that is part of the catalog.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#dataset"/>
+   </rdf:Property>
+   <!-- Data Catalogue - dct:description  -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#description">
+      <vann:usageNote xml:lang="en">Mandatory property. This property contains a free-text account of the Catalogue. This property can be repeated for parallel language versions of the description.</vann:usageNote>
+      <dct:identifier>dct:description</dct:identifier>
+      <rdfs:label>description</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-description"/>
+      <rdfs:comment xml:lang="en">Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#description"/>
+   </rdf:Property>
+   <!-- Data Catalogue - dct:publisher -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#publisher">
+      <vann:usageNote xml:lang="en">Mandatory property. This property refers to an entity (organisation) responsible for making the Catalogue available.</vann:usageNote>
+      <dct:identifier>dct:publisher</dct:identifier>
+      <rdfs:label>publisher</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-publisher"/>
+      <rdfs:comment xml:lang="en">This property refers to an entity (organisation) responsible for making the Catalogue available.</rdfs:comment>
+      <!-- <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/> -->
+      <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#publisher"/>
+   </rdf:Property>
+   <!-- Data Catalogue - dct:title -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#title">
+      <vann:usageNote xml:lang="en">Mandatory property. This property contains a name given to the Catalogue. This property can be repeated for parallel language versions of the name.</vann:usageNote>
+      <dct:identifier>dct:title</dct:identifier>
+      <rdfs:label>title</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-title"/>
+      <rdfs:comment xml:lang="en">This property contains a name given to the Catalogue. This property can be repeated for parallel language versions of the name.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#title"/>
+   </rdf:Property>
+   <!--  Data Catalogue - homepage  -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#homepage">
+      <vann:usageNote xml:lang="en">Recommended property. This property refers to a web page that acts as the main page for the Catalogue.</vann:usageNote>
+      <dct:identifier>foaf:homepage</dct:identifier>
+      <rdfs:label>homepage</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/spec/#term_homepage"/>
+      <rdfs:comment xml:lang="en">This property refers to a web page that acts as the main page for the Catalogue.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#homepage"/>
+   </rdf:Property>
+   <!--  Data Catalogue - language   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#language">
+      <vann:usageNote xml:lang="en">Recommended property. This property refers to a language used in the textual metadata describing titles, descriptions, etc. of the Datasets in the Catalogue. This property can be repeated if the metadata is provided in multiple languages.</vann:usageNote>
+      <dct:identifier>dct:language</dct:identifier>
+      <rdfs:label>language</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-language"/>
+      <rdfs:comment xml:lang="en">This property refers to a language used in the textual metadata describing titles, descriptions, etc. of the Datasets in the Catalogue. This property can be repeated if the metadata is provided in multiple languages.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#language"/>
+   </rdf:Property>
+   <!--  Data Catalogue - licence   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#licence">
+      <vann:usageNote xml:lang="en">Recommended property. This property refers to the licence under which the Catalogue can be used or reused.</vann:usageNote>
+      <dct:identifier>dct:license</dct:identifier>
+      <rdfs:label>licence</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-license"/>
+      <rdfs:comment xml:lang="en">This property refers to the licence under which the Catalogue can be used or reused.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#licence"/>
+   </rdf:Property>
+   <!--  Data Catalogue - release date   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#releasedate">
+      <vann:usageNote xml:lang="en">Recommended property. This property contains the date of formal issuance (e.g., publication) of the Catalogue.</vann:usageNote>
+      <dct:identifier>dct:issued</dct:identifier>
+      <rdfs:label>releasedate</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-issued"/>
+      <rdfs:comment xml:lang="en">This property contains the date of formal issuance (e.g., publication) of the Catalogue.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#releasedate"/>
+   </rdf:Property>
+   <!--  Data Catalogue - themes   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#themes">
+      <vann:usageNote xml:lang="en">Recommended property. This property refers to a knowledge organization system (KOS) used to classify the Catalogue's Datasets.</vann:usageNote>
+      <dct:identifier>dcat:themeTaxonomy</dct:identifier>
+      <rdfs:label>themes</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_themes"/>
+      <rdfs:comment xml:lang="en">The knowledge organization system (KOS) used to classify catalog's datasets</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#themes"/>
+   </rdf:Property>
+   <!--  Data Catalogue - update/modification date   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#update/modificationdate">
+      <vann:usageNote xml:lang="en">Recommended property. This property contains the most recent date on which the Catalogue was changed or modified.</vann:usageNote>
+      <dct:identifier>dct:modified</dct:identifier>
+      <rdfs:label>update/modificationdate</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-modified"/>
+      <rdfs:comment xml:lang="en">This property contains the most recent date on which the Catalogue was changed or modified.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#update/modificationdate"/>
+   </rdf:Property>
+   <!--  Data Catalogue - spatial/geographic   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#spatial/geographic">
+      <vann:usageNote xml:lang="en">Recommended property. This property refers to a geographical area covered by the Catalogue.</vann:usageNote>
+      <dct:identifier>dct:spatial</dct:identifier>
+      <rdfs:label>spatial/geographic</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-spatial"/>
+      <rdfs:comment xml:lang="en">This property refers to a geographical area covered by the Catalogue.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#spatial/geographic"/>
+   </rdf:Property>
+   <!--  Data Catalogue - record   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#record">
+      <vann:usageNote xml:lang="en">Optional property. This property refers to a Catalogue Record that is part of the Catalogue</vann:usageNote>
+      <dct:identifier>dcat:record</dct:identifier>
+      <rdfs:label>record</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_catalog_record"/>
+      <rdfs:comment xml:lang="en">This property refers to a Catalogue Record that is part of the Catalogue</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#record"/>
+   </rdf:Property>
+   <!--  Data Catalogue - rights   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#rights">
+      <vann:usageNote xml:lang="en">Optional property. This property refers to a statement that specifies rights associated with the Catalogue.</vann:usageNote>
+      <dct:identifier>dct:rights</dct:identifier>
+      <rdfs:label>rights</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-rights"/>
+      <rdfs:comment xml:lang="en">This property refers to a statement that specifies rights associated with the Catalogue.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#rights"/>
+   </rdf:Property>
+   <!--  Data Catalogue - has part  -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#haspart">
+      <vann:usageNote xml:lang="en">Optional property. This property refers to a related Catalogue that is part of the described Catalogue.</vann:usageNote>
+      <dct:identifier>dct:hasPart</dct:identifier>
+      <rdfs:label>haspart</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-hasPart"/>
+      <rdfs:comment xml:lang="en">This property refers to a related Catalogue that is part of the described Catalogue</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#haspart"/>
+   </rdf:Property>
+   <!--  Data Catalogue - is part of  -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#ispartof">
+      <vann:usageNote xml:lang="en">Optional property. This property refers to a related Catalogue in which the described Catalogue is physically or logically included.</vann:usageNote>
+      <dct:identifier>dct:isPartOf</dct:identifier>
+      <rdfs:label>ispartof</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-isPartOf"/>
+      <rdfs:comment xml:lang="en">This property refers to a related Catalogue in which the described Catalogue is physically or logically included.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#ispartof"/>
+   </rdf:Property>
+   <!--  Catalog -  service  (dcat 2) -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#service">
+      <vann:usageNote xml:lang="en">Optional property. This property refers to a site or end-point that is listed in the catalog.</vann:usageNote>
+      <dct:identifier> dcat:service</dct:identifier>
+      <rdfs:label>service</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_service"/>
+      <rdfs:comment xml:lang="en">This property refers to a site or end-point that is listed in the catalog. .</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#service"/>
+   </rdf:Property>
+   <!--  Catalog -  catalog  (dcat 2) -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#catalog">
+      <vann:usageNote xml:lang="en">Optional property. This property refers to  a catalog whose contents are of interest in the context of this catalog . </vann:usageNote>
+      <dct:identifier> dcat:catalog</dct:identifier>
+      <rdfs:label>catalog</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_catalog"/>
+      <rdfs:comment xml:lang="en">This property refers to a catalog whose contents are of interest in the context of this catalog  .</rdfs:comment>
+      <!-- <rdfs:range 
+                  rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/> -->
+      <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+   </rdf:Property>
+   <!--  Catalog -  creator (dcat 2) -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#creator">
+      <vann:usageNote xml:lang="en">Optional property. This property refers to an entity primarily responsible for making the resource.</vann:usageNote>
+      <dct:identifier>dct:creator</dct:identifier>
+      <rdfs:label>creator</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#terms-creator"/>
+      <rdfs:comment xml:lang="en">This property refers to an entity primarily responsible for making the catalogue.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#creator"/>
+   </rdf:Property>
+   <!-- ====================================== -->
+   <!-- ==  Catalogue Record - Properties   == -->
+   <!-- ====================================== -->
+   <!--  Catalogue Record - primary topic   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#primarytopic">
+      <vann:usageNote xml:lang="en">Mandatory property.  This property links the Catalogue Record to the Dataset, Data Service or Catalogue described in the record.</vann:usageNote>
+      <dct:identifier>foaf:primaryTopic</dct:identifier>
+      <rdfs:label>primarytopic</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/spec/#term_primaryTopic"/>
+      <rdfs:comment xml:lang="en">This property links the Catalogue Record to the Dataset, Data Service or Catalogue described in the record.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#primarytopic"/>
+   </rdf:Property>
+   <!--  Catalogue Record - update/modification date   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#update/modificationdate">
+      <vann:usageNote xml:lang="en">Mandatory property.  This property contains the most recent date on which the Catalogue entry was changed or modified.</vann:usageNote>
+      <dct:identifier>dct:modified</dct:identifier>
+      <rdfs:label>update/modificationdate</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-modified"/>
+      <rdfs:comment xml:lang="en">This property contains the most recent date on which the Catalogue entry was changed or modified.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#update/modificationdate"/>
+   </rdf:Property>
+   <!--  Catalogue Record - listing date   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#listingdate">
+      <vann:usageNote xml:lang="en">Recommended property. This property contains the date on which the description of the Dataset was included in the Catalogue.</vann:usageNote>
+      <dct:identifier>dct:issued</dct:identifier>
+      <rdfs:label>listingdate</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-issued"/>
+      <rdfs:comment xml:lang="en">This property contains the date on which the description of the Dataset was included in the Catalogue.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#listingdate"/>
+   </rdf:Property>
+   <!--  Catalogue Record - change type   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#changetype">
+      <vann:usageNote xml:lang="en">Recommended property.  The type of the latest revision of a Dataset's entry in the Catalogue. It MUST take one of the values :created, :updated or :deleted depending on whether this latest revision is a result of a creation, update or deletion.</vann:usageNote>
+      <dct:identifier>adms:status</dct:identifier>
+      <rdfs:label>changetype</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-adms/#adms-status"/>
+      <rdfs:comment xml:lang="en">The type of the latest revision of a Dataset's entry in the Catalogue. It MUST take one of the values :Completed, :Depricated, :Under development or :Withdrawn.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#changetype"/>
+   </rdf:Property>
+   <!--  Catalogue Record - conforms to -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#conformsto">
+      <vann:usageNote xml:lang="en">Recommended property. This property refers to an Application Profile that the Dataset’s metadata conforms to.</vann:usageNote>
+      <dct:identifier>dct:conformsTo</dct:identifier>
+      <rdfs:label>conformsto</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-conformsTo"/>
+      <rdfs:comment xml:lang="en">This property refers to an Application Profile that the Dataset’s metadata conforms to.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#conformsto"/>
+   </rdf:Property>
+   <!--  Catalogue Record - description  -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#description">
+      <vann:usageNote xml:lang="en">Optional property. This property contains a free-text account of the record. This property can be repeated for parallel language versions of the description.</vann:usageNote>
+      <dct:identifier>dct:description</dct:identifier>
+      <rdfs:label>description</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-description"/>
+      <rdfs:comment xml:lang="en">This property contains a free-text account of the record. This property can be repeated for parallel language versions of the description.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#description"/>
+   </rdf:Property>
+   <!--  Catalogue Record - title  -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#title">
+      <vann:usageNote xml:lang="en">Optional property. This property contains a name given to the Catalogue. This property can be repeated for parallel language versions of the name.</vann:usageNote>
+      <dct:identifier>dct:title</dct:identifier>
+      <rdfs:label>title</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-title"/>
+      <rdfs:comment xml:lang="en">This property contains a name given to the Catalogue. This property can be repeated for parallel language versions of the name.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#title"/>
+   </rdf:Property>
+   <!--  Catalogue Record - language  -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#language">
+      <vann:usageNote xml:lang="en">Optional property. This property refers to a language used in the textual metadata describing titles, descriptions, etc. of the Dataset. This property can be repeated if the metadata is provided in multiple languages.</vann:usageNote>
+      <dct:identifier>dct:language</dct:identifier>
+      <rdfs:label>language</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-language"/>
+      <rdfs:comment xml:lang="en">This property refers to a language used in the textual metadata describing titles, descriptions, etc. of the Dataset. This property can be repeated if the metadata is provided in multiple languages.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#language"/>
+   </rdf:Property>
+   <!--  Catalogue Record - source metadata -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#sourcemetadata">
+      <vann:usageNote xml:lang="en">Optional property. This property refers to the original metadata that was used in creating metadata for the Dataset.</vann:usageNote>
+      <dct:identifier>dct:source</dct:identifier>
+      <rdfs:label>sourcemetadata</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-source"/>
+      <rdfs:comment xml:lang="en">This property refers to the original metadata that was used in creating metadata for the Dataset.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#sourcemetadata"/>
+   </rdf:Property>
+   <!-- ====================================== -->
+   <!--  Data Service - Properties  (dcat 2)      -->
+   <!-- ====================================== -->
+   <!--             Mandatory                  -->
+   <!-- ====================================== -->
+   <!-- Data Service - endpoint URL   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#endpointURL">
+      <vann:usageNote xml:lang="en">Mandatory property. The root location or primary endpoint of the service (an IRI)..</vann:usageNote>
+      <dct:identifier>dcat:endpointURL</dct:identifier>
+      <rdfs:label>endpointURL</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:data_service_endpoint_url"/>
+      <rdfs:comment xml:lang="en">The root location or primary endpoint of the service (an IRI).</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#endpointURL"/>
+   </rdf:Property>
+   <!--  Data Service - title  -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#title">
+      <vann:usageNote xml:lang="en">Mandatory property. This property contains a name given to the Data Service. This property can be repeated for parallel language versions of the name.</vann:usageNote>
+      <dct:identifier>dct:title</dct:identifier>
+      <rdfs:label>title</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-title"/>
+      <rdfs:comment xml:lang="en">This property contains a name given to the Data Service. This property can be repeated for parallel language versions of the name.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#title"/>
+   </rdf:Property>
+   <!-- ====================================== -->
+   <!--             Recommended                 -->
+   <!-- ====================================== -->
+   <!-- Data Service - serves dataset   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#servesdataset">
+      <vann:usageNote xml:lang="en">Recommended property. A collection of data that this data service can distribute.</vann:usageNote>
+      <dct:identifier>dcat:servesDataset</dct:identifier>
+      <rdfs:label>servesdataset</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:data_service_serves_dataset"/>
+      <rdfs:comment xml:lang="en">A collection of data that this data service can distribute.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#servesdataset"/>
+   </rdf:Property>
+   <!-- Data Service -  endpoint description -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#endpointdescription">
+      <vann:usageNote xml:lang="en">Recomended property. A description of the services available via the end-points, including their operations, parameters etc .</vann:usageNote>
+      <dct:identifier>dcat:endpointDescription</dct:identifier>
+      <rdfs:label>endpointdescription</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:data_service_endpoint_description"/>
+      <rdfs:comment xml:lang="en">A description of the services available via the end-points, including their operations, parameters etc.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#endpointdescription"/>
+   </rdf:Property>
+   <!-- ====================================== -->
+   <!--             Optional                   -->
+   <!-- ====================================== -->
+   <!-- Data Service - dct:description  -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#description">
+      <vann:usageNote xml:lang="en">Optional property. This property contains a free-text account of the Catalogue. This property can be repeated for parallel language versions of the description.</vann:usageNote>
+      <dct:identifier>dct:description</dct:identifier>
+      <rdfs:label>description</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-description"/>
+      <rdfs:comment xml:lang="en">Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#description"/>
+   </rdf:Property>
+   <!-- Data Service - licence -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#licence">
+      <vann:usageNote xml:lang="en">Optional property. This property refers to the licence under which the Catalogue can be used or reused.</vann:usageNote>
+      <dct:identifier>dct:license</dct:identifier>
+      <rdfs:label>licence</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-license"/>
+      <rdfs:comment xml:lang="en">This property refers to the licence under which the Catalogue can be used or reused.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#licence"/>
+   </rdf:Property>
+   <!-- Data Service -  access rights -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#accessrights">
+      <vann:usageNote xml:lang="en">Optional property. This property refers to information that indicates whether the Dataset is open data, has access restrictions or is not public. A controlled vocabulary with three members (:public, :restricted, :non-public) will be created and maintained by the Publications Office of the EU.</vann:usageNote>
+      <dct:identifier>dct:accessRights</dct:identifier>
+      <rdfs:label>accessrights</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-accessRights"/>
+      <rdfs:comment xml:lang="en">This property refers to information that indicates whether the Dataset is open data, has access restrictions or is not public. A controlled vocabulary with three members (:public, :restricted, :non-public) will be created and maintained by the Publications Office of the EU.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#accessrights"/>
+   </rdf:Property>
+   <!-- ====================================== -->
+   <!-- ==       Dataset - Properties       == -->
+   <!-- ====================================== -->
+   <!-- ==       Mandatory Properties       == -->
+   <!-- ====================================== -->
+   <!--  Dataset - description  -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#description">
+      <vann:usageNote xml:lang="en">Mandatory property. This property contains a free-text account of the Dataset. This property can be repeated for parallel language versions of the description.</vann:usageNote>
+      <dct:identifier>dct:description</dct:identifier>
+      <rdfs:label>description</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-description"/>
+      <rdfs:comment xml:lang="en">This property contains a free-text account of the Dataset. This property can be repeated for parallel language versions of the description.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#description"/>
+   </rdf:Property>
+   <!--  Dataset - title  -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#title">
+      <vann:usageNote xml:lang="en">Mandatory property. This property contains a name given to the Dataset. This property can be repeated for parallel language versions of the name.</vann:usageNote>
+      <dct:identifier>dct:title</dct:identifier>
+      <rdfs:label>title</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-title"/>
+      <rdfs:comment xml:lang="en">This property contains a name given to the Dataset. This property can be repeated for parallel language versions of the name.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#title"/>
+   </rdf:Property>
+   <!-- ============================ -->
+   <!-- Recommended properties       -->
+   <!-- ============================= -->
+   <!--  Dataset - contact point -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#contactpoint">
+      <vann:usageNote xml:lang="en">Recommended property.This property contains contact information that can be used for sending comments about the Dataset.</vann:usageNote>
+      <dct:identifier>dcat:contactPoint</dct:identifier>
+      <rdfs:label>contactpoint</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_contact_point"/>
+      <rdfs:comment xml:lang="en">This property contains contact information that can be used for sending comments about the Dataset.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#contactpoint"/>
+   </rdf:Property>
+   <!--  Dataset - dataset distribution  -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#datasetdistribution">
+      <vann:usageNote xml:lang="en">Recommended property. This property links the Dataset to an available Distribution.</vann:usageNote>
+      <dct:identifier>dcat:distribution</dct:identifier>
+      <rdfs:label>datasetdistribution</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_distribution"/>
+      <rdfs:comment xml:lang="en">This property links the Dataset to an available Distribution.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#datasetdistribution"/>
+   </rdf:Property>
+   <!--  Dataset - keyword/ tag  -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#keyword/tag">
+      <vann:usageNote xml:lang="en">Recommended property. This property contains a keyword or tag describing the Dataset.</vann:usageNote>
+      <dct:identifier>dcat:keyword</dct:identifier>
+      <rdfs:label>keyword/tag</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_keyword"/>
+      <rdfs:comment xml:lang="en">This property contains a keyword or tag describing the Dataset.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#keyword/tag"/>
+   </rdf:Property>
+   <!--  Dataset - publisher  -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#publisher">
+      <vann:usageNote xml:lang="en">Recommended property. This property refers to an entity (organisation) responsible for making the Dataset available.</vann:usageNote>
+      <dct:identifier>dct:publisher</dct:identifier>
+      <rdfs:label>publisher</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-publisher"/>
+      <rdfs:comment xml:lang="en">This property refers to an entity (organisation) responsible for making the Dataset available.</rdfs:comment>
+      <!-- <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/> -->
+      <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#publisher"/>
+   </rdf:Property>
+   <!--  Dataset - spatial/geographical coverage   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#spatial/geographicalcoverage">
+      <vann:usageNote xml:lang="en">Recommended property. This property refers to a geographic region that is covered by the Dataset. </vann:usageNote>
+      <dct:identifier>dct:spatial</dct:identifier>
+      <rdfs:label>spatial/geographicalcoverage</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-spatial"/>
+      <rdfs:comment xml:lang="en">This property refers to a geographic region that is covered by the Dataset.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#spatial/geographicalcoverage"/>
+   </rdf:Property>
+   <!--  Dataset - theme/category  -->
+   <!-- BW: the subproperty is not defined -->
+   <!-- Answer to BW: dcat:theme IS the subproperty. We do not use the superproperty -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#theme/category">
+      <vann:usageNote xml:lang="en">Recommended property. This property refers to a category of the Dataset. A Dataset may be associated with multiple themes. Subproperty of dct:subject.</vann:usageNote>
+      <dct:identifier>dcat:theme</dct:identifier>
+      <rdfs:label>theme/category</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_type"/>
+      <rdfs:comment xml:lang="en">This property refers to a category of the Dataset. A Dataset may be associated with multiple themes. Subproperty of dct:subject</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#theme/category"/>
+   </rdf:Property>
+   <!--  Dataset - temporal coverage   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#temporalcoverage">
+      <vann:usageNote xml:lang="en">Recommended property. This property refers to a temporal period that the Dataset covers.</vann:usageNote>
+      <dct:identifier>dct:temporal</dct:identifier>
+      <rdfs:label>temporalcoverage</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-temporal"/>
+      <rdfs:comment xml:lang="en">This property refers to a temporal period that the Dataset covers.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#temporalcoverage"/>
+   </rdf:Property>
+   <!-- ====================================== -->
+   <!--         Optional properties            -->
+   <!-- ====================================== -->
+   <!--  Dataset - conforms to  -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#conformsto">
+      <vann:usageNote xml:lang="en">Optional property. This property refers to an implementing rule or other specification.</vann:usageNote>
+      <dct:identifier>dct:conformsTo</dct:identifier>
+      <rdfs:label>conformsto</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-conformsTo"/>
+      <rdfs:comment xml:lang="en">This property refers to an implementing rule or other specification.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#conformsto"/>
+   </rdf:Property>
+   <!--  Dataset - frequency   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#frequency">
+      <vann:usageNote xml:lang="en">Optional property. This property refers to the frequency at which Dataset is updated.</vann:usageNote>
+      <dct:identifier>dct:accrualPeriodicity</dct:identifier>
+      <rdfs:label>frequency</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-acrualPeriodicity"/>
+      <rdfs:comment xml:lang="en">This property refers to the frequency at which Dataset is updated.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#frequency"/>
+   </rdf:Property>
+   <!--  Dataset - identifier   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#identifier">
+      <vann:usageNote xml:lang="en">Optional property. This property contains the main identifier for the Dataset, e.g. the URI or other unique identifier in the context of the Catalogue.</vann:usageNote>
+      <dct:identifier>dct:identifier</dct:identifier>
+      <rdfs:label>identifier</rdfs:label>
+      <dct:acrualPeriodicity rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-identifier"/>
+      <rdfs:comment xml:lang="en">This property contains the main identifier for the Dataset, e.g. the URI or other unique identifier in the context of the Catalogue.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>0
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#identifier"/>
+   </rdf:Property>
+   <!--  Dataset - landing page   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#landingpage">
+      <vann:usageNote xml:lang="en">Optional property. This property refers to a web page that provides access to the Dataset, its Distributions and/or additional information. </vann:usageNote>
+      <dct:identifier>dcat:landingPage</dct:identifier>
+      <rdfs:label>landingpage</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_landing_page"/>
+      <rdfs:comment xml:lang="en">This property refers to a web page that provides access to the Dataset, its Distributions and/or additional information.</rdfs:comment>
+      <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#landingpage"/>
+   </rdf:Property>
+   <!--  Dataset - language   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#language">
+      <vann:usageNote xml:lang="en">Optional property. This property refers to a language of the Dataset. This property can be repeated if there are multiple languages in the Dataset.</vann:usageNote>
+      <dct:identifier>dct:language</dct:identifier>
+      <rdfs:label>language</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-language"/>
+      <rdfs:comment xml:lang="en">This property refers to a language of the Dataset. This property can be repeated if there are multiple languages in the Dataset.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#language"/>
+   </rdf:Property>
+   <!--  Dataset - other identifier   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#otheridentifier">
+      <vann:usageNote xml:lang="en">Optional property. This property refers to a secondary identifier of the Dataset, such as MAST/ADS[1], DataCite[2], DOI[3], EZID[4] or W3ID[5].</vann:usageNote>
+      <dct:identifier>adms:identifier</dct:identifier>
+      <rdfs:label>otheridentifier</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-adms/#adms-identifier"/>
+      <rdfs:comment xml:lang="en">This property refers to a secondary identifier of the Dataset, such as MAST/ADS[1], DataCite[2], DOI[3], EZID[4] or W3ID[5].</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#otheridentifier"/>
+   </rdf:Property>
+   <!--  Dataset - release date   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#releasedate">
+      <vann:usageNote xml:lang="en">Optional property. This property contains the date of formal issuance (e.g., publication) of the Dataset.</vann:usageNote>
+      <dct:identifier>dct:issued</dct:identifier>
+      <rdfs:label>releasedate</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-issued"/>
+      <rdfs:comment xml:lang="en">This property contains the date of formal issuance (e.g., publication) of the Dataset.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#releasedate"/>
+   </rdf:Property>
+   <!--  Dataset - update/modification date   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#update/modificationdate">
+      <vann:usageNote xml:lang="en">Optional property. This property contains the most recent date on which the Dataset was changed or modified.</vann:usageNote>
+      <dct:identifier>dct:modified</dct:identifier>
+      <rdfs:label>update/modificationdate</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-modified"/>
+      <rdfs:comment xml:lang="en">This property contains the most recent date on which the Dataset was changed or modified.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#update/modificationdate"/>
+   </rdf:Property>
+   <!--  Dataset - provenance   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#provenance">
+      <vann:usageNote xml:lang="en">Optional property. This property contains a statement about the lineage of a Dataset.</vann:usageNote>
+      <dct:identifier>dct:provenance</dct:identifier>
+      <rdfs:label>provenance</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-provenance"/>
+      <rdfs:comment xml:lang="en">This property contains a statement about the lineage of a Dataset.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#provenance"/>
+   </rdf:Property>
+   <!--  Dataset - sample   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#sample">
+      <vann:usageNote xml:lang="en">Optional property. This property refers to a sample distribution of the dataset.</vann:usageNote>
+      <dct:identifier>adms:sample</dct:identifier>
+      <rdfs:label>sample</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-adms/#adms-sample"/>
+      <rdfs:comment xml:lang="en">This property refers to a sample distribution of the dataset.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#sample"/>
+   </rdf:Property>
+   <!--  Dataset - source   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#source">
+      <vann:usageNote xml:lang="en">Optional property. This property refers to a related Dataset from which the described Dataset is derived.</vann:usageNote>
+      <dct:identifier>dct:source</dct:identifier>
+      <rdfs:label>source</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-source"/>
+      <rdfs:comment xml:lang="en">This property refers to a related Dataset from which the described Dataset is derived.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#source"/>
+   </rdf:Property>
+   <!--  Dataset - type   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#type">
+      <vann:usageNote xml:lang="en">Optional property. This property refers to the type of the Dataset. A controlled vocabulary for the values has not been established.</vann:usageNote>
+      <dct:identifier>dct:type</dct:identifier>
+      <rdfs:label>type</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-type"/>
+      <rdfs:comment xml:lang="en">This property refers to the type of the Dataset. A controlled vocabulary for the values has not been established.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#type"/>
+   </rdf:Property>
+   <!--  Dataset - related resource   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#relatedresource">
+      <vann:usageNote xml:lang="en">Optional property. This property refers to a related resource.</vann:usageNote>
+      <dct:identifier>dct:relation</dct:identifier>
+      <rdfs:label>relatedresource</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-relation"/>
+      <rdfs:comment xml:lang="en">This property refers to a related resource.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#relatedresource"/>
+   </rdf:Property>
+   <!--  Dataset - version   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#version">
+      <vann:usageNote xml:lang="en">Optional property. This property contains a version number or other version designation of the Dataset.</vann:usageNote>
+      <dct:identifier>owl:versionInfo</dct:identifier>
+      <rdfs:label>version</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2002/07/owl#"/>
+      <rdfs:comment xml:lang="en">This property contains a version number or other version designation of the Dataset.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#version"/>
+   </rdf:Property>
+   <!--  Dataset - version notes   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#versionnotes">
+      <vann:usageNote xml:lang="en">Optional property. This property contains a description of the differences between this version and a previous version of the Dataset.</vann:usageNote>
+      <dct:identifier>adms:versionNotes</dct:identifier>
+      <rdfs:label>versionnotes</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-adms/#adms-versionnotes"/>
+      <rdfs:comment xml:lang="en">This property contains a description of the differences between this version and a previous version of the Dataset.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#versionnotes"/>
+   </rdf:Property>
+   <!--  Dataset - is Version Of   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#isVersionOf">
+      <vann:usageNote xml:lang="en">Optional property. This property refers to a related Dataset of which the described Dataset is a version, edition, or adaptation.</vann:usageNote>
+      <dct:identifier>dct:isVersionOf</dct:identifier>
+      <rdfs:label>isVersionOf</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-isVersionOf"/>
+      <rdfs:comment xml:lang="en">This property refers to a related Dataset of which the described Dataset is a version, edition, or adaptation.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#isVersionOf"/>
+   </rdf:Property>
+   <!--  Dataset - has Version   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#hasVersion">
+      <vann:usageNote xml:lang="en">Optional property.This property refers to a related Dataset that is a version, edition, or adaptation of the described Dataset.</vann:usageNote>
+      <dct:identifier>dct:hasVersion</dct:identifier>
+      <rdfs:label>hasVersion</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-hasVersion"/>
+      <rdfs:comment xml:lang="en">This property refers to a related Dataset that is a version, edition, or adaptation of the described Dataset.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#hasVersion"/>
+   </rdf:Property>
+   <!--  Dataset - documentation   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#documentation">
+      <vann:usageNote xml:lang="en">Optional property. This property refers to a page or document about this Dataset.</vann:usageNote>
+      <dct:identifier>foaf:page</dct:identifier>
+      <rdfs:label>documentation</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/spec/#term_page"/>
+      <rdfs:comment xml:lang="en">This property refers to a page or document about this Dataset.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#documentation"/>
+   </rdf:Property>
+   <!--  Dataset - access rights   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#accessRights">
+      <vann:usageNote xml:lang="en">Optional property. This property refers to information that indicates whether the Dataset is open data, has access restrictions or is not public. A controlled vocabulary with three members (:public, :restricted, :non-public) will be created and maintained by the Publications Office of the EU.</vann:usageNote>
+      <dct:identifier>dct:accessRights</dct:identifier>
+      <rdfs:label>accessRights</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-accessRights"/>
+      <rdfs:comment xml:lang="en">This property refers to information that indicates whether the Dataset is open data, has access restrictions or is not public. A controlled vocabulary with three members (:public, :restricted, :non-public) will be created and maintained by the Publications Office of the EU.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#accessRights"/>
+   </rdf:Property>
+   <!--  Dataset  - creator  (dcat 2) -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#creator">
+      <vann:usageNote xml:lang="en">Optional property. This property refers to an entity primarily responsible for making the resource.</vann:usageNote>
+      <dct:identifier>dct:creator</dct:identifier>
+      <rdfs:label>creator</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#terms-creator"/>
+      <rdfs:comment xml:lang="en">This property refers to an entity primarily responsible for making the dataset.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#creator"/>
+   </rdf:Property>
+   <!--  Dataset  - qualified attribution   (dcat 2) -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#qualifiedattribution">
+      <vann:usageNote xml:lang="en">Optional property. This property refers to the link to an Agent having some form of responsibility for the resource. </vann:usageNote>
+      <dct:identifier>prov:qualifiedAttribution</dct:identifier>
+      <rdfs:label>qualifiedattribution</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/2013/REC-prov-o-20130430/#qualifiedAttribution"/>
+      <rdfs:comment xml:lang="en">This property refers to the link to an Agent having some form of responsibility for the resource.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#qualifiedattribution"/>
+   </rdf:Property>
+   <!--  Dataset  -  was generated by  (dcat 2) -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#wasgeneratedby">
+      <vann:usageNote xml:lang="en">Optional property. This property refers to an activity that generated, or provides the business context for, the creation of the dataset. </vann:usageNote>
+      <dct:identifier> prov:wasGeneratedBy</dct:identifier>
+      <rdfs:label>wasgeneratedby</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/2013/REC-prov-o-20130430/#wasGeneratedBy"/>
+      <rdfs:comment xml:lang="en">This property refers to an activity that generated, or provides the business context for, the creation of the dataset.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#wasgeneratedby"/>
+   </rdf:Property>
+   <!--  Dataset  -  temporal resolution (dcat 2) -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#temporalResolution">
+      <vann:usageNote xml:lang="en">Optional property. This property refers to the minimum time period resolvable in the dataset. </vann:usageNote>
+      <dct:identifier>dcat:temporalResolution</dct:identifier>
+      <rdfs:label>temporalResolution</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_temporal_resolution"/>
+      <rdfs:comment xml:lang="en">This property refers to the minimum time period resolvable in the dataset. .</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#"/>
+   </rdf:Property>
+   <!--  Dataset  - spatial resolution   (dcat 2) -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#spatialResolutionInMeters">
+      <vann:usageNote xml:lang="en">Optional property. This property refers to the minimum spatial separation resolvable in a dataset, measured in meters. </vann:usageNote>
+      <dct:identifier>dcat:spatialResolutionInMeters</dct:identifier>
+      <rdfs:label>spatialResolutionInMeters</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial_resolution"/>
+      <rdfs:comment xml:lang="en">This property refers to the  minimum spatial separation resolvable in a dataset, measured in meters.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#"/>
+   </rdf:Property>
+   <!--  Dataset  - qualified Relation   (dcat 2) -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#qualifiedrelation">
+      <vann:usageNote xml:lang="en">Optional property. This property provides a link to a description of a relationship with another resource. </vann:usageNote>
+      <dct:identifier>dcat:qualifiedRelation</dct:identifier>
+      <rdfs:label>qualifiedrelation</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_qualified_relation"/>
+      <rdfs:comment xml:lang="en">This property provides a link to a description of a relationship with another resource.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#Relationship"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#qualifiedrelation"/>
+   </rdf:Property>
+   <!--  Dataset  - is reference by   (dcat 2) -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#isreferencedBy">
+      <vann:usageNote xml:lang="en">Optional property. This property refers to a related resource, such as a publication, that references, cites, or otherwise points to the dataset. </vann:usageNote>
+      <dct:identifier>dct:isReferencedBy</dct:identifier>
+      <rdfs:label>isreferencedBy</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_is_referenced_by"/>
+      <rdfs:comment xml:lang="en">This property refers to a related resource, such as a publication, that references, cites, or otherwise points to the dataset.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#isreferencedBy"/>
+   </rdf:Property>
+   <!-- ====================================== -->
+   <!-- ==    Distribution - Properties     == -->
+   <!-- ====================================== -->
+   <!--  Distribution - access URL   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#accessURL">
+      <vann:usageNote xml:lang="en">Mandatory property.  This property contains a URL that gives access to a Distribution of the Dataset. The resource at the access URL may contain information about how to get the Dataset. </vann:usageNote>
+      <dct:identifier>dcat:accessURL</dct:identifier>
+      <rdfs:label>accessURL</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_access_url"/>
+      <rdfs:comment xml:lang="en">This property contains a URL that gives access to a Distribution of the Dataset. The resource at the access URL may contain information about how to get the Dataset.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#accessURL"/>
+   </rdf:Property>
+   <!--  Distribution - availability  -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#availability">
+      <vann:usageNote xml:lang="en">Recommended property. This property indicates how long it is planned to keep the Distribution of the Dataset available . </vann:usageNote>
+      <dct:identifier>dcatap:availability</dct:identifier>
+      <rdfs:label>availability</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/r5r/availability"/>
+      <rdfs:comment xml:lang="en">This property indicates how long it is planned to keep the Distribution of the Dataset available.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#availability"/>
+   </rdf:Property>
+   <!--  Distribution - description   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#description">
+      <vann:usageNote xml:lang="en">Recommended property. This property contains a free-text account of the Distribution. This property can be repeated for parallel language versions of the description.</vann:usageNote>
+      <dct:identifier>dct:description</dct:identifier>
+      <rdfs:label>description</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-description"/>
+      <rdfs:comment xml:lang="en">This property can be repeated for parallel language versions of the description.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#description"/>
+   </rdf:Property>
+   <!--  Distribution - format   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#format">
+      <vann:usageNote xml:lang="en">Recommended property. This property refers to the file format of the Distribution.</vann:usageNote>
+      <dct:identifier>dct:format</dct:identifier>
+      <rdfs:label>format</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-format"/>
+      <rdfs:comment xml:lang="en">This property refers to the file format of the Distribution.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#format"/>
+   </rdf:Property>
+   <!--  Distribution - licence   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#licence">
+      <vann:usageNote xml:lang="en">Recommended property. This property refers to the licence under which the Distribution is made available.</vann:usageNote>
+      <dct:identifier>dct:license</dct:identifier>
+      <rdfs:label>licence</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-license"/>
+      <rdfs:comment xml:lang="en">This property refers to the licence under which the Distribution is made available.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#licence"/>
+   </rdf:Property>
+   <!--  Distribution - byte size   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#bytesize">
+      <vann:usageNote xml:lang="en">Optional property. This property contains the size of a Distribution in bytes.</vann:usageNote>
+      <dct:identifier>dcat:byteSize</dct:identifier>
+      <rdfs:label>bytesize</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_size"/>
+      <rdfs:comment xml:lang="en">This property contains the size of a Distribution in bytes.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#bytesize"/>
+   </rdf:Property>
+   <!--  Distribution - download URL   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#downloadURL">
+      <vann:usageNote xml:lang="en">Optional property. This property contains a URL that is direct link to a downloadable file in a given format.</vann:usageNote>
+      <dct:identifier>dcat:downloadURL</dct:identifier>
+      <rdfs:label>downloadURL</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_download_url"/>
+      <rdfs:comment xml:lang="en">This property contains a URL that is direct link to a downloadable file in a given format.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#downloadURL"/>
+   </rdf:Property>
+   <!--  Distribution - media type   -->
+   <!-- the subproperty is not defined, do we do this? -->
+   <!-- Answer to BW: you mean the superproperty is not defined? yes it is ok as long as you do not use it. as it is not used in the model it should not be in the model, otherwise someone may use it -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#mediatype">
+      <vann:usageNote xml:lang="en">Optional property. Subproperty of dct:format. This property refers to the media type of the Distribution if this is defined in IANA.</vann:usageNote>
+      <dct:identifier>dcat:mediaType</dct:identifier>
+      <rdfs:label>mediatype</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-mediaType"/>
+      <rdfs:comment xml:lang="en">This property refers to the media type of the Distribution if this is defined in IANA.</rdfs:comment>
+      <rdfs:range rdf:resource="http://purl.org/dc/terms/MediaType"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#mediatype"/>
+   </rdf:Property>
+   <!--  Distribution - release date   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#releasedate">
+      <vann:usageNote xml:lang="en">Optional property. This property contains the date of formal issuance (e.g., publication) of the Distribution.</vann:usageNote>
+      <dct:identifier>dct:issued</dct:identifier>
+      <rdfs:label>releasedate</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-issued"/>
+      <rdfs:comment xml:lang="en">This property contains the date of formal issuance (e.g., publication) of the Distribution.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#releasedate"/>
+   </rdf:Property>
+   <!--  Distribution - rights   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#rights">
+      <vann:usageNote xml:lang="en">Optional property. This property refers to a statement that specifies rights associated with the Distribution.</vann:usageNote>
+      <dct:identifier>dct:rights</dct:identifier>
+      <rdfs:label>rights</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-rights"/>
+      <rdfs:comment xml:lang="en">This property refers to a statement that specifies rights associated with the Distribution.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#rights"/>
+   </rdf:Property>
+   <!--  Distribution - status   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#status">
+      <vann:usageNote xml:lang="en">Optional property. This property refers to the maturity of the Distribution.</vann:usageNote>
+      <dct:identifier>adms:status</dct:identifier>
+      <rdfs:label>status</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-adms/#status"/>
+      <rdfs:comment xml:lang="en">This property refers to the maturity of the Distribution</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#status"/>
+   </rdf:Property>
+   <!--  Distribution - title   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#title">
+      <vann:usageNote xml:lang="en">Optional property. This property contains a name given to the Distribution. This property can be repeated for parallel language versions of the description.</vann:usageNote>
+      <dct:identifier>dct:title</dct:identifier>
+      <rdfs:label>title</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-title"/>
+      <rdfs:comment xml:lang="en">This property contains a name given to the Distribution. This property can be repeated for parallel language versions of the description.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#title"/>
+   </rdf:Property>
+   <!--  Distribution - update/modification date   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#update/modificationdate">
+      <vann:usageNote xml:lang="en">Optional property. This property contains the most recent date on which the Distribution was changed or modified.</vann:usageNote>
+      <dct:identifier>dct:modified</dct:identifier>
+      <rdfs:label>update/modificationdate</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-modified"/>
+      <rdfs:comment xml:lang="en">This property contains the most recent date on which the Distribution was changed or modified.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#update/modificationdate"/>
+   </rdf:Property>
+   <!--  Distribution - linked schemas   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#linkedschemas">
+      <vann:usageNote xml:lang="en">Optional property. This property refers to an established schema to which the described Distribution conforms.</vann:usageNote>
+      <dct:identifier>dct:conformsTo</dct:identifier>
+      <rdfs:label>linkedschemas</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-conformsTo"/>
+      <rdfs:comment xml:lang="en">This property refers to an established schema to which the described Distribution conforms.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#linkedschemas"/>
+   </rdf:Property>
+   <!--  Distribution - language   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#language">
+      <vann:usageNote xml:lang="en">Optional property. This property refers to a language used in the Distribution. This property can be repeated if the metadata is provided in multiple languages.</vann:usageNote>
+      <dct:identifier>dct:language</dct:identifier>
+      <rdfs:label>language</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-language"/>
+      <rdfs:comment xml:lang="en">This property refers to a language used in the Distribution.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#language"/>
+   </rdf:Property>
+   <!--  Distribution - checksum   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#checksum">
+      <vann:usageNote xml:lang="en">Optional property.This property provides a mechanism that can be used to verify that the contents of a distribution have not changed. The checksum is related to the downloadURL.</vann:usageNote>
+      <dct:identifier>spdx:checksum</dct:identifier>
+      <rdfs:label>checksum</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://spdx.org/rdf/terms/#checksum"/>
+      <rdfs:comment xml:lang="en">This property provides a mechanism that can be used to verify that the contents of a distribution have not changed.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#distribution"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#checksum"/>
+   </rdf:Property>
+   <!--  Distribution - documentation   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#documentation">
+      <vann:usageNote xml:lang="en">Optional property.This property refers to a page or document about this Distribution.</vann:usageNote>
+      <dct:identifier>foaf:page</dct:identifier>
+      <rdfs:label>documentation</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/spec/#term_page"/>
+      <rdfs:comment xml:lang="en">This property refers to a page or document about this Distribution.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#documentation"/>
+   </rdf:Property>
+   <!--  Distribution -  has policy  (dcat 2) -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#haspolicy">
+      <vann:usageNote xml:lang="en">Optional property. This property refers to a policy expressing the rights associated with the resource if using the ODRL vocabulary. </vann:usageNote>
+      <dct:identifier>odrl:hasPolicy </dct:identifier>
+      <rdfs:label>haspolicy</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_has_policy"/>
+      <rdfs:comment xml:lang="en">This property refers to a policy expressing the rights associated with the resource if using the ODRL vocabulary.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#haspolicy"/>
+   </rdf:Property>
+   <!--   Distribution -  access service  (dcat 2)  -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#accessservice">
+      <vann:usageNote xml:lang="en">Optional property. This property refers to a data service that gives access to the distribution of the dataset. </vann:usageNote>
+      <dct:identifier>dcat:accessService </dct:identifier>
+      <rdfs:label>accessservice</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_access_service"/>
+      <rdfs:comment xml:lang="en">This property refers to the a data service that gives access to the distribution of the dataset .</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#accessservice"/>
+   </rdf:Property>
+   <!--   Distribution -  spatial resolution   (dcat 2) -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#spatialresolution">
+      <vann:usageNote xml:lang="en">Optional property. This property refers to the minimum spatial separation resolvable in a dataset distribution, measured in meters. . </vann:usageNote>
+      <dct:identifier>dcat:spatialResolutionInMeters </dct:identifier>
+      <rdfs:label>spatialresolution</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_spatial_resolution"/>
+      <rdfs:comment xml:lang="en">This property refers to the minimum spatial separation resolvable in a dataset distribution, measured in meters. .</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#spatialresolution"/>
+   </rdf:Property>
+   <!--   Distribution -  temporal resolution  (dcat 2)  -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#temporalresolution">
+      <vann:usageNote xml:lang="en">Optional property. This property refers to the minimum time period resolvable in the dataset distribution . </vann:usageNote>
+      <dct:identifier>dcat:temporalResolution </dct:identifier>
+      <rdfs:label>temporalresolution</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_temporal_resolution"/>
+      <rdfs:comment xml:lang="en">This property refers to the minimum time period resolvable in the dataset distribution .</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#duration"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#temporalresolution"/>
+   </rdf:Property>
+   <!--   Distribution -  compression format  (dcat 2)  -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#compressionformat">
+      <vann:usageNote xml:lang="en">Optional property. This property refers to the format of the file in which the data is contained in a compressed form, e.g. to reduce the size of the downloadable file. It SHOULD be expressed using a media type as defined in the official register of media types managed by IANA.</vann:usageNote>
+      <dct:identifier>dcat:compressFormat</dct:identifier>
+      <rdfs:label>compressionformat</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_compression_format"/>
+      <rdfs:comment xml:lang="en">This property refers to the format of the file in which the data is contained in a compressed form, e.g. to reduce the size of the downloadable file .</rdfs:comment>
+      <rdfs:range rdf:resource="http://purl.org/dc/terms/MediaType"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#compressionformat"/>
+   </rdf:Property>
+   <!--   Distribution - packaging format   (dcat 2)  -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#packagingformat">
+      <vann:usageNote xml:lang="en">Optional property. This property refers to the format of the file in which one or more data files are grouped together, e.g. to enable a set of related files to be downloaded together. It SHOULD be expressed using a media type as defined in the official register of media types managed by IANA. </vann:usageNote>
+      <dct:identifier>dcat:packageFormat</dct:identifier>
+      <rdfs:label>packagingformat</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_packaging_format"/>
+      <rdfs:comment xml:lang="en">This property refers to the format of the file in which one or more data files are grouped together, e.g. to enable a set of related files to be downloaded together.</rdfs:comment>
+      <rdfs:range rdf:resource="http://purl.org/dc/terms/MediaType"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#packagingformat"/>
+   </rdf:Property>
+   <!-- ====================================== -->
+   <!-- ==        Agent - Properties        == -->
+   <!-- ====================================== -->
+   <!--  Agent - name   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#name">
+      <vann:usageNote xml:lang="en">Mandatory property.  This property contains a name of the agent. This property can be repeated for different versions of the name (e.g. the name in different languages)</vann:usageNote>
+      <dct:identifier>foaf:name</dct:identifier>
+      <rdfs:label>name</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/spec/#term_name"/>
+      <rdfs:comment xml:lang="en">This property can be repeated for different versions of the name (e.g. the name in different languages)</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#name"/>
+   </rdf:Property>
+   <!--  Agent - type  -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#type">
+      <vann:usageNote xml:lang="en">Recommended property. This property refers to a type of the agent that makes the Catalogue or Dataset available</vann:usageNote>
+      <dct:identifier>dct:type</dct:identifier>
+      <rdfs:label>type</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-type"/>
+      <rdfs:comment xml:lang="en">This property refers to a type of the agent that makes the Catalogue or Dataset availabl</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#type"/>
+   </rdf:Property>
+   <!-- ====================================== -->
+   <!-- ==   Category Scheme - Properties   == -->
+   <!-- ====================================== -->
+   <!--  Category Scheme - title   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#title">
+      <vann:usageNote xml:lang="en">Mandatory property.  This property contains a name of the category scheme. May be repeated for different versions of the name</vann:usageNote>
+      <dct:identifier>dct:title</dct:identifier>
+      <rdfs:label>title</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-title"/>
+      <rdfs:comment xml:lang="en">This property contains a name of the category scheme. May be repeated for different versions of the name</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#CategoryScheme"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#title"/>
+   </rdf:Property>
+   <!-- ====================================== -->
+   <!-- ==     Checksum - Properties        == -->
+   <!-- ====================================== -->
+   <!--  Checksum - algorithm   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#algorithm">
+      <vann:usageNote xml:lang="en">Mandatory property. This property identifies the algorithm used to produce the subject Checksum. Currently, SHA-1 is the only supported algorithm. It is anticipated that other algorithms will be supported at a later time.</vann:usageNote>
+      <dct:identifier>spdx:algorithm</dct:identifier>
+      <rdfs:label>algorithm</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://spdx.org/rdf/terms/#algorithm"/>
+      <rdfs:comment xml:lang="en">Identifies the algorithm used to produce the subject Checksum. Currently, SHA-1 is the only supported algorithm. It is anticipated that other algorithms will be supported at a later time.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Checksum"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#algorithm"/>
+   </rdf:Property>
+   <!--  Checksum - checksum value   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#checksumvalue">
+      <vann:usageNote xml:lang="en">Mandatory property. This property provides a lower case hexadecimal encoded digest value produced using a specific algorithm.</vann:usageNote>
+      <dct:identifier>spdx:checksumValue</dct:identifier>
+      <rdfs:label>checksumvalue</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://spdx.org/rdf/terms/#checksumValue"/>
+      <rdfs:comment xml:lang="en">This property provides a lower case hexadecimal encoded digest value produced using a specific algorithm.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Checksum"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#checksumvalue"/>
+   </rdf:Property>
+   <!-- ====================================== -->
+   <!-- ==     Category - Properties        == -->
+   <!-- ====================================== -->
+   <!--  Category - preferred label   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#preferredlabel">
+      <vann:usageNote xml:lang="en">Mandatory property.  This property contains a preferred label of the category. This property can be repeated for parallel language versions of the label.</vann:usageNote>
+      <dct:identifier>skos:prefLabel</dct:identifier>
+      <rdfs:label>preferredlabel</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2009/08/skos-reference/skos.html#prefLabel"/>
+      <rdfs:comment xml:lang="en">This property can be repeated for parallel language versions of the label.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Category"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#preferredlabel"/>
+   </rdf:Property>
+   <!-- ====================================== -->
+   <!-- ==   Licence Document - Properties  == -->
+   <!-- ====================================== -->
+   <!--  Licence Document - licence type   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#licencetype">
+      <vann:usageNote xml:lang="en">Recommended property. This property refers to a type of licence, e.g. indicating ‘public domain’ or ‘royalties required’.</vann:usageNote>
+      <dct:identifier>dct:type</dct:identifier>
+      <rdfs:label>licencetype</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-type"/>
+      <rdfs:comment xml:lang="en">This property refers to a type of licence, e.g. indicating ‘public domain’ or ‘royalties required’.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#LicenceDocument"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#licencetype"/>
+   </rdf:Property>
+   <!-- ====================================== -->
+   <!-- ==    Identifier - Properties       == -->
+   <!-- ====================================== -->
+   <!--  Identifier - notation   -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#notation">
+      <vann:usageNote xml:lang="en">Mandatory property.  This property contains a string that is an identifier in the context of the identifier scheme referenced by its datatype.</vann:usageNote>
+      <dct:identifier>skos:notation</dct:identifier>
+      <rdfs:label>notation</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2009/08/skos-reference/skos.html#notation"/>
+      <rdfs:comment xml:lang="en">This property contains a string that is an identifier in the context of the identifier scheme referenced by its datatype.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Identifier"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#notation"/>
+   </rdf:Property>
+   <!-- ====================================== -->
+   <!-- ==   Period Of Time - Properties    == -->
+   <!-- ====================================== -->
+   <!--  Period Of Time - start date  (dcat 2) -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#startdate">
+      <vann:usageNote xml:lang="en">Recommended property. This property contains the start of the period.</vann:usageNote>
+      <dct:identifier>dcat:startDate</dct:identifier>
+      <rdfs:label>startdate</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:period_start_date"/>
+      <rdfs:comment xml:lang="en">This property contains the start of the period.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#PeriodOfTime"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#startdate"/>
+   </rdf:Property>
+   <!--  Period Of Time - end date (dcat 2)  -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#enddate">
+      <vann:usageNote xml:lang="en">Recommended property. This property contains the end of the period.</vann:usageNote>
+      <dct:identifier>dcat:endDate</dct:identifier>
+      <rdfs:label>enddate</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:period_end_date"/>
+      <rdfs:comment xml:lang="en">This property contains the end of the period.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#PeriodOfTime"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#enddate"/>
+   </rdf:Property>
+   <!--  Period Of Time - beginning  (dcat 2) -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#beginning">
+      <vann:usageNote xml:lang="en">Optional property. This property refers to the beginning of a period or interval.</vann:usageNote>
+      <dct:identifier>time:hasBeginning</dct:identifier>
+      <rdfs:label>beginning</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:period_has_beginning"/>
+      <rdfs:comment xml:lang="en">This property refers to the beginning of a period or interval.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#PeriodOfTime"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#beginning"/>
+   </rdf:Property>
+   <!--  Period Of Time - end  (dcat 2) -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#end">
+      <vann:usageNote xml:lang="en">Optional property. This property refers to the end of a period or interval.</vann:usageNote>
+      <dct:identifier>time:hasEnd</dct:identifier>
+      <rdfs:label>end</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:period_has_end"/>
+      <rdfs:comment xml:lang="en">This property refers to the end of a period or interval.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#PeriodOfTime"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#end"/>
+   </rdf:Property>
+   <!-- ====================================== -->
+   <!-- ==   Location - Properties    == -->
+   <!-- ====================================== -->
+   <!--  Location - geometry (dcat 2)-->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#geometry">
+      <vann:usageNote xml:lang="en">Optional property. This property associates any resource with the corresponding geometry.</vann:usageNote>
+      <dct:identifier>locn:geometry </dct:identifier>
+      <rdfs:label>geometry</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:location_geometry"/>
+      <rdfs:comment xml:lang="en">This property associates any resource with the corresponding geometry</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Location"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#geometry"/>
+   </rdf:Property>
+   <!--  Location-  bounding box  (dcat 2)-->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#boundingbox">
+      <vann:usageNote xml:lang="en">Recommended property. This propert refers to the geographic bounding box of a resource.</vann:usageNote>
+      <dct:identifier> dcat:bbox</dct:identifier>
+      <rdfs:label>boundingbox</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:location_bbox"/>
+      <rdfs:comment xml:lang="en">This propert refers to the geographic bounding box of a resource.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Location"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#boundingbox"/>
+   </rdf:Property>
+   <!--  Location- centroid  (dcat 2)-->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#centroid">
+      <vann:usageNote xml:lang="en">Recommended property. This property refers to the geographic center (centroid) of a resource.</vann:usageNote>
+      <dct:identifier>dcat:centroid</dct:identifier>
+      <rdfs:label>centroid</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:location_centroid"/>
+      <rdfs:comment xml:lang="en">This property refers to the geographic center (centroid) of a resource</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Location"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#centroid"/>
+   </rdf:Property>
+   <!-- ==============================================-->
+   <!--  Relationship - Properties (dcat 2)         -->
+   <!-- ============================================= -->
+   <!-- Relationship -  relation  (dcat 2) -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#relation">
+      <vann:usageNote xml:lang="en">Mandatory property.This property refers to the resource related to the source resource. .</vann:usageNote>
+      <dct:identifier>dct:relation</dct:identifier>
+      <rdfs:label>relation</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:relationship_relation"/>
+      <rdfs:comment xml:lang="en">This property refers to the resource related to the source resource.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Relationship"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#relation"/>
+   </rdf:Property>
+   <!-- Relationship - had role  (dcat 2) -->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#hadrole">
+      <vann:usageNote xml:lang="en">Mandatory property. The function of an entity or agent with respect to another entity or resource..</vann:usageNote>
+      <dct:identifier>dcat:hadRole</dct:identifier>
+      <rdfs:label>hadrole</rdfs:label>
+      <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/vocab-dcat-2/#Property:relationship_hadRole"/>
+      <rdfs:comment xml:lang="en">The function of an entity or agent with respect to another entity or resource.</rdfs:comment>
+      <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#Role"/>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Relationship"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#hadrole"/>
+   </rdf:Property>
+   <!-- ======================================= -->
+   <!-- ==  Definition of dcatap properties  == -->
+   <!-- ======================================= -->
+   <!-- Property Definition: availability-->
+   <rdf:Property 
+                 rdf:about="http://www.w3.org/ns/dcat#">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+      <rdfs:isDefinedBy rdf:resource="data.europa.eu/r5r/"/>
+      <rdfs:label/>
+      <rdfs:comment xml:lang="en">The knowledge organization system (KOS) used to classify Datase Distribution availability levels.</rdfs:comment>
+      <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <rdfs:about rdf:resource="http://www.w3.org/ns/dcat#"/>
+   </rdf:Property>
+   <!-- ======================================= -->
+   <!-- Code List of availability levels -->
+   <!-- ======================================= -->
+   <owl:Ontology rdf:about="http://data.europa.eu/r5r/availability">
+      <owl:versionInfo>1.0</owl:versionInfo>
+      <owl:versionIRI rdf:resource="http://data.europa.eu/r5r/availability/1.0/"/>
+      <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">List of availability levels.</rdfs:comment>
+   </owl:Ontology>
+   <!-- http://data.europa.eu/r5r/availability/1.0-->
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/r5r/availability/1.0">
+      <rdfs:label />
+      <vann:usageNote xml:lang="en">The list of terms for the avalability levels of a dataset distribution  in the DCAT-AP  specification.</vann:usageNote>
+      <skos:prefLabel xml:lang="en">List of availability levels</skos:prefLabel>
+      <dct:identifier>http://data.europa.eu/r5r/availability/1.0</dct:identifier>
+      <skos:hasTopConcept rdf:resource="http://data.europa.eu/r5r/availability/temporary"/>
+      <skos:hasTopConcept rdf:resource="http://data.europa.eu/r5r/availability/experimental"/>
+      <skos:hasTopConcept rdf:resource="http://data.europa.eu/r5r/availability/available"/>
+      <skos:hasTopConcept rdf:resource="http://data.europa.eu/r5r/availability/stable"/>
+   </skos:ConceptScheme>
+   <skos:Concept rdf:about="http://data.europa.eu/r5r/availability/temporary">
+      <dct:identifier>temporary</dct:identifier>
+      <skos:inScheme rdf:resource="http://data.europa.eu/r5r/availability/1.0"/>
+      <skos:prefLabel xml:lang="en">temporary</skos:prefLabel>
+      <skos:definition xml:lang="en">Data can disappear at any time, no planning.</skos:definition>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/r5r/experimental">
+      <dct:identifier>experimental</dct:identifier>
+      <skos:inScheme rdf:resource="http://data.europa.eu/r5r/availability/1.0"/>
+      <skos:prefLabel xml:lang="en">experimental</skos:prefLabel>
+      <skos:definition xml:lang="en">Data is available for a few years, medium term planning.</skos:definition>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/r5r/available">
+      <dct:identifier>available</dct:identifier>
+      <skos:inScheme rdf:resource="http://data.europa.eu/r5r/availability/1.0"/>
+      <skos:prefLabel xml:lang="en">available</skos:prefLabel>
+      <skos:definition xml:lang="en">Data is available for a few years, medium term planning.</skos:definition>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/r5r/stable">
+      <dct:identifier>stable</dct:identifier>
+      <skos:inScheme rdf:resource="http://data.europa.eu/r5r/availability/1.0"/>
+      <skos:prefLabel xml:lang="en">stable</skos:prefLabel>
+      <skos:definition xml:lang="en">Data will remain available in the long term.</skos:definition>
+   </skos:Concept>
+
+   <!--FOAF -->
+
+   
+</rdf:RDF>

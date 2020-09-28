@@ -1,0 +1,3 @@
+//>>built
+define("rdforms/view/SortedStore",["dojo/_base/declare","dojo/data/ItemFileWriteStore"],function(a,e){return a(e,{sortBy:"label",constructor:function(b){null!=b.sortBy&&(this.sortBy=b.sortBy)},fetch:function(){arguments[0].sort=[{attribute:this.sortBy,descending:!1}];this.inherited("fetch",arguments)},getValues:function(b,a){var d=this.inherited("getValues",arguments);if(null!=d&&"children"===a){var c=this.sortBy;d.sort(function(a,b){return a[c]>b[c]?1:a[c]<b[c]?-1:0})}return d}})});
+//# sourceMappingURL=SortedStore.js.map

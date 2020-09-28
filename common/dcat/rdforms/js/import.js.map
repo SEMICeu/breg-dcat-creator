@@ -1,0 +1,8 @@
+{
+"version":3,
+"file":"import.js",
+"lineCount":2,
+"mappings":"A;IAAIA,SAAWA,QAAAA,CAASC,CAATD,EACTE,CADSF,CACDC,CAAAE,OADCH,KAGTI,EAAS,IAAIC,UACjBD,EAAAE,OAJaN,CAIGO,QAAAA,OACVC,EAAOJ,CAAAK,OADGF,CAEVG,EAAkBC,CAAA,0JAAAC,KAAA,MACtBC,MAAAC,KAAA,CAAWJ,CAAX,CAAAK,IAAA,SAAyCP,CAAzC,CAHcD,CAKhBH,EAAAY,WAAA,CAAkBd,CAAAe,MAAA,GAAlB,CATajB;",
+"sources":["import.js.uncompressed.js"],
+"names":["openFile","event","input","target","reader","FileReader","onload","reader.onload","text","result","activeTextField","$","attr","dijit","byId","set","readAsText","files"]
+}

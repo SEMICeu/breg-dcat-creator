@@ -1,0 +1,4 @@
+//>>built
+define("rdfjson/formats/rdfxml/uri",[],function(){return{join:function(a,c){var d=c.indexOf("#");0<d&&(c=c.slice(0,d));if(0==a.length)return c;if(0==a.indexOf("#"))return c+a;if(0<=a.indexOf(":"))return a;var b=c.indexOf(":");if(0>b)return a;d=c.slice(0,b+1);if(0==a.indexOf("//"))return d+a;var e;if(c.indexOf("//",b)==b+1){if(e=c.indexOf("/",b+3),0>e)return 0<c.length-b-3?c+"/"+a:d+a}else if(e=c.indexOf("/",b+1),0>e)return 0<c.length-b-1?c+"/"+a:d+a;if(0==a.indexOf("/"))return c.slice(0,e)+a;var b=
+c.slice(e),f=b.lastIndexOf("/");if(0>f)return d+a;0<=f&&f<b.length-1&&(b=b.slice(0,f+1));for(b+=a;b.match(/[^\/]*\/\.\.\//);)b=b.replace(/[^\/]*\/\.\.\//,"");b=b.replace(/\.\//g,"");return c.slice(0,e)+b},docpart:function(a){var c=a.indexOf("#");return 0>c?a:a.slice(0,c)},protocol:function(a){return a.slice(0,a.indexOf(":"))}}});
+//# sourceMappingURL=uri.js.map

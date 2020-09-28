@@ -1,0 +1,8 @@
+{
+"version":3,
+"file":"Bundle.js",
+"lineCount":3,
+"mappings":"A;AACAA,MAAA,kDAA0D,QAAA,CAASC,CAAT,MAElDC,GAFkD,OAM/CD,EAAA,uHAgBYE,QAAAA,SACJC,SADID,CAhBZ,WAoBQE,QAAAA,SACAC,aADAD,CApBR,SAuBME,QAAAA,CAASC,CAATD,QACED,aAAAG,KADFF,CACsBC,CADtBD,CAvBN,SA0BMG,QAAAA,MACDJ,YAAAG,KADCC,OAEMC,gBAAAC,QAAA,CAAwBN,YAAAG,KAAxB,CAFNC,CA1BN,cA+BWG,QAAAA,SACHF,gBADGE,CA/BX,SAkCMC,QAAAA,SACEC,WADFD,CAlCN,UAsCOE,QAAAA,SACCC,YADDD,CAtCP;QA0CME,QAAAA,CAASC,CAATD,EACLD,WAAAG,KAAA,CAAiBD,CAAjB,CADKD,CA1CN,YA8CSG,QAAAA,CAASF,CAATE,EACRJ,WAAAK,OAAA,CAAmBL,WAAAM,QAAA,CAAoBJ,CAApB,CAAnB,GADQE,CA9CT,YAkDSG,QAAAA,SACFC,eADED,CAlDT,aAsDUE,QAAAA,CAASC,CAATD,EACTD,cADSC,CACQC,CADRD,CAtDV,YA0DSE,QAAAA,SACDC,eADCD,QACiBb,UADjBa,CA1DT,aAiEUE,QAAAA,CAASC,CAATD,EACTnB,eADSmB,CACSC,CAAAC,UAClB1B,aAFSwB,CAEMC,CAAAE,OACflB,WAHSe,CAGIC,CAAAG,KACbL,eAJSC,CAIQC,CAAAI,SACjBlB,YALSa,GAMT5B,EANS4B,EAOT1B,SAPS0B,YAOa5B,CAPb4B,CAjEV,EAN+C,CAA1D;",
+"sources":["Bundle.js.uncompressed.js"],
+"names":["define","declare","counter","getInternalId","_id","getSource","_source","setRoot","itemId","root","getRoot","_itemStore","getItem","getItemStore","getPath","_path","getItems","_items","addItem","item","push","removeItem","splice","indexOf","isModified","_modified","setModified","modified","isReadOnly","_readOnly","constructor","params","itemStore","source","path","readOnly"]
+}

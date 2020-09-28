@@ -1,0 +1,3195 @@
+{
+ "templates": [
+  {
+   "id": "http://www.w3.org/ns/locn#address",
+   "property": "http://www.w3.org/ns/locn#address",
+   "label": {
+    "en": "address"
+   },
+   "description": {
+    "en": "The locn:address property relationship associates any resource with the locn:Address class "
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/ns/locn#Address"
+   },
+   "extends": "http://www.w3.org/ns/locn#Address",
+   "type": "group",
+   "automatic": true
+  },
+  {
+   "id": "http://www.w3.org/ns/locn#addressArea",
+   "property": "http://www.w3.org/ns/locn#addressArea",
+   "label": {
+    "en": "address area"
+   },
+   "description": {
+    "en": "The name or names of a geographic area or locality that groups a number of addressable objects for addressing purposes, without being an administrative unit. This would typically be part of a city, a neighbourhood or village. The domain of locn:addressArea is locn:Address."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/ns/locn#addressId",
+   "property": "http://www.w3.org/ns/locn#addressId",
+   "label": {
+    "en": "address ID"
+   },
+   "description": {
+    "en": "The concept of adding a globally unique identifier for each instance of an address is a crucial part of the INSPIRE data spec. The domain of locn:addressId is locn:Address."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/ns/locn#adminUnitL1",
+   "property": "http://www.w3.org/ns/locn#adminUnitL1",
+   "label": {
+    "en": "admin unit level 1"
+   },
+   "description": {
+    "en": "The uppermost administrative unit for the address, almost always a country. The domain of locn:adminUnitL1 is locn:Address and the range is a literal, conceptually defined by the INSPIRE Geographical Name data type."
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/ns/locn#adminUnitL2",
+   "property": "http://www.w3.org/ns/locn#adminUnitL2",
+   "label": {
+    "en": "admin unit level 2"
+   },
+   "description": {
+    "en": "The region of the address, usually a county, state or other such area that typically encompasses several localities. The domain of  locn:adminUnitL2 is locn:Address and the range is a literal, conceptually defined by the INSPIRE Geographical Name data type."
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/ns/locn#fullAddress",
+   "property": "http://www.w3.org/ns/locn#fullAddress",
+   "label": {
+    "en": "full address"
+   },
+   "description": {
+    "en": "The complete address written as a string, with or without formatting. The domain of locn:fullAddress is locn:Address."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/ns/locn#geographicName",
+   "property": "http://www.w3.org/ns/locn#geographicName",
+   "label": {
+    "en": "geographic name"
+   },
+   "description": {
+    "en": "\nA geographic name is a proper noun applied to a spatial object. Taking the example used in the relevant INSPIRE data specification (page 18), the following are all valid geographic names for the Greek capital:\n- Î‘Î¸Î®Î½Î± (the Greek endonym written in the Greek script)\n- AthÃ­na (the standard Romanisation of the endonym)\n- Athens (the English language exonym)\nFor INSPIRE-conformant data, provide the metadata for the geographic name using a skos:Concept as a datatype.\n"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/ns/locn#geometry",
+   "property": "http://www.w3.org/ns/locn#geometry",
+   "label": {
+    "en": "geometry"
+   },
+   "description": {
+    "en": "Associates any resource with the corresponding geometry."
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/ns/locn#Geometry"
+   },
+   "extends": "http://www.w3.org/ns/locn#Geometry",
+   "type": "group",
+   "automatic": true
+  },
+  {
+   "id": "http://www.w3.org/ns/locn#location",
+   "property": "http://www.w3.org/ns/locn#location",
+   "label": {
+    "en": "location"
+   },
+   "description": {
+    "en": "The location property links any resource to the Location Class. Asserting the location relationship implies only that the domain has some connection to a Location in time or space. It does not imply that the resource is necessarily at that location at the time when the assertion is made."
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://purl.org/dc/terms/Location"
+   },
+   "extends": "http://purl.org/dc/terms/Location",
+   "type": "group",
+   "automatic": true
+  },
+  {
+   "id": "http://www.w3.org/ns/locn#locatorDesignator",
+   "property": "http://www.w3.org/ns/locn#locatorDesignator",
+   "label": {
+    "en": "locator designator"
+   },
+   "description": {
+    "en": "A number or a sequence of characters that uniquely identifies the locator within the relevant scope(s). The full identification of the locator could include one or more locator designators.\n    "
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/ns/locn#locatorName",
+   "property": "http://www.w3.org/ns/locn#locatorName",
+   "label": {
+    "en": "locator name"
+   },
+   "description": {
+    "en": "Proper noun(s) applied to the real world entity identified by the locator. The locator name could be the name of the property or complex, of the building or part of the building, or it could be the name of a room inside a building. \n    "
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/ns/locn#poBox",
+   "property": "http://www.w3.org/ns/locn#poBox",
+   "label": {
+    "en": "PO box"
+   },
+   "description": {
+    "en": "The Post Office Box number. The domain of locn:poBox is locn:Address."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/ns/locn#postCode",
+   "property": "http://www.w3.org/ns/locn#postCode",
+   "label": {
+    "en": "post code"
+   },
+   "description": {
+    "en": "The post code (a.k.a postal code, zip code etc.). Post codes are common elements in many countries' postal address systems. The domain of locn:postCode is locn:Address."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/ns/locn#postName",
+   "property": "http://www.w3.org/ns/locn#postName",
+   "label": {
+    "en": "post name"
+   },
+   "description": {
+    "en": "The key postal division of the address, usually the city. (INSPIRE's definition is \"One or more names created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.\"). The domain of locn:postName is locn:Address."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/ns/locn#thoroughfare",
+   "property": "http://www.w3.org/ns/locn#thoroughfare",
+   "label": {
+    "en": "thoroughfare"
+   },
+   "description": {
+    "en": "An address component that represents the name of a passage or way through from one location to another. A thoroughfare is not necessarily a road, it might be a waterway or some other feature. The domain of locn:thoroughfare is locn:Address."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:type",
+   "property": "http://www.w3.org/ns/dcat#type",
+   "label": {
+    "en": "type"
+   },
+   "description": {
+    "en": "This property refers to a type of the agent that makes the Catalogue or Dataset availabl"
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:identifier",
+   "property": "http://www.w3.org/ns/dcat#identifier",
+   "label": {
+    "en": "identifier"
+   },
+   "description": {
+    "en": "This property refers to a identifier of the agent that makes the Catalogue or Dataset availabl"
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:description",
+   "property": "http://www.w3.org/ns/dcat#description",
+   "label": {
+    "en": "description"
+   },
+   "description": {
+    "en": "This property can be repeated for parallel language versions of the description."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+   "property": "http://www.w3.org/2004/02/skos/core#prefLabel",
+   "label": {
+    "en": "preferred label"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2004/02/skos/core#altLabel",
+   "property": "http://www.w3.org/2004/02/skos/core#altLabel",
+   "label": {
+    "en": "alternative label"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/ns/org#identifier",
+   "property": "http://www.w3.org/ns/org#identifier",
+   "label": {
+    "en": "identifier"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://purl.org/dc/terms/description",
+   "property": "http://purl.org/dc/terms/description",
+   "label": {
+    "en": "description"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://purl.org/dc/terms/spatial",
+   "property": "http://purl.org/dc/terms/spatial",
+   "label": {
+    "en": "spatial"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/ns/org#purpose",
+   "property": "http://www.w3.org/ns/org#purpose",
+   "label": {
+    "en": "purpose"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/ns/org#classification",
+   "property": "http://www.w3.org/ns/org#classification",
+   "label": {
+    "en": "classification"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://xmlns.com/foaf/0.1/homepage",
+   "property": "http://xmlns.com/foaf/0.1/homepage",
+   "label": {
+    "en": "homepage"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://schema.org/logo",
+   "property": "http://schema.org/logo",
+   "label": {
+    "en": "logo"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/ns/org#hasSubOrganization",
+   "property": "http://www.w3.org/ns/org#hasSubOrganization",
+   "label": {
+    "en": "has SubOrganization"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/ns/org#subOrganizationOf",
+   "property": "http://www.w3.org/ns/org#subOrganizationOf",
+   "label": {
+    "en": "SubOrganization of"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/ns/org#hasUnit",
+   "property": "http://www.w3.org/ns/org#hasUnit",
+   "label": {
+    "en": "has unit"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/ns/org#unitOf",
+   "property": "http://www.w3.org/ns/org#unitOf",
+   "label": {
+    "en": "unit of"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/ns/org#memberOf",
+   "property": "http://www.w3.org/ns/org#memberOf",
+   "label": {
+    "en": "member of"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/ns/org#hasMember",
+   "property": "http://www.w3.org/ns/org#hasMember",
+   "label": {
+    "en": "has member"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://schema.org/contactPoint",
+   "property": "http://schema.org/contactPoint",
+   "label": {
+    "en": "contact point"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/1999/xhtml/vocab#prev",
+   "property": "http://www.w3.org/1999/xhtml/vocab#prev",
+   "label": {
+    "en": "prev"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/1999/xhtml/vocab#next",
+   "property": "http://www.w3.org/1999/xhtml/vocab#next",
+   "label": {
+    "en": "prev"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/ns/org#resultingOrganization",
+   "property": "http://www.w3.org/ns/org#resultingOrganization",
+   "label": {
+    "en": "resulting organization"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/ns/org#resultedFrom",
+   "property": "http://www.w3.org/ns/org#resultedFrom",
+   "label": {
+    "en": "resulted from"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/ns/org#originalOrganization",
+   "property": "http://www.w3.org/ns/org#originalOrganization",
+   "label": {
+    "en": "original organization"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/ns/org#changedBy",
+   "property": "http://www.w3.org/ns/org#changedBy",
+   "label": {
+    "en": "changed by"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://data.europa.eu/m8g/hasFormalFramework",
+   "property": "http://data.europa.eu/m8g/hasFormalFramework",
+   "label": {
+    "en": "has formal framework"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://purl.org/vocab/cpsv#implements",
+   "property": "http://purl.org/vocab/cpsv#implements",
+   "label": {
+    "en": "implements"
+   },
+   "description": {
+    "en": "The implements property links a Rule to relevant legislation or policy documents i.e. the formal framework under which the Rules are defined."
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://purl.org/vocab/cpsv#FormalFramework"
+   },
+   "extends": "http://purl.org/vocab/cpsv#FormalFramework",
+   "type": "group",
+   "automatic": true
+  },
+  {
+   "id": "http://schema.org/email",
+   "property": "http://schema.org/email",
+   "label": {
+    "en": "has email"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://schema.org/telephone",
+   "property": "http://schema.org/telephone",
+   "label": {
+    "en": "has telephone"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://schema.org/openingHours",
+   "property": "http://schema.org/openingHours",
+   "label": {
+    "en": "opening hours"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://schema.org/hoursAvailable",
+   "property": "http://schema.org/hoursAvailable",
+   "label": {
+    "en": "availability restriction"
+   },
+   "type": "choice",
+   "nodetype": "RESOURCE",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://purl.org/vocab/cpsv#physicallyAvailableAt",
+   "property": "http://purl.org/vocab/cpsv#physicallyAvailableAt",
+   "label": {
+    "en": "physically available at"
+   },
+   "description": {
+    "en": "A physical location at which a user may interact with the Public Service."
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://purl.org/dc/terms/Location"
+   },
+   "extends": "http://purl.org/dc/terms/Location",
+   "type": "group",
+   "automatic": true
+  },
+  {
+   "id": "http://purl.org/vocab/cpsv#hasInput",
+   "property": "http://purl.org/vocab/cpsv#hasInput",
+   "label": {
+    "en": "has input"
+   },
+   "description": {
+    "en": "The hasInput property links a Public Service to one or more instances of the Input class (see below). A specific service may require the presence of certain inputs or combinations of inputs in order to operate. These should be described in an application profile for a given service."
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://purl.org/vocab/cpsv#Input"
+   },
+   "extends": "http://purl.org/vocab/cpsv#Input",
+   "type": "group",
+   "automatic": true
+  },
+  {
+   "id": "http://purl.org/vocab/cpsv#produces",
+   "property": "http://purl.org/vocab/cpsv#produces",
+   "label": {
+    "en": "produces"
+   },
+   "description": {
+    "en": "The produces property links a Public Service to one or more instances of the Output class which is its range."
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://purl.org/vocab/cpsv#Output"
+   },
+   "extends": "http://purl.org/vocab/cpsv#Output",
+   "type": "group",
+   "automatic": true
+  },
+  {
+   "id": "http://purl.org/vocab/cpsv#hasRole",
+   "property": "http://purl.org/vocab/cpsv#hasRole",
+   "label": {
+    "en": "has role"
+   },
+   "description": {
+    "en": "This very general property links an Agent to a Public Service in which it plays some role. Both 'provides' and 'uses' are sub properties of playsRole with specific semantics."
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://purl.org/vocab/cpsv#PublicService"
+   },
+   "extends": "http://purl.org/vocab/cpsv#PublicService",
+   "type": "group",
+   "automatic": true
+  },
+  {
+   "id": "http://purl.org/vocab/cpsv#provides",
+   "property": "http://purl.org/vocab/cpsv#provides",
+   "label": {
+    "en": "provides"
+   },
+   "description": {
+    "en": "The provides property links an Agent to a Public Service for which it is responsible. Whether it provides the service directly or outsources it is not relevant, the Agent that provides the service is the one that is ultimately responsible for its provision."
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://purl.org/vocab/cpsv#PublicService"
+   },
+   "extends": "http://purl.org/vocab/cpsv#PublicService",
+   "type": "group",
+   "automatic": true
+  },
+  {
+   "id": "http://purl.org/vocab/cpsv#uses",
+   "property": "http://purl.org/vocab/cpsv#uses",
+   "label": {
+    "en": "uses"
+   },
+   "description": {
+    "en": "The uses property links an Agent to a Public Service in which it plays the specific role of user, meaning that it provides the input and receives the output but does not play any direct role in providing the service. This will typically be an individual citizen or an outside organisation."
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://purl.org/vocab/cpsv#PublicService"
+   },
+   "extends": "http://purl.org/vocab/cpsv#PublicService",
+   "type": "group",
+   "automatic": true
+  },
+  {
+   "id": "http://purl.org/vocab/cpsv#follows",
+   "property": "http://purl.org/vocab/cpsv#follows",
+   "label": {
+    "en": "follows"
+   },
+   "description": {
+    "en": "The follows property links a service to the Rule(s) under which it operates."
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://purl.org/vocab/cpsv#Rule"
+   },
+   "extends": "http://purl.org/vocab/cpsv#Rule",
+   "type": "group",
+   "automatic": true
+  },
+  {
+   "id": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+   "property": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+   "label": {
+    "en": "subClassOf"
+   },
+   "description": {
+    "en": "The subject is a subclass of a class."
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2000/01/rdf-schema#Class"
+   },
+   "extends": "http://www.w3.org/2000/01/rdf-schema#Class",
+   "type": "group",
+   "automatic": true
+  },
+  {
+   "id": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+   "property": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+   "label": {
+    "en": "subPropertyOf"
+   },
+   "description": {
+    "en": "The subject is a subproperty of a property."
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+   },
+   "extends": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+   "type": "group",
+   "automatic": true
+  },
+  {
+   "id": "http://www.w3.org/2000/01/rdf-schema#comment",
+   "property": "http://www.w3.org/2000/01/rdf-schema#comment",
+   "label": {
+    "en": "comment"
+   },
+   "description": {
+    "en": "A description of the subject resource."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2000/01/rdf-schema#label",
+   "property": "http://www.w3.org/2000/01/rdf-schema#label",
+   "label": {
+    "en": "label"
+   },
+   "description": {
+    "en": "A human-readable name for the subject."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "http://www.w3.org/2000/01/rdf-schema#domain",
+   "property": "http://www.w3.org/2000/01/rdf-schema#domain",
+   "label": {
+    "en": "domain"
+   },
+   "description": {
+    "en": "A domain of the subject property."
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2000/01/rdf-schema#Class"
+   },
+   "extends": "http://www.w3.org/2000/01/rdf-schema#Class",
+   "type": "group",
+   "automatic": true
+  },
+  {
+   "id": "http://www.w3.org/2000/01/rdf-schema#range",
+   "property": "http://www.w3.org/2000/01/rdf-schema#range",
+   "label": {
+    "en": "range"
+   },
+   "description": {
+    "en": "A range of the subject property."
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2000/01/rdf-schema#Class"
+   },
+   "extends": "http://www.w3.org/2000/01/rdf-schema#Class",
+   "type": "group",
+   "automatic": true
+  },
+  {
+   "id": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+   "property": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+   "label": {
+    "en": "seeAlso"
+   },
+   "description": {
+    "en": "Further information about the subject resource."
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2000/01/rdf-schema#Resource"
+   },
+   "extends": "http://www.w3.org/2000/01/rdf-schema#Resource",
+   "type": "group",
+   "automatic": true
+  },
+  {
+   "id": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+   "property": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+   "label": {
+    "en": "isDefinedBy"
+   },
+   "description": {
+    "en": "The defininition of the subject resource."
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2000/01/rdf-schema#Resource"
+   },
+   "extends": "http://www.w3.org/2000/01/rdf-schema#Resource",
+   "type": "group",
+   "automatic": true
+  },
+  {
+   "id": "http://www.w3.org/2000/01/rdf-schema#member",
+   "property": "http://www.w3.org/2000/01/rdf-schema#member",
+   "label": {
+    "en": "member"
+   },
+   "description": {
+    "en": "A member of the subject resource."
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2000/01/rdf-schema#Resource"
+   },
+   "extends": "http://www.w3.org/2000/01/rdf-schema#Resource",
+   "type": "group",
+   "automatic": true
+  },
+  {
+   "id": "dcat:dataset",
+   "property": "http://www.w3.org/ns/dcat#dataset",
+   "label": {
+    "en": "dataset"
+   },
+   "description": {
+    "en": "A dataset that is part of the catalog."
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/ns/dcat#Dataset"
+   },
+   "extends": "dcat:Dataset",
+   "type": "group",
+   "automatic": true
+  },
+  {
+   "id": "dcat:publisher",
+   "property": "http://www.w3.org/ns/dcat#publisher",
+   "label": {
+    "en": "publisher"
+   },
+   "description": {
+    "en": "This property refers to an entity (organisation) responsible for making the Dataset available."
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://xmlns.com/foaf/0.1/Agent"
+   },
+   "extends": "http://xmlns.com/foaf/0.1/Agent",
+   "type": "group",
+   "automatic": true
+  },
+  {
+   "id": "dcat:title",
+   "property": "http://www.w3.org/ns/dcat#title",
+   "label": {
+    "en": "title"
+   },
+   "description": {
+    "en": "This property contains a name of the category scheme. May be repeated for different versions of the name"
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:homepage",
+   "property": "http://www.w3.org/ns/dcat#homepage",
+   "label": {
+    "en": "homepage"
+   },
+   "description": {
+    "en": "This property refers to a web page that acts as the main page for the Catalogue."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:language",
+   "property": "http://www.w3.org/ns/dcat#language",
+   "label": {
+    "en": "language"
+   },
+   "description": {
+    "en": "This property refers to a language used in the Distribution."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:licence",
+   "property": "http://www.w3.org/ns/dcat#licence",
+   "label": {
+    "en": "licence"
+   },
+   "description": {
+    "en": "This property refers to the licence under which the Distribution is made available."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:releasedate",
+   "property": "http://www.w3.org/ns/dcat#releasedate",
+   "label": {
+    "en": "releasedate"
+   },
+   "description": {
+    "en": "This property contains the date of formal issuance (e.g., publication) of the Distribution."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:themes",
+   "property": "http://www.w3.org/ns/dcat#themes",
+   "label": {
+    "en": "themes"
+   },
+   "description": {
+    "en": "The knowledge organization system (KOS) used to classify catalog's datasets"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2000/01/rdf-schema#Resource"
+   },
+   "extends": "http://www.w3.org/2000/01/rdf-schema#Resource",
+   "type": "group",
+   "automatic": true
+  },
+  {
+   "id": "dcat:update/modificationdate",
+   "property": "http://www.w3.org/ns/dcat#update/modificationdate",
+   "label": {
+    "en": "update/modificationdate"
+   },
+   "description": {
+    "en": "This property contains the most recent date on which the Distribution was changed or modified."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:spatial/geographic",
+   "property": "http://www.w3.org/ns/dcat#spatial/geographic",
+   "label": {
+    "en": "spatial/geographic"
+   },
+   "description": {
+    "en": "This property refers to a geographical area covered by the Catalogue."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:record",
+   "property": "http://www.w3.org/ns/dcat#record",
+   "label": {
+    "en": "record"
+   },
+   "description": {
+    "en": "This property refers to a Catalogue Record that is part of the Catalogue"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/ns/dcat#CatalogRecord"
+   },
+   "extends": "dcat:CatalogRecord",
+   "type": "group",
+   "automatic": true
+  },
+  {
+   "id": "dcat:rights",
+   "property": "http://www.w3.org/ns/dcat#rights",
+   "label": {
+    "en": "rights"
+   },
+   "description": {
+    "en": "This property refers to a statement that specifies rights associated with the Distribution."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:haspart",
+   "property": "http://www.w3.org/ns/dcat#haspart",
+   "label": {
+    "en": "haspart"
+   },
+   "description": {
+    "en": "This property refers to a related Catalogue that is part of the described Catalogue"
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:ispartof",
+   "property": "http://www.w3.org/ns/dcat#ispartof",
+   "label": {
+    "en": "ispartof"
+   },
+   "description": {
+    "en": "This property refers to a related Catalogue in which the described Catalogue is physically or logically included."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:service",
+   "property": "http://www.w3.org/ns/dcat#service",
+   "label": {
+    "en": "service"
+   },
+   "description": {
+    "en": "This property refers to a site or end-point that is listed in the catalog. ."
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/ns/dcat#DataService"
+   },
+   "extends": "dcat:DataService",
+   "type": "group",
+   "automatic": true
+  },
+  {
+   "id": "dcat:catalog",
+   "property": "http://www.w3.org/ns/dcat#catalog",
+   "label": {
+    "en": "catalog"
+   },
+   "description": {
+    "en": "This property refers to a catalog whose contents are of interest in the context of this catalog  ."
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/ns/dcat#Catalog"
+   },
+   "extends": "dcat:Catalog",
+   "type": "group",
+   "automatic": true
+  },
+  {
+   "id": "dcat:creator",
+   "property": "http://www.w3.org/ns/dcat#creator",
+   "label": {
+    "en": "creator"
+   },
+   "description": {
+    "en": "This property refers to an entity primarily responsible for making the dataset."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:primarytopic",
+   "property": "http://www.w3.org/ns/dcat#primarytopic",
+   "label": {
+    "en": "primarytopic"
+   },
+   "description": {
+    "en": "This property links the Catalogue Record to the Dataset, Data Service or Catalogue described in the record."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:listingdate",
+   "property": "http://www.w3.org/ns/dcat#listingdate",
+   "label": {
+    "en": "listingdate"
+   },
+   "description": {
+    "en": "This property contains the date on which the description of the Dataset was included in the Catalogue."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:changetype",
+   "property": "http://www.w3.org/ns/dcat#changetype",
+   "label": {
+    "en": "changetype"
+   },
+   "description": {
+    "en": "The type of the latest revision of a Dataset's entry in the Catalogue. It MUST take one of the values :Completed, :Depricated, :Under development or :Withdrawn."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:conformsto",
+   "property": "http://www.w3.org/ns/dcat#conformsto",
+   "label": {
+    "en": "conformsto"
+   },
+   "description": {
+    "en": "This property refers to an implementing rule or other specification."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:sourcemetadata",
+   "property": "http://www.w3.org/ns/dcat#sourcemetadata",
+   "label": {
+    "en": "sourcemetadata"
+   },
+   "description": {
+    "en": "This property refers to the original metadata that was used in creating metadata for the Dataset."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:endpointURL",
+   "property": "http://www.w3.org/ns/dcat#endpointURL",
+   "label": {
+    "en": "endpointURL"
+   },
+   "description": {
+    "en": "The root location or primary endpoint of the service (an IRI)."
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2000/01/rdf-schema#Resource"
+   },
+   "extends": "http://www.w3.org/2000/01/rdf-schema#Resource",
+   "type": "group",
+   "automatic": true
+  },
+  {
+   "id": "dcat:servesdataset",
+   "property": "http://www.w3.org/ns/dcat#servesdataset",
+   "label": {
+    "en": "servesdataset"
+   },
+   "description": {
+    "en": "A collection of data that this data service can distribute."
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/ns/dcat#Dataset"
+   },
+   "extends": "dcat:Dataset",
+   "type": "group",
+   "automatic": true
+  },
+  {
+   "id": "dcat:endpointdescription",
+   "property": "http://www.w3.org/ns/dcat#endpointdescription",
+   "label": {
+    "en": "endpointdescription"
+   },
+   "description": {
+    "en": "A description of the services available via the end-points, including their operations, parameters etc."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:accessrights",
+   "property": "http://www.w3.org/ns/dcat#accessrights",
+   "label": {
+    "en": "accessrights"
+   },
+   "description": {
+    "en": "This property refers to information that indicates whether the Dataset is open data, has access restrictions or is not public. A controlled vocabulary with three members (:public, :restricted, :non-public) will be created and maintained by the Publications Office of the EU."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:contactpoint",
+   "property": "http://www.w3.org/ns/dcat#contactpoint",
+   "label": {
+    "en": "contactpoint"
+   },
+   "description": {
+    "en": "This property contains contact information that can be used for sending comments about the Dataset."
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Kind"
+   },
+   "extends": "http://www.w3.org/2006/vcard/ns#Kind",
+   "type": "group",
+   "automatic": true
+  },
+  {
+   "id": "dcat:datasetdistribution",
+   "property": "http://www.w3.org/ns/dcat#datasetdistribution",
+   "label": {
+    "en": "datasetdistribution"
+   },
+   "description": {
+    "en": "This property links the Dataset to an available Distribution."
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/ns/dcat#Distribution"
+   },
+   "extends": "dcat:Distribution",
+   "type": "group",
+   "automatic": true
+  },
+  {
+   "id": "dcat:keyword/tag",
+   "property": "http://www.w3.org/ns/dcat#keyword/tag",
+   "label": {
+    "en": "keyword/tag"
+   },
+   "description": {
+    "en": "This property contains a keyword or tag describing the Dataset."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:spatial/geographicalcoverage",
+   "property": "http://www.w3.org/ns/dcat#spatial/geographicalcoverage",
+   "label": {
+    "en": "spatial/geographicalcoverage"
+   },
+   "description": {
+    "en": "This property refers to a geographic region that is covered by the Dataset."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:theme/category",
+   "property": "http://www.w3.org/ns/dcat#theme/category",
+   "label": {
+    "en": "theme/category"
+   },
+   "description": {
+    "en": "This property refers to a category of the Dataset. A Dataset may be associated with multiple themes. Subproperty of dct:subject"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2004/02/skos/core#Concept"
+   },
+   "extends": "http://www.w3.org/2004/02/skos/core#Concept",
+   "type": "group",
+   "automatic": true
+  },
+  {
+   "id": "dcat:temporalcoverage",
+   "property": "http://www.w3.org/ns/dcat#temporalcoverage",
+   "label": {
+    "en": "temporalcoverage"
+   },
+   "description": {
+    "en": "This property refers to a temporal period that the Dataset covers."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:frequency",
+   "property": "http://www.w3.org/ns/dcat#frequency",
+   "label": {
+    "en": "frequency"
+   },
+   "description": {
+    "en": "This property refers to the frequency at which Dataset is updated."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:landingpage",
+   "property": "http://www.w3.org/ns/dcat#landingpage",
+   "label": {
+    "en": "landingpage"
+   },
+   "description": {
+    "en": "This property refers to a web page that provides access to the Dataset, its Distributions and/or additional information."
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://xmlns.com/foaf/0.1/Document"
+   },
+   "extends": "http://xmlns.com/foaf/0.1/Document",
+   "type": "group",
+   "automatic": true
+  },
+  {
+   "id": "dcat:otheridentifier",
+   "property": "http://www.w3.org/ns/dcat#otheridentifier",
+   "label": {
+    "en": "otheridentifier"
+   },
+   "description": {
+    "en": "This property refers to a secondary identifier of the Dataset, such as MAST/ADS[1], DataCite[2], DOI[3], EZID[4] or W3ID[5]."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:provenance",
+   "property": "http://www.w3.org/ns/dcat#provenance",
+   "label": {
+    "en": "provenance"
+   },
+   "description": {
+    "en": "This property contains a statement about the lineage of a Dataset."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:sample",
+   "property": "http://www.w3.org/ns/dcat#sample",
+   "label": {
+    "en": "sample"
+   },
+   "description": {
+    "en": "This property refers to a sample distribution of the dataset."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:source",
+   "property": "http://www.w3.org/ns/dcat#source",
+   "label": {
+    "en": "source"
+   },
+   "description": {
+    "en": "This property refers to a related Dataset from which the described Dataset is derived."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:relatedresource",
+   "property": "http://www.w3.org/ns/dcat#relatedresource",
+   "label": {
+    "en": "relatedresource"
+   },
+   "description": {
+    "en": "This property refers to a related resource."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:version",
+   "property": "http://www.w3.org/ns/dcat#version",
+   "label": {
+    "en": "version"
+   },
+   "description": {
+    "en": "This property contains a version number or other version designation of the Dataset."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:versionnotes",
+   "property": "http://www.w3.org/ns/dcat#versionnotes",
+   "label": {
+    "en": "versionnotes"
+   },
+   "description": {
+    "en": "This property contains a description of the differences between this version and a previous version of the Dataset."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:isVersionOf",
+   "property": "http://www.w3.org/ns/dcat#isVersionOf",
+   "label": {
+    "en": "isVersionOf"
+   },
+   "description": {
+    "en": "This property refers to a related Dataset of which the described Dataset is a version, edition, or adaptation."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:hasVersion",
+   "property": "http://www.w3.org/ns/dcat#hasVersion",
+   "label": {
+    "en": "hasVersion"
+   },
+   "description": {
+    "en": "This property refers to a related Dataset that is a version, edition, or adaptation of the described Dataset."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:documentation",
+   "property": "http://www.w3.org/ns/dcat#documentation",
+   "label": {
+    "en": "documentation"
+   },
+   "description": {
+    "en": "This property refers to a page or document about this Distribution."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:accessRights",
+   "property": "http://www.w3.org/ns/dcat#accessRights",
+   "label": {
+    "en": "accessRights"
+   },
+   "description": {
+    "en": "This property refers to information that indicates whether the Dataset is open data, has access restrictions or is not public. A controlled vocabulary with three members (:public, :restricted, :non-public) will be created and maintained by the Publications Office of the EU."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:qualifiedattribution",
+   "property": "http://www.w3.org/ns/dcat#qualifiedattribution",
+   "label": {
+    "en": "qualifiedattribution"
+   },
+   "description": {
+    "en": "This property refers to the link to an Agent having some form of responsibility for the resource."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:wasgeneratedby",
+   "property": "http://www.w3.org/ns/dcat#wasgeneratedby",
+   "label": {
+    "en": "wasgeneratedby"
+   },
+   "description": {
+    "en": "This property refers to an activity that generated, or provides the business context for, the creation of the dataset."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:temporalResolution",
+   "property": "http://www.w3.org/ns/dcat#temporalResolution",
+   "label": {
+    "en": "temporalResolution"
+   },
+   "description": {
+    "en": "This property refers to the minimum time period resolvable in the dataset. ."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:spatialResolutionInMeters",
+   "property": "http://www.w3.org/ns/dcat#spatialResolutionInMeters",
+   "label": {
+    "en": "spatialResolutionInMeters"
+   },
+   "description": {
+    "en": "This property refers to the  minimum spatial separation resolvable in a dataset, measured in meters."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:qualifiedrelation",
+   "property": "http://www.w3.org/ns/dcat#qualifiedrelation",
+   "label": {
+    "en": "qualifiedrelation"
+   },
+   "description": {
+    "en": "This property provides a link to a description of a relationship with another resource."
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/ns/dcat#Relationship"
+   },
+   "extends": "dcat:Relationship",
+   "type": "group",
+   "automatic": true
+  },
+  {
+   "id": "dcat:isreferencedBy",
+   "property": "http://www.w3.org/ns/dcat#isreferencedBy",
+   "label": {
+    "en": "isreferencedBy"
+   },
+   "description": {
+    "en": "This property refers to a related resource, such as a publication, that references, cites, or otherwise points to the dataset."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:accessURL",
+   "property": "http://www.w3.org/ns/dcat#accessURL",
+   "label": {
+    "en": "accessURL"
+   },
+   "description": {
+    "en": "This property contains a URL that gives access to a Distribution of the Dataset. The resource at the access URL may contain information about how to get the Dataset."
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2000/01/rdf-schema#Resource"
+   },
+   "extends": "http://www.w3.org/2000/01/rdf-schema#Resource",
+   "type": "group",
+   "automatic": true
+  },
+  {
+   "id": "dcat:availability",
+   "property": "http://www.w3.org/ns/dcat#availability",
+   "label": {
+    "en": "availability"
+   },
+   "description": {
+    "en": "This property indicates how long it is planned to keep the Distribution of the Dataset available."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:format",
+   "property": "http://www.w3.org/ns/dcat#format",
+   "label": {
+    "en": "format"
+   },
+   "description": {
+    "en": "This property refers to the file format of the Distribution."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:bytesize",
+   "property": "http://www.w3.org/ns/dcat#bytesize",
+   "label": {
+    "en": "bytesize"
+   },
+   "description": {
+    "en": "This property contains the size of a Distribution in bytes."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:downloadURL",
+   "property": "http://www.w3.org/ns/dcat#downloadURL",
+   "label": {
+    "en": "downloadURL"
+   },
+   "description": {
+    "en": "This property contains a URL that is direct link to a downloadable file in a given format."
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2000/01/rdf-schema#Resource"
+   },
+   "extends": "http://www.w3.org/2000/01/rdf-schema#Resource",
+   "type": "group",
+   "automatic": true
+  },
+  {
+   "id": "dcat:mediatype",
+   "property": "http://www.w3.org/ns/dcat#mediatype",
+   "label": {
+    "en": "mediatype"
+   },
+   "description": {
+    "en": "This property refers to the media type of the Distribution if this is defined in IANA."
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://purl.org/dc/terms/MediaType"
+   },
+   "extends": "http://purl.org/dc/terms/MediaType",
+   "type": "group",
+   "automatic": true
+  },
+  {
+   "id": "dcat:status",
+   "property": "http://www.w3.org/ns/dcat#status",
+   "label": {
+    "en": "status"
+   },
+   "description": {
+    "en": "This property refers to the maturity of the Distribution"
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:linkedschemas",
+   "property": "http://www.w3.org/ns/dcat#linkedschemas",
+   "label": {
+    "en": "linkedschemas"
+   },
+   "description": {
+    "en": "This property refers to an established schema to which the described Distribution conforms."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:checksum",
+   "property": "http://www.w3.org/ns/dcat#checksum",
+   "label": {
+    "en": "checksum"
+   },
+   "description": {
+    "en": "This property provides a mechanism that can be used to verify that the contents of a distribution have not changed."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:haspolicy",
+   "property": "http://www.w3.org/ns/dcat#haspolicy",
+   "label": {
+    "en": "haspolicy"
+   },
+   "description": {
+    "en": "This property refers to a policy expressing the rights associated with the resource if using the ODRL vocabulary."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:accessservice",
+   "property": "http://www.w3.org/ns/dcat#accessservice",
+   "label": {
+    "en": "accessservice"
+   },
+   "description": {
+    "en": "This property refers to the a data service that gives access to the distribution of the dataset ."
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/ns/dcat#DataService"
+   },
+   "extends": "dcat:DataService",
+   "type": "group",
+   "automatic": true
+  },
+  {
+   "id": "dcat:spatialresolution",
+   "property": "http://www.w3.org/ns/dcat#spatialresolution",
+   "label": {
+    "en": "spatialresolution"
+   },
+   "description": {
+    "en": "This property refers to the minimum spatial separation resolvable in a dataset distribution, measured in meters. ."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:temporalresolution",
+   "property": "http://www.w3.org/ns/dcat#temporalresolution",
+   "label": {
+    "en": "temporalresolution"
+   },
+   "description": {
+    "en": "This property refers to the minimum time period resolvable in the dataset distribution ."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2001/XMLSchema#duration",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:compressionformat",
+   "property": "http://www.w3.org/ns/dcat#compressionformat",
+   "label": {
+    "en": "compressionformat"
+   },
+   "description": {
+    "en": "This property refers to the format of the file in which the data is contained in a compressed form, e.g. to reduce the size of the downloadable file ."
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://purl.org/dc/terms/MediaType"
+   },
+   "extends": "http://purl.org/dc/terms/MediaType",
+   "type": "group",
+   "automatic": true
+  },
+  {
+   "id": "dcat:packagingformat",
+   "property": "http://www.w3.org/ns/dcat#packagingformat",
+   "label": {
+    "en": "packagingformat"
+   },
+   "description": {
+    "en": "This property refers to the format of the file in which one or more data files are grouped together, e.g. to enable a set of related files to be downloaded together."
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://purl.org/dc/terms/MediaType"
+   },
+   "extends": "http://purl.org/dc/terms/MediaType",
+   "type": "group",
+   "automatic": true
+  },
+  {
+   "id": "dcat:name",
+   "property": "http://www.w3.org/ns/dcat#name",
+   "label": {
+    "en": "name"
+   },
+   "description": {
+    "en": "This property can be repeated for different versions of the name (e.g. the name in different languages)"
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:algorithm",
+   "property": "http://www.w3.org/ns/dcat#algorithm",
+   "label": {
+    "en": "algorithm"
+   },
+   "description": {
+    "en": "Identifies the algorithm used to produce the subject Checksum. Currently, SHA-1 is the only supported algorithm. It is anticipated that other algorithms will be supported at a later time."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:checksumvalue",
+   "property": "http://www.w3.org/ns/dcat#checksumvalue",
+   "label": {
+    "en": "checksumvalue"
+   },
+   "description": {
+    "en": "This property provides a lower case hexadecimal encoded digest value produced using a specific algorithm."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:preferredlabel",
+   "property": "http://www.w3.org/ns/dcat#preferredlabel",
+   "label": {
+    "en": "preferredlabel"
+   },
+   "description": {
+    "en": "This property can be repeated for parallel language versions of the label."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:licencetype",
+   "property": "http://www.w3.org/ns/dcat#licencetype",
+   "label": {
+    "en": "licencetype"
+   },
+   "description": {
+    "en": "This property refers to a type of licence, e.g. indicating ‘public domain’ or ‘royalties required’."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:notation",
+   "property": "http://www.w3.org/ns/dcat#notation",
+   "label": {
+    "en": "notation"
+   },
+   "description": {
+    "en": "This property contains a string that is an identifier in the context of the identifier scheme referenced by its datatype."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:startdate",
+   "property": "http://www.w3.org/ns/dcat#startdate",
+   "label": {
+    "en": "startdate"
+   },
+   "description": {
+    "en": "This property contains the start of the period."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:enddate",
+   "property": "http://www.w3.org/ns/dcat#enddate",
+   "label": {
+    "en": "enddate"
+   },
+   "description": {
+    "en": "This property contains the end of the period."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:beginning",
+   "property": "http://www.w3.org/ns/dcat#beginning",
+   "label": {
+    "en": "beginning"
+   },
+   "description": {
+    "en": "This property refers to the beginning of a period or interval."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:end",
+   "property": "http://www.w3.org/ns/dcat#end",
+   "label": {
+    "en": "end"
+   },
+   "description": {
+    "en": "This property refers to the end of a period or interval."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:geometry",
+   "property": "http://www.w3.org/ns/dcat#geometry",
+   "label": {
+    "en": "geometry"
+   },
+   "description": {
+    "en": "This property associates any resource with the corresponding geometry"
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:boundingbox",
+   "property": "http://www.w3.org/ns/dcat#boundingbox",
+   "label": {
+    "en": "boundingbox"
+   },
+   "description": {
+    "en": "This propert refers to the geographic bounding box of a resource."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:centroid",
+   "property": "http://www.w3.org/ns/dcat#centroid",
+   "label": {
+    "en": "centroid"
+   },
+   "description": {
+    "en": "This property refers to the geographic center (centroid) of a resource"
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:relation",
+   "property": "http://www.w3.org/ns/dcat#relation",
+   "label": {
+    "en": "relation"
+   },
+   "description": {
+    "en": "This property refers to the resource related to the source resource."
+   },
+   "type": "text",
+   "nodetype": "DATATYPE_LITERAL",
+   "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "cardinality": {
+    "pref": 1
+   }
+  },
+  {
+   "id": "dcat:hadrole",
+   "property": "http://www.w3.org/ns/dcat#hadrole",
+   "label": {
+    "en": "hadrole"
+   },
+   "description": {
+    "en": "The function of an entity or agent with respect to another entity or resource."
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/ns/dcat#Role"
+   },
+   "extends": "dcat:Role",
+   "type": "group",
+   "automatic": true
+  },
+  {
+   "id": "dcat:",
+   "property": "http://www.w3.org/ns/dcat#",
+   "label": {
+    "en": ""
+   },
+   "description": {
+    "en": "The knowledge organization system (KOS) used to classify Datase Distribution availability levels."
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2004/02/skos/core#Concept"
+   },
+   "extends": "http://www.w3.org/2004/02/skos/core#Concept",
+   "type": "group",
+   "automatic": true
+  },
+  {
+   "id": "http://www.w3.org/ns/locn#Address",
+   "label": {
+    "en": "Address"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/ns/locn#Address"
+   },
+   "description": {
+    "en": "An \"address representation\" as conceptually defined by the INSPIRE Address Representation data type. The locn:addressId property may be used to link this locn:Address to other representations."
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group",
+   "items": [
+    "http://www.w3.org/ns/locn#addressArea",
+    "http://www.w3.org/ns/locn#addressId",
+    "http://www.w3.org/ns/locn#adminUnitL1",
+    "http://www.w3.org/ns/locn#adminUnitL2",
+    "http://www.w3.org/ns/locn#fullAddress",
+    "http://www.w3.org/ns/locn#poBox",
+    "http://www.w3.org/ns/locn#postCode",
+    "http://www.w3.org/ns/locn#postName",
+    "http://www.w3.org/ns/locn#thoroughfare"
+   ]
+  },
+  {
+   "id": "http://www.w3.org/ns/locn#Geometry",
+   "label": {
+    "en": "Geometry"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/ns/locn#Geometry"
+   },
+   "description": {
+    "en": "The locn:Geometry class provides the means to identify a location as a point, line, polygon, etc. expressed using coordinates in some coordinate reference system."
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "http://purl.org/dc/terms/Location",
+   "label": {
+    "en": "Location",
+    "": "Location"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://purl.org/dc/terms/Location"
+   },
+   "description": {
+    "en": "A spatial region or named place."
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2004/02/skos/core#Concept",
+   "label": {
+    "en": "Concept",
+    "": "Concept"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2004/02/skos/core#Concept"
+   },
+   "description": {
+    "en": "An abstract idea or notion; a unit of thought."
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "http://data.europa.eu/eli/ontology#LegalResource",
+   "label": {
+    "en": "LegalResource"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://data.europa.eu/eli/ontology#LegalResource"
+   },
+   "description": {
+    "en": ""
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group",
+   "items": [
+    "dcat:type",
+    "dcat:identifier",
+    "dcat:description"
+   ]
+  },
+  {
+   "id": "http://data.europa.eu/m8g/PublicOrganisation",
+   "label": {
+    "en": "PublicOrganisation"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://data.europa.eu/m8g/PublicOrganisation"
+   },
+   "description": {
+    "en": "The Public Organization class represents the organization. One organization may comprise several sub-organizations and any organization may have one or more organizational units. Each of these is described using the same properties and relationships."
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group",
+   "items": [
+    "http://www.w3.org/ns/org#purpose"
+   ]
+  },
+  {
+   "id": "http://www.w3.org/ns/org#ChangeEvent",
+   "label": {
+    "en": "Change Event"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/ns/org#ChangeEvent"
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group",
+   "items": [
+    "http://data.europa.eu/m8g/hasFormalFramework"
+   ]
+  },
+  {
+   "id": "http://data.europa.eu/m8g/FoundationEvent",
+   "label": {
+    "en": "Foundation Event"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://data.europa.eu/m8g/FoundationEvent"
+   },
+   "description": {
+    "en": "Public organizations are formed and changed in response to events. This may be the result of new legislation, new policies, taking on new obligations etc. The CPOV captures this in its Change Event class but recognises the specific case of an organization's foundation as being sufficiently distinct to require a sub class of Change Event."
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group",
+   "items": [
+    "http://data.europa.eu/m8g/hasFormalFramework"
+   ]
+  },
+  {
+   "id": "http://purl.org/vocab/cpsv#FormalFramework",
+   "label": {
+    "en": "This class represents the legislation, policy or policies that lie behind the rules that govern the service. As with the Rule class, the Formal Framework class is a sub class of frbr:Expression, i.e. instances of the class are concrete expressions of the more abstract concept of the piece of legislation or policy itself."
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://purl.org/vocab/cpsv#FormalFramework"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://schema.org/ContactPoint",
+   "label": {
+    "en": "Contact Point"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://schema.org/ContactPoint"
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "http://schema.org/OpeningHoursSpecification",
+   "label": {
+    "en": "opening hours specification"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://schema.org/OpeningHoursSpecification"
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "http://purl.org/vocab/cpsv#PublicService",
+   "label": {
+    "en": "Public Service"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://purl.org/vocab/cpsv#PublicService"
+   },
+   "description": {
+    "en": "This class represents the service itself. A public service is the capacity to carry out a procedure and exists whether it is used or not. It is a set of deeds and acts performed by or on behalf of a public agency for the benefit of a citizen, a business or another public agency."
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group",
+   "items": [
+    "http://purl.org/vocab/cpsv#physicallyAvailableAt"
+   ]
+  },
+  {
+   "id": "http://purl.org/vocab/cpsv#Rule",
+   "label": {
+    "en": "Rule"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://purl.org/vocab/cpsv#Rule"
+   },
+   "description": {
+    "en": "The Rule class represents the specific rules, guidelines or procedures that the Public Service follows. Instances of the Rule class are FRBR Expressions, that is, a concrete expression, such as a document, of the more abstract concept of the rules themselves."
+   },
+   "type": "group",
+   "items": [
+    "http://purl.org/vocab/cpsv#implements"
+   ]
+  },
+  {
+   "id": "http://purl.org/vocab/cpsv#Input",
+   "label": {
+    "en": "Input"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://purl.org/vocab/cpsv#Input"
+   },
+   "description": {
+    "en": "Inputs can by any resource - document, artefact - anything. In a specific context it is likely to be useful to either define a sub class or declare the particular resource to also be of another type as well. A general case might be a foaf:Document but where possible, it is better to refer to a controlled vocabulary of types. dcterms:type should be used to use to provide this information linking to a SKOS Concept."
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "http://purl.org/vocab/cpsv#Output",
+   "label": {
+    "en": "Output"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://purl.org/vocab/cpsv#Output"
+   },
+   "description": {
+    "en": "Outputs can by any resource - document, artefact - anything. In a specific context it is likely to be useful to either define a sub class or declare the particular resource to also be of another type as well. A general case might be a foaf:Document but where possible, it is better to refer to a controlled vocabulary of types. dcterms:type should be used to use to provide this information linking to a SKOS Concept."
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "http://xmlns.com/foaf/0.1/LabelProperty",
+   "label": {
+    "en": "Label Property"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://xmlns.com/foaf/0.1/LabelProperty"
+   },
+   "description": {
+    "en": "A foaf:LabelProperty is any RDF property with texual values that serve as labels."
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "http://xmlns.com/foaf/0.1/Person",
+   "label": {
+    "en": "Person"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://xmlns.com/foaf/0.1/Person"
+   },
+   "description": {
+    "en": "A person."
+   },
+   "type": "group",
+   "items": [
+    "dcat:type",
+    "dcat:identifier",
+    "dcat:name"
+   ]
+  },
+  {
+   "id": "http://xmlns.com/foaf/0.1/Agent",
+   "label": {
+    "en": "Agent"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://xmlns.com/foaf/0.1/Agent"
+   },
+   "description": {
+    "en": "An agent (eg. person, group, software or physical artifact)."
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group",
+   "items": [
+    "dcat:type",
+    "dcat:identifier",
+    "dcat:name"
+   ]
+  },
+  {
+   "id": "http://xmlns.com/foaf/0.1/Organization",
+   "label": {
+    "en": "Organization"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://xmlns.com/foaf/0.1/Organization"
+   },
+   "description": {
+    "en": "An organization."
+   },
+   "type": "group",
+   "items": [
+    "dcat:type",
+    "dcat:identifier",
+    "dcat:name"
+   ]
+  },
+  {
+   "id": "http://xmlns.com/foaf/0.1/Group",
+   "label": {
+    "en": "Group"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://xmlns.com/foaf/0.1/Group"
+   },
+   "description": {
+    "en": "A class of Agents."
+   },
+   "type": "group",
+   "items": [
+    "dcat:type",
+    "dcat:identifier",
+    "dcat:name"
+   ]
+  },
+  {
+   "id": "http://xmlns.com/foaf/0.1/Project",
+   "label": {
+    "en": "Project"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://xmlns.com/foaf/0.1/Project"
+   },
+   "description": {
+    "en": "A project (a collective endeavour of some kind)."
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "http://xmlns.com/foaf/0.1/Image",
+   "label": {
+    "en": "Image"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://xmlns.com/foaf/0.1/Image"
+   },
+   "description": {
+    "en": "An image."
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://xmlns.com/foaf/0.1/Document",
+   "label": {
+    "en": "Document"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://xmlns.com/foaf/0.1/Document"
+   },
+   "description": {
+    "en": "A document."
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "http://xmlns.com/foaf/0.1/PersonalProfileDocument",
+   "label": {
+    "en": "PersonalProfileDocument"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://xmlns.com/foaf/0.1/PersonalProfileDocument"
+   },
+   "description": {
+    "en": "A personal profile RDF document."
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://xmlns.com/foaf/0.1/OnlineAccount",
+   "label": {
+    "en": "Online Account"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://xmlns.com/foaf/0.1/OnlineAccount"
+   },
+   "description": {
+    "en": "An online account."
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "http://xmlns.com/foaf/0.1/OnlineGamingAccount",
+   "label": {
+    "en": "Online Gaming Account"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://xmlns.com/foaf/0.1/OnlineGamingAccount"
+   },
+   "description": {
+    "en": "An online gaming account."
+   },
+   "extends": "http://xmlns.com/foaf/0.1/OnlineAccount",
+   "type": "group"
+  },
+  {
+   "id": "http://xmlns.com/foaf/0.1/OnlineEcommerceAccount",
+   "label": {
+    "en": "Online E-commerce Account"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://xmlns.com/foaf/0.1/OnlineEcommerceAccount"
+   },
+   "description": {
+    "en": "An online e-commerce account."
+   },
+   "extends": "http://xmlns.com/foaf/0.1/OnlineAccount",
+   "type": "group"
+  },
+  {
+   "id": "http://xmlns.com/foaf/0.1/OnlineChatAccount",
+   "label": {
+    "en": "Online Chat Account"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://xmlns.com/foaf/0.1/OnlineChatAccount"
+   },
+   "description": {
+    "en": "An online chat account."
+   },
+   "extends": "http://xmlns.com/foaf/0.1/OnlineAccount",
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2000/01/rdf-schema#Class",
+   "label": {
+    "en": "Class"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2000/01/rdf-schema#Class"
+   },
+   "description": {
+    "en": "The class of classes."
+   },
+   "type": "group",
+   "items": [
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+    "http://www.w3.org/2000/01/rdf-schema#comment",
+    "http://www.w3.org/2000/01/rdf-schema#label",
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+    "http://www.w3.org/2000/01/rdf-schema#member"
+   ]
+  },
+  {
+   "id": "http://www.w3.org/2000/01/rdf-schema#Container",
+   "label": {
+    "en": "Container"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2000/01/rdf-schema#Container"
+   },
+   "description": {
+    "en": "The class of RDF containers."
+   },
+   "type": "group",
+   "items": [
+    "http://www.w3.org/2000/01/rdf-schema#comment",
+    "http://www.w3.org/2000/01/rdf-schema#label",
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+    "http://www.w3.org/2000/01/rdf-schema#member"
+   ]
+  },
+  {
+   "id": "http://www.w3.org/2000/01/rdf-schema#ContainerMembershipProperty",
+   "label": {
+    "en": "ContainerMembershipProperty"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2000/01/rdf-schema#ContainerMembershipProperty"
+   },
+   "description": {
+    "en": "The class of container membership properties, rdf:_1, rdf:_2, ...,\n                    all of which are sub-properties of 'member'."
+   },
+   "type": "group",
+   "items": [
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+    "http://www.w3.org/2000/01/rdf-schema#domain",
+    "http://www.w3.org/2000/01/rdf-schema#range"
+   ]
+  },
+  {
+   "id": "http://www.w3.org/2000/01/rdf-schema#Datatype",
+   "label": {
+    "en": "Datatype"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2000/01/rdf-schema#Datatype"
+   },
+   "description": {
+    "en": "The class of RDF datatypes."
+   },
+   "type": "group",
+   "items": [
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+    "http://www.w3.org/2000/01/rdf-schema#comment",
+    "http://www.w3.org/2000/01/rdf-schema#label",
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+    "http://www.w3.org/2000/01/rdf-schema#member"
+   ]
+  },
+  {
+   "id": "dcat:Catalog",
+   "label": {
+    "en": "Catalog"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/ns/dcat#Catalog"
+   },
+   "description": {
+    "en": "A  curated collection of metadata about datasets"
+   },
+   "type": "group",
+   "items": [
+    "dcat:description",
+    "dcat:dataset",
+    "dcat:publisher",
+    "dcat:title",
+    "dcat:homepage",
+    "dcat:language",
+    "dcat:licence",
+    "dcat:releasedate",
+    "dcat:themes",
+    "dcat:update/modificationdate",
+    "dcat:spatial/geographic",
+    "dcat:record",
+    "dcat:rights",
+    "dcat:haspart",
+    "dcat:ispartof",
+    "dcat:service",
+    "dcat:catalog",
+    "dcat:creator",
+    "dcat:type",
+    "dcat:identifier",
+    "dcat:conformsto",
+    "dcat:contactpoint",
+    "dcat:datasetdistribution",
+    "dcat:keyword/tag",
+    "dcat:spatial/geographicalcoverage",
+    "dcat:theme/category",
+    "dcat:temporalcoverage",
+    "dcat:frequency",
+    "dcat:landingpage",
+    "dcat:otheridentifier",
+    "dcat:provenance",
+    "dcat:sample",
+    "dcat:source",
+    "dcat:relatedresource",
+    "dcat:version",
+    "dcat:versionnotes",
+    "dcat:isVersionOf",
+    "dcat:hasVersion",
+    "dcat:documentation",
+    "dcat:accessRights",
+    "dcat:qualifiedattribution",
+    "dcat:wasgeneratedby",
+    "dcat:temporalResolution",
+    "dcat:spatialResolutionInMeters",
+    "dcat:qualifiedrelation",
+    "dcat:isreferencedBy"
+   ]
+  },
+  {
+   "id": "dcat:Resource",
+   "label": {
+    "en": "Resource"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/ns/dcat#Resource"
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "dcat:Dataset",
+   "label": {
+    "en": "Dataset"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/ns/dcat#Dataset"
+   },
+   "description": {
+    "en": "A collection of data, published or curated by a single source, and available for access or download in one or more formats"
+   },
+   "type": "group",
+   "items": [
+    "dcat:type",
+    "dcat:identifier",
+    "dcat:description",
+    "dcat:publisher",
+    "dcat:title",
+    "dcat:language",
+    "dcat:releasedate",
+    "dcat:update/modificationdate",
+    "dcat:creator",
+    "dcat:conformsto",
+    "dcat:contactpoint",
+    "dcat:datasetdistribution",
+    "dcat:keyword/tag",
+    "dcat:spatial/geographicalcoverage",
+    "dcat:theme/category",
+    "dcat:temporalcoverage",
+    "dcat:frequency",
+    "dcat:landingpage",
+    "dcat:otheridentifier",
+    "dcat:provenance",
+    "dcat:sample",
+    "dcat:source",
+    "dcat:relatedresource",
+    "dcat:version",
+    "dcat:versionnotes",
+    "dcat:isVersionOf",
+    "dcat:hasVersion",
+    "dcat:documentation",
+    "dcat:accessRights",
+    "dcat:qualifiedattribution",
+    "dcat:wasgeneratedby",
+    "dcat:temporalResolution",
+    "dcat:spatialResolutionInMeters",
+    "dcat:qualifiedrelation",
+    "dcat:isreferencedBy"
+   ]
+  },
+  {
+   "id": "http://www.w3.org/2000/01/rdf-schema#Literal",
+   "label": {
+    "en": "Literal"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+   },
+   "description": {
+    "en": "The class rdfs:Literal is the class of literal values such as strings and integers. Property values such as textual strings are examples of RDF literals."
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2000/01/rdf-schema#Resource",
+   "label": {
+    "en": "Resource"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2000/01/rdf-schema#Resource"
+   },
+   "description": {
+    "en": "All things described by RDF are called resources, and are instances of the class rdfs:Resource. This is the class of everything. All other classes are subclasses of this class. rdfs:Resource is an instance of rdfs:Class."
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group",
+   "items": [
+    "http://www.w3.org/2000/01/rdf-schema#comment",
+    "http://www.w3.org/2000/01/rdf-schema#label",
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+    "http://www.w3.org/2000/01/rdf-schema#member"
+   ]
+  },
+  {
+   "id": "dcat:Distribution",
+   "label": {
+    "en": "Distribution"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/ns/dcat#Distribution"
+   },
+   "description": {
+    "en": "Represents a specific available form of a dataset. Each dataset might be available in different forms, these forms might represent different formats of the dataset, different endpoints,... Examples of Distribution include a downloadable CSV file, an XLS file representing the dataset, an RSS feed…"
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group",
+   "items": [
+    "dcat:description",
+    "dcat:title",
+    "dcat:language",
+    "dcat:licence",
+    "dcat:releasedate",
+    "dcat:update/modificationdate",
+    "dcat:rights",
+    "dcat:documentation",
+    "dcat:accessURL",
+    "dcat:availability",
+    "dcat:format",
+    "dcat:bytesize",
+    "dcat:downloadURL",
+    "dcat:mediatype",
+    "dcat:status",
+    "dcat:linkedschemas",
+    "dcat:haspolicy",
+    "dcat:accessservice",
+    "dcat:spatialresolution",
+    "dcat:temporalresolution",
+    "dcat:compressionformat",
+    "dcat:packagingformat",
+    "dcat:"
+   ]
+  },
+  {
+   "id": "http://purl.org/dc/terms/LicenseDocument",
+   "label": {
+    "en": "LicenseDocument"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://purl.org/dc/terms/LicenseDocument"
+   },
+   "description": {
+    "en": "A legal document giving official permission to do something with a Resource."
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+   "label": {
+    "en": "ConceptScheme"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+   },
+   "description": {
+    "en": "An abstract idea or notion; a unit of thought."
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "dcat:CatalogRecord",
+   "label": {
+    "en": "CatalogRecord"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/ns/dcat#CatalogRecord"
+   },
+   "description": {
+    "en": "A record in a data catalog, describing a single dataset."
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group",
+   "items": [
+    "dcat:description",
+    "dcat:title",
+    "dcat:language",
+    "dcat:update/modificationdate",
+    "dcat:primarytopic",
+    "dcat:listingdate",
+    "dcat:changetype",
+    "dcat:conformsto",
+    "dcat:sourcemetadata"
+   ]
+  },
+  {
+   "id": "http://spdx.org/rdf/terms#Checksum",
+   "label": {
+    "en": "Checksum"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://spdx.org/rdf/terms#Checksum"
+   },
+   "description": {
+    "en": "A value that allows the contents of a file to be authenticated. This class allows the results of a variety of checksum and cryptographic message digest algorithms to be represented."
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "http://purl.org/dc/terms/Frequency",
+   "label": {
+    "en": "Frequency"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://purl.org/dc/terms/Frequency"
+   },
+   "description": {
+    "en": "A rate at which something recurs."
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/ns/adms#Identifier",
+   "label": {
+    "en": "Identifier"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/ns/adms#Identifier"
+   },
+   "description": {
+    "en": "This class is based on the UN/CEFACT Identifier complex type defined in See Section 5.8 of Core Components Data Type Catalogue Version 3.1 (http://www.unece.org/fileadmin/DAM/cefact/codesfortrade/CCTS/CCTS-DTCatalogueVersion3p1.pdf) In RDF this is expressed using the following properties: - the content string should be provided using skos:notation, datatyped with the identifier scheme (inclduing the version number if appropriate); - use dcterms:creator to link to a class describing the agency that manages the identifier scheme or adms:schemaAgency to provide the name as a literal. Although not part of the ADMS conceptual model, it may be useful to provide further properties to the Identifier class such as dcterms:created to provide the date on which the identifier was issued."
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2006/vcard/ns#Kind",
+   "label": {
+    "en": "Kind"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Kind"
+   },
+   "description": {
+    "en": "A description following the vCard specification, e.g. to provide telephone number and e-mail address for a contact point. Note that the class Kind is the parent class for the four explicit types of vCards (Individual, Organization, Location, Group)."
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "http://purl.org/dc/terms/LinguisticSystem",
+   "label": {
+    "en": "LinguisticSystem"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://purl.org/dc/terms/LinguisticSystem"
+   },
+   "description": {
+    "en": "A system of signs, symbols, sounds, gestures, or rules used in communication, e.g. a language."
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "http://purl.org/dc/terms/MediaType",
+   "label": {
+    "en": "MediaType"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://purl.org/dc/terms/MediaType"
+   },
+   "description": {
+    "en": "A media type or extent, e.g. the format of a computer file."
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "http://purl.org/dc/terms/PeriodOfTime",
+   "label": {
+    "en": "PeriodOfTime"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://purl.org/dc/terms/PeriodOfTime"
+   },
+   "description": {
+    "en": "An interval of time that is named or defined by its start and end dates."
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "http://purl.org/dc/terms/RightsStatement",
+   "label": {
+    "en": "RightsStatement"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://purl.org/dc/terms/RightsStatement"
+   },
+   "description": {
+    "en": "A statement about the intellectual property rights (IPR) held in or over a resource, a legal document giving official permission to do something with a resource, or a statement about access rights."
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "http://purl.org/dc/terms/ProvenanceStatement",
+   "label": {
+    "en": "ProvenanceStatement"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://purl.org/dc/terms/ProvenanceStatement"
+   },
+   "description": {
+    "en": "A statement of any changes in ownership and custody of a resource since its creation that are significant for its authenticity, integrity, and interpretation."
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "http://purl.org/dc/terms/Standard",
+   "label": {
+    "en": "Standard"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://purl.org/dc/terms/Standard"
+   },
+   "description": {
+    "en": "A basis for comparison; a reference point against which other things can be evaluated."
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "dcat:DataService",
+   "label": {
+    "en": "DataService"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/ns/dcat#DataService"
+   },
+   "description": {
+    "en": "A collection of operations that provides access to one or more datasets or data processing functions."
+   },
+   "type": "group",
+   "items": [
+    "dcat:description",
+    "dcat:title",
+    "dcat:licence",
+    "dcat:endpointURL",
+    "dcat:servesdataset",
+    "dcat:endpointdescription",
+    "dcat:accessrights"
+   ]
+  },
+  {
+   "id": "dcat:Relationship",
+   "label": {
+    "en": "Relationship"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/ns/dcat#Relationship"
+   },
+   "description": {
+    "en": "An association class for attaching additional information to a relationship between DCAT Resources."
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group",
+   "items": [
+    "dcat:relation",
+    "dcat:hadrole"
+   ]
+  },
+  {
+   "id": "dcat:Role",
+   "label": {
+    "en": "Role"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/ns/dcat#Role"
+   },
+   "description": {
+    "en": "A role is the function of a resource or agent with respect to another resource, in the context of resource attribution or resource relationships."
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing",
+   "label": {
+    "en": "Spatial Thing"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "http://purl.org/vocab/frbr/core#Expression",
+   "label": {
+    "en": "core#Expression"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://purl.org/vocab/frbr/core#Expression"
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/2002/07/owl#Thing",
+   "label": {
+    "en": "Thing"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2002/07/owl#Thing"
+   },
+   "type": "group"
+  },
+  {
+   "id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+   "label": {
+    "en": "22-rdf-syntax-ns#Property"
+   },
+   "constraints": {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+   },
+   "extends": "http://www.w3.org/2002/07/owl#Thing",
+   "type": "group",
+   "items": [
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+    "http://www.w3.org/2000/01/rdf-schema#domain",
+    "http://www.w3.org/2000/01/rdf-schema#range"
+   ]
+  }
+ ],
+ "scope": "dcat",
+ "namespace": "http://www.w3.org/ns/dcat#",
+ "root": "dcat:Catalog"
+}

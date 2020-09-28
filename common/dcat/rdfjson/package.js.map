@@ -1,0 +1,8 @@
+{
+"version":3,
+"file":"package.js",
+"lineCount":2,
+"mappings":"A;IACIA,QAAW,QAAA,OACPC,aADO,CAEPC,eAFO,6BAKKA,QAAAA,CAASC,CAATD,CAAmBE,CAAnBF,QACGA,EAAAG,KAAA,CAAYD,CAAZ,CADHF,CALL,MAQGG,QAAAA,CAASF,CAATE,CAAmBD,CAAnBC,QACKJ,EAAAI,KAAA,CAAoBD,CAApB,CADLC,CARH,KAWEC,QAAAA,CAASH,CAATG,CAAmBF,CAAnBE,QACMD,YAAA,CAAaF,CAAb,CADNG,GACiCL,CAAAI,KAAA,CAAoBD,CAApB,CADjCE,CAXF,GAAA;",
+"sources":["package.js.uncompressed.js"],
+"names":["profile","testResourceRe","ignore","filename","mid","test","amd"]
+}

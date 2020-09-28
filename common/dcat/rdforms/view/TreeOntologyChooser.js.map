@@ -1,0 +1,8 @@
+{
+"version":3,
+"file":"TreeOntologyChooser.js",
+"lineCount":3,
+"mappings":"A;AAAAA,MAAA,2HAMG,QAAA,CAAUC,CAAV,CAAmBC,CAAnB,CAAyBC,CAAzB,CAAkCC,CAAlC,CAAoDC,CAApD,QAEQJ,EAAA,CAAQE,CAAR,aAISG,QAAAA,GACRC,cAAA,cAA6BC,SAA7B,CACAC,UAFQH,CAEI,IAAID,CAAJ,QACD,IAAID,CAAJ,CAAqBM,YAAAC,QAAA,EAAAC,WAAA,EAArB,KADC,qBAGCV,CAAAW,MAAA,MAAiBC,kBAAjB,CAHD,eAIOZ,CAAAW,MAAA,MAAiB,QAAA,CAAUE,CAAV,WACxBA,CADwB,cAIxBC,EAASN,YAAAO,UAAA,EAJe,YAKxBF,CAAAG,WALwB,uBAQxBF,CARwB,EAQNA,CAAAG,MARM,GAQWJ,CAAAI,MARX;6BAAjB,CAJP,EAgBHC,kBAhBG,CAFJd,CAJT,EAFR,CANH;",
+"sources":["TreeOntologyChooser.js.uncompressed.js"],
+"names":["define","declare","lang","Chooser","ChoicesTreeModel","Tree","postCreate","inherited","arguments","tree","binding","getItem","getChoices","hitch","_selectChoice","item","choice","getChoice","selectable","value","selectionNode"]
+}

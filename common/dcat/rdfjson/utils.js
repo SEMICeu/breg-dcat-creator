@@ -1,0 +1,3 @@
+//>>built
+define("rdfjson/utils",["rdfjson/Graph"],function(h){var g={extract:function(e,a,b,c){c=c||new h;b=b||{};a=e.find(a,null,null);for(var d=0;d<a.length;d++){var f=a[d];b[f.getPredicate()]||(c.add(a[d]),"bnode"===f.getType()&&g.extract(e,c,f.getValue(),b))}return c},remove:function(e,a,b){b=b||{};a=e.find(a,null,null);for(var c=0;c<a.length;c++){var d=a[c];e.remove(d);b[d.getPredicate()]||"bnode"===d.getType()&&g.remove(e,d.getValue(),b)}}};return g});
+//# sourceMappingURL=utils.js.map

@@ -1,0 +1,3 @@
+//>>built
+define("rdforms/template/PropertyGroup",["dojo/_base/declare","./Group"],function(a,b){return a(b,{getChildren:function(){if(null==this._delegatedChildren){var a={getCardinality:function(){return{min:1,max:1,pref:1}}};this._delegatedChildren=dojo.map(this.inherited("getChildren",arguments),function(b){return dojo.delegate(b,a)})}return this._delegatedChildren},getPropertyItem:function(){return this.getChildren()[0]},getObjectItem:function(){return this.getChildren()[1]}})});
+//# sourceMappingURL=PropertyGroup.js.map

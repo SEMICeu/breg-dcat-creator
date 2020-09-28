@@ -1,0 +1,8 @@
+{
+"version":3,
+"file":"PropertyGroupBinding.js",
+"lineCount":3,
+"mappings":"A;AACAA,MAAA,sCAA6C,+HAAA,MAAA,KAA7C,CAQG,QAAA,CAASC,CAAT,CAAkBC,CAAlB,CAAgCC,CAAhC,CAAuDC,CAAvD,CAAqEC,CAArE,CAAoFC,CAApF,CAA2FC,CAA3F,QAWQN,EAAA,CAAQC,CAAR,sBAIWM,QAAAA,SACbC,oBAAA,GAAA,GADaD,CAJX,kBAOQE,QAAAA,SACVD,oBAAA,GAAA,GADUC,CAPR,aAcGC,QAAAA,CAASC,CAATD,EACZE,eADYF,OAEZG,qBAFYH,GAGZI,kBAHYJ,QAIRK,EAAWC,UAAAC,YAAA,EAJHP,CAKiCQ,EAAQH,CAAA,GAEpDI,EAPWT,CAMRQ,CANQR,WAMSL,EANTK,CAOA,IAAIT,CAAJ,OAAwBiB,CAAxB;UAA0CP,CAAAS,UAA1C,aAAuET,CAAAU,YAAvE,EAPAX,CAQDQ,CARCR,WAQgBJ,EARhBI,CASA,IAAIN,CAAJ,OAAyBc,CAAzB,WAA2CP,CAAAS,UAA3C,EATAV,CAWA,IAAIP,CAAJ,OAAwBe,CAAxB,WAA0CP,CAAAS,UAA1C,EAEZE,EAbYZ,CAaD,IAAIR,CAAJ,OAAiCa,CAAA,GAAjC,eAA6DI,CAA7D,EACXI,qBAAA,CAAqBD,CAArB,CACAC,qBAAA,CAAqBJ,CAArB,CAfYT,CAdH,UA+BAc,QAAAA,SACFf,sBAAA,EAAAe,SAAA,EADEA,CA/BA,EAXR,CARH;",
+"sources":["PropertyGroupBinding.js.uncompressed.js"],
+"names":["define","declare","GroupBinding","PropertyChoiceBinding","ValueBinding","ChoiceBinding","Group","Choice","getPredicateBinding","_childBindings","getObjectBinding","constructor","args","_statement","_validPredicate","_constraints","children","_item","getChildren","oItem","oBinding","statement","constraints","pBinding","addChildBinding","getGraph"]
+}

@@ -1,0 +1,8 @@
+{
+"version":3,
+"file":"PropertyChoiceBinding.js",
+"lineCount":2,
+"mappings":"A;AACAA,MAAA,gFAAyF,QAAA,CAASC,CAAT,CAAkBC,CAAlB,QAM9ED,EAAA,CAAQC,CAAR,kCASGC,QAAAA,CAASC,CAATD,EACZE,mBADYF,CACUC,CAAAE,cADVH,CATH,QAgBFI,QAAAA,IAhBE,UAwBAC,QAAAA,CAASC,CAATD,EACTH,mBAAAK,aAAA,CAAiCD,CAAjC,CADSD,CAxBA,UA2BAG,QAAAA,SACFN,oBAAAO,aAAA,EADED,CA3BA,SAqCDE,QAAAA,YArCC,kBA2CQC,QAAAA,IA3CR,EAN8E,CAAzF;",
+"sources":["PropertyChoiceBinding.js.uncompressed.js"],
+"names":["define","declare","ChoiceBinding","constructor","args","_objectBinding","objectBinding","remove","setValue","value","setPredicate","getValue","getPredicate","isValid","updateAssertions"]
+}

@@ -1,0 +1,8 @@
+{
+"version":3,
+"file":"openTab.js",
+"lineCount":2,
+"mappings":"A;AAAAA,QAASA,QAATA,CAAiBC,CAAjBD,CAAsBE,CAAtBF,MACKG,CADLH,CACQI,CAEPA,EAHDJ,CAGcK,QAAAC,uBAAA,cAHdN,KAIOG,CAJPH,GAIcG,CAJdH,CAIkBI,CAAAG,OAJlBP,CAIqCG,CAJrCH,GAKGI,CAAA,CAAWD,CAAX,CAAAK,MAAAC,QALHT,OAQCU,EARDV,CAQYK,QAAAC,uBAAA,YARZN,KASOG,CATPH,GAScG,CATdH,CASkBU,CAAAH,OATlBP,CASmCG,CATnCH,GAUGU,CAAA,CAASP,CAAT,CAAAQ,UAVHX,CAU2BU,CAAA,CAASP,CAAT,CAAAQ,UAAAC,QAAA,cAG1BP,SAAAQ,eAAA,CAAwBX,CAAxB,CAAAM,MAAAC,QAbDT,QAcEC,EAAAa,cAAAH,UAdFX;",
+"sources":["openTab.js.uncompressed.js"],
+"names":["openTab","evt","tabname","i","tabcontent","document","getElementsByClassName","length","style","display","tablinks","className","replace","getElementById","currentTarget"]
+}

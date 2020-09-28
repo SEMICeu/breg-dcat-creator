@@ -1,0 +1,8 @@
+{
+"version":3,
+"file":"Binding.js",
+"lineCount":3,
+"mappings":"A;AACAA,MAAA,gDAAwD,QAAA,CAASC,CAAT,MAEhDC,GAFgD,OAW7CD,EAAA,+FAaAE,QAAAA,GACJC,WADID,GAEJE,eAFIF,CAGPC,WAHOD,CAGOE,eAAAF,SAAA,EAHPA,CAIGG,YAJHH,GAKPC,WALOD,CAKOG,YAAAH,SAAA,EALPA,SAQFC,YARED,CAbA,QAuBFI,QAAAA,IAvBE,uBAyBaC,QAAAA,SACfC,yBADeD,CAzBb,uBA4BaE,QAAAA,CAASC,CAATD,EACtBD,wBADsBC,CACKC,CADLD,CA5Bb,SA+BDE,QAAAA,SACDC,WADCD,CA/BC;aAkCIE,QAAAA,SACNT,gBADMS,CAlCJ,WAqCCC,QAAAA,SACHT,aADGS,CArCD,WAwCCC,QAAAA,CAASC,CAATD,EACVV,YADUU,CACKC,CADLD,CAxCD,SAkDDE,QAAAA,IAlDC,kBAyDQC,QAAAA,CAASC,CAATD,EACjBE,mBADiBF,CACKC,CACtBE,sBAAA,EAFiBH,CAzDR,kBAgEQG,QAAAA,IAhER,SAoEDC,QAAAA,SACDC,WADCD,CApEC,aA2EGE,QAAAA,CAASC,CAATD,EACZZ,UADYY,CACCC,CAAAC,KACbtB,gBAFYoB,CAEMC,CAAAE,UACdF,EAAAG,MAHQJ,GAIXrB,WAJWqB,CAIGC,CAAAG,MAJHJ,CAMZD,WANYC,MAMMvB,CAClBA,EAPYuB,GA3EH,eAwFKK,QAAAA,CAASC,CAATD,kBACPC,CADOD,SACgBC,CADhBD,OACkCC,CADlCD,CAxFL,EAX6C,CAAxD;",
+"sources":["Binding.js.uncompressed.js"],
+"names":["define","declare","counter","getGraph","_graph","_statement","_parent","remove","getCardinalityTracker","_cardinalityTracker","setCardinalityTracker","cardTracker","getItem","_item","getStatement","getParent","setParent","parent","isValid","setAncestorValid","valid","_ancestorValid","updateAssertions","getHash","_hash","constructor","args","item","statement","graph","_isValidValue","value"]
+}
