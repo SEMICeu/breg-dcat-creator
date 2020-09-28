@@ -7,30 +7,7 @@ The Data Catalog Vocabulary (DCAT) Description Creator uses [RDForms 4.1 by Meta
 
 ## Installation instructions
 
-To install the DCAT Description creator, please follow one of the following methods:
-* [automated installation for Windows](#automatedInstallation)
-* [Command-line installation instructions for Linux](#commandLineInstallation)
-
-Both methods are explained in more details in the following paragraph.
-After installation, make sure to follow the steps provided in the [Configuration section](#configuration) and finaly the [usage instructions](#usageInstructions).
-
-### Automated installation for Windows <a name="automatedInstallation"></a>
-
-Download the content of this GitHub project to your local computer and unzip it.
-
-![How to download the content of a GitHub project](https://github.com/catalogue-of-services-isa/cpsv-ap_rdf_editor/blob/master/images/downloadProjectFromGitHub.png?raw=true)
-
-Double-click the install.bat file in the main folder. The DCAT description Creator will now install.
-Next to this, the following programs will be installed which are required to be able to run the Description Creator (default settings apply):
-* nodejs
-* bower
-* Git
-
-If some/all of these programs are already installed on your computer, the installation process will automatically detect this and skip their installation.
-
-It is possible that your computer will need to be restarted during the process. If so, please re-open the install.bat file after restarting to continue the installation process.
-
-### Command-line installation instructions for Linux <a name="commandLineInstallation"></a>
+### Command-line installation instructions <a name="commandLineInstallation"></a>
 
 The Data Catalog Vocabulary (DCAT) Description Creator uses [RDForms 4.1 by MetaSolutionsAB](https://github.com/MetaSolutionsAB/rdforms/releases/tag/4.1), a JavaScript library that provides a way to declarative describe how the editor and presentation views of RDF should look like. Before you can use the editor you need to make sure all the dependencies for RDForms are loaded and RDForms is build. To load the dependencies, simply run:
 
