@@ -5,11 +5,19 @@ This is a proof of concept editor for editing public service descriptions accord
 The DCAT Application profile for base registries in Europe (BRegDCAT-AP)	 Description Creator uses [RDForms 4.1 by MetaSolutionsAB](https://github.com/MetaSolutionsAB/rdforms/releases/tag/4.1), a JavaScript library that provides a way to declarative describe how the editor and presentation views of RDF should look like. The configuration mechanism eliminates the need for programming once the library has been deployed into an environment. The main task of RDForms is to make it easy to construct form-based RDF editors in a web environment. To accomplish this, RDForms relies on a templating mechanism that both describes how to generate a HTML-form and how to map specific expressions in a RDF graph to corresponding fields. Simply put, RDForm uses a template to construct the input-form for the user and its transformation to RDF. 
 
 
-## Installation instructions
+## Deployment
 
-### Command-line installation instructions <a name="commandLineInstallation"></a>
+### Docker
 
-The DCAT Application profile for base registries in Europe (BRegDCAT-AP)	 Description Creator uses [RDForms 4.1 by MetaSolutionsAB](https://github.com/MetaSolutionsAB/rdforms/releases/tag/4.1), a JavaScript library that provides a way to declarative describe how the editor and presentation views of RDF should look like. Before you can use the editor you need to make sure all the dependencies for RDForms are loaded and RDForms is build. To load the dependencies, simply run:
+This application has configured to launch a [docker](https://www.docker.com/) cointainer ready to use. This requires that you have [docker](https://www.docker.com/) and [docker-compose](https://docs.docker.com/compose/install/). To run:
+
+    $ cd path_to_creator
+    $ docker-compose up --build
+    
+
+### Local deployment <a name="commandLineInstallation"></a>
+
+The DCAT Application profile for base registries in Europe (BRegDCAT-AP) Description Creator uses [RDForms 4.1 by MetaSolutionsAB](https://github.com/MetaSolutionsAB/rdforms/releases/tag/4.1), a JavaScript library that provides a way to declarative describe how the editor and presentation views of RDF should look like. Before you can use the editor you need to make sure all the dependencies for RDForms are loaded and RDForms is build. To load the dependencies, simply run:
 
     $ cd path_to_creator
     $ npm   install
