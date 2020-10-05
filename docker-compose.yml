@@ -1,7 +1,5 @@
 version: "3"
-
 services:
-
   creator:
     build: .
     image: bregdcat_creator:0.01
