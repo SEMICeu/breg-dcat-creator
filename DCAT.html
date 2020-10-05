@@ -13,9 +13,7 @@
     <script src="./js/openTab.js"></script>
 </head>
 
-
 <body class="claro" onLoad="document.getElementById('editorButton').click();">
-
     <script type="text/javascript">
         require([
             'rdfjson/Graph',             //Rdfjson Graph API
@@ -70,48 +68,35 @@
             $("div[widgetid='dijit_layout_TabContainer_1_tablist_dijit_layout_ContentPane_4']").css('display', 'none');
 
         });
-
-
     </script>
 
     <header class="banner">
         <a id="logobanner" href="#"><img src="./images/CPSV-AP_logo.png" width="70" height="70" float="left"
                 alt="CPSV-AP logo" /></a>
-        <h1> BReg DCAT Description Creator </h1>
+        <h1>BRegDCAT-AP v2 Creator</h1>
 
         <div class="tab">
-            <button class=" tablinks" id="editorButton" onclick="openTab(event, 'editor') ">Editor</button>
+            <button class="tablinks" id="editorButton" onclick="openTab(event, 'editor') ">Editor</button>
             <button class="tablinks" onclick="openTab(event, 'about')">About</button>
         </div>
     </header>
 
-
     <div id="about" class="tabcontent" display: "none">
-        <h2> About the BReg DCAT Description Creator </h2>
-        <p>This is a proof of concept editor for editing catalog descriptions according to the DCAT Application profile
-            for base registries in Europe (BRegDCAT-AP) v2.0.1. The editor is driven by the RDForms library which uses
-            templates to generate HTML Forms to edit RDF. The DCAT Describer will allow European public administrations
-            to create catalog descriptions in an easy-to-use web form and export these descriptions in BRegDCAT-AP 2.0.1
-            compliant machine-readable formats to store locally on a computer. </p>
-        <h2> Usage instructions </h2>
-        <p> Edit your description in the editor tab, see the results in the present tab and download the resulting RDF
-            in the RDF tab. Any changes you make in the editor will be reflected in the other tabs. Created descriptions
-            can be imported into the RDF tab and then viewed (and possibly changed) in the editor tab. The tool allows
-            to make a description for one public service and to export the created description. </p>
-
-        <h2> Deployment instructions </h2>
-        <p> The source code and instructions to install this tool on your local computer can be found on
-            <a href=https://github.com/BRegDCAT-AP-Tools/breg-dcat-creator> gitHub.</a> </p>
+        <h2>About the BRegDCAT-AP v2 Creator</h2>
+        <p>
+            This is a proof of concept tool for the creation of RDF graphs 
+            that follow the DCAT Application profile for Base Registries in 
+            Europe (BRegDCAT-AP) v2 specification.
+        </p>
+        <p>
+            This tool will allow European public administrations to describe base 
+            registries in an easy-to-use web form, exporting these descriptions 
+            in BRegDCAT-AP v2 compliant machine-readable formats to store locally on a computer.
+        </p>
     </div>
-
 
     <div id="editor" class="tabcontent">
         <div class="body" id="body"></div>
-    </div>
-
-    <footer>
-
-    </footer>
     </div>
 </body>
 
